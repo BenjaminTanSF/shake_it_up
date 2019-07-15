@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 console.log = console.log.bind(this);
 
 router.get('/:ingredient_name', (req, res) => {
-  let name = req.params.ingredient_name;
+  let name = req.params.ingredient_name.toLowerCase();
   let regexName = name + "$";
   DrinksByLowerCaseIngredient.find({
     name: { $regex: regexName }
