@@ -8,10 +8,11 @@ class BaseSpirit extends React.Component {
   // }
 
   render() {
-    // const { actions } = this.props;
-    const baseSpirits = ["rum","gin"]
+    // const { baseSpirits } = this.props; assuming we get baseSpirits from container
+    const baseSpirits = ["Rum","Gin","Whiskey","Tequila","Brandy","Vodka"]
     const baseSpiritItems = baseSpirits.map(spirit => (
-        <li><BaseSpiritItem/></li>      
+        // <li><BaseSpiritItem/></li>      
+        <li>{spirit}</li>
     ));
     return (
       <div>
@@ -21,7 +22,6 @@ class BaseSpirit extends React.Component {
       </div>
     );
   }
-
 }
 
 export default BaseSpirit;
