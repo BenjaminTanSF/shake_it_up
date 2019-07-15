@@ -4,7 +4,7 @@ import BaseSpirit from './base_spirit_list';
 // Actions
 
 const mSTP = state => ({
-
+  
 });
 
 
