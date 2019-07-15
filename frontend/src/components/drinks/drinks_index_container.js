@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import BaseSpirit from './base_spirit_list';
+import DrinksIndex from './drinks_index';
 
 const mSTP = state => ({
-  
+
 });
 
 
@@ -13,4 +13,4 @@ const mDTP = dispatch => ({
 export default connect(
   mSTP,
   mDTP
-)(BaseSpirit);
+)(DrinksIndex);
