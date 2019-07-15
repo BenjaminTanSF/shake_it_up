@@ -11,13 +11,17 @@ router.get('/', (req, res) => {
     .catch(err => res.status(404).json({ noingredientsfound: 'No ingredients found' }));
 });
 
+console.log = console.log.bind(this);
+
 router.get('/:ingredient_name', (req, res) => {
+  let name = req.params.ingredient_name;
+  let regexName = name + "$";
   DrinksByLowerCaseIngredient.find({
-    idDrink: req.params.ingredient_name
+    name: { $regex: regexName }
   })
-    .sort({ idDrink: 1 })
-    .then(drinks => res.json(drinks))
-    .catch(err => res.status(404).json({ nodrinksfound: 'No drinks found from that id' }));
+    .sort({ name: 1 })
+    .then(ingredients => res.json(ingredients))
+    .catch(err => res.status(404).json({ nodrinksfound: 'No drinks found from that ingredient' }));
 });
 
 module.exports = router;
