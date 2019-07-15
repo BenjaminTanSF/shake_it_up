@@ -10,11 +10,13 @@ function App() {
     <div className="shake-it-up-container">
       <h1>Shake It Up</h1>
       
-      Giant Shaker Button
+      {/* <BuildADrink/> */}
       <br/><br/>
-      Featured Drinks
+      {/* <FeaturedDrinks/> */}
       
       <Splash/>
+
+      {/* <MenuBar/>  */}
     </div>
   );
 }

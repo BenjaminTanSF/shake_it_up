@@ -12,20 +12,13 @@ class BaseSpiritList extends React.Component {
   }
 
   render() {
-    // const baseSpirits = ["Rum","Gin","Whiskey","Tequila","Brandy","Vodka"];
-    // const baseSpiritItems = baseSpirits.map(spirit => (   
-    //     // <li>
-    //     //   {spirit}
-    //     // </li>
-    //     <div>
-    //       {spirit}
-    //     </div>
-    // ));
     
     return (
       <div className="base-spirit-container">
         <div className="item-1">
-          Rum
+          {/* <Link to="#"> */}
+            Rum
+          {/* </Link> */}
         </div>
         <div className="item-2">
           Gin
