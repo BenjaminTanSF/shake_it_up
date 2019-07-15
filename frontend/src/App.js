@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Link } from 'react-router-dom';
 
-import Splash from './components/splash/splash';
+import Discover from './components/discover/discover';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <br/><br/>
       {/* <FeaturedDrinks/> */}
       
-      <Splash/>
+      <Discover/>
 
       {/* <MenuBar/>  */}
     </div>

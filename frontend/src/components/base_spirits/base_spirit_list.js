@@ -3,7 +3,7 @@ import BaseSpiritItem from './base_spirit_item';
 import { Link } from 'react-router-dom';
 
 // styles
-import '../../styles/splash.scss';
+import '../../styles/discover/discover.scss';
 
 class BaseSpiritList extends React.Component {
   constructor(props) {

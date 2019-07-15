@@ -1,7 +1,7 @@
 import React from 'react';
 import BaseSpiritList from '../base_spirits/base_spirit_list';
 
-class Splash extends React.Component {
+class Discover extends React.Component {
 
   render() {
     return (
@@ -11,4 +11,4 @@ class Splash extends React.Component {
 
 }
 
-export default Splash;
+export default Discover;
