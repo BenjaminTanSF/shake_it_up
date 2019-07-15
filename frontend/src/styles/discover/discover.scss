@@ -1,0 +1,77 @@
+.shake-it-up-container {
+  text-align: center; 
+}
+
+.base-spirit-container {
+  align-content: center;
+  align-items: center;
+
+  ul {
+    list-style: none;
+  }
+}
+
+.base-spirit-tile-rum {
+
+}
+.base-spirit-tile-gin {
+
+}
+.base-spirit-tile-whiskey {
+
+}
+.base-spirit-tile-tequila {
+
+}
+.base-spirit-tile-brandy {
+
+}
+.base-spirit-tile-vodka {
+
+}
+
+// begin grid
+
+.item-1 {
+  grid-area: rum;
+  border: 1px solid black;
+  padding: 30px;
+}
+.item-2 {
+  grid-area: gin;
+  border: 1px solid black;
+  padding: 30px;
+}
+.item-3 {
+  grid-area: whiskey;
+  border: 1px solid black;
+  padding: 30px;
+}
+.item-4 {
+  grid-area: tequila;
+  border: 1px solid black;
+  padding: 30px;
+}
+.item-5 {
+  grid-area: brandy;
+  border: 1px solid black;
+  padding: 30px;
+}
+.item-6 {
+  grid-area: vodka;
+  border: 1px solid black;
+  padding: 30px;
+}
+
+.base-spirit-container {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 130px 130px;
+  grid-template-rows: 95px 70px 96px;
+  grid-template-areas: "rum gin" "whiskey tequila" "brandy vodka";
+  color: #231f20;
+  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
