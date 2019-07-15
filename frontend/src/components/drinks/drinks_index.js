@@ -14,7 +14,9 @@ class DrinksIndex extends React.Component {
       <div>
         <h1>Drinks Index</h1>
         <div>
-          
+          <div>
+            
+          </div>
         </div>
       </div>
     )
