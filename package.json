@@ -1,0 +1,31 @@
+{
+  "name": "shake_it_up",
+  "version": "1.0.0",
+  "description": "an application that allows users to make customized cocktails, search cocktails and/or ingredients, and discover about base spirits.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "debug": "node --inspect app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenjaminT88/shake_it_up.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenjaminT88/shake_it_up/issues"
+  },
+  "homepage": "https://github.com/BenjaminT88/shake_it_up#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "mongoose": "^5.6.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
