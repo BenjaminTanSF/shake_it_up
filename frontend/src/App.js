@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import BaseSpirit from './components/base_spirits/base_spirit_list';
+
 function App() {
   return (
     <div className="App">
@@ -18,8 +20,10 @@ function App() {
         >
           Learn React
         </a>
+        <BaseSpirit/>
       </header>
     </div>
+
   );
 }
 
