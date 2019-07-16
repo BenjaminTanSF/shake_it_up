@@ -19,6 +19,10 @@ class DrinkShow extends React.Component {
     return <h1>LOADING</h1>; 
   } 
 
+  const ing = () => {
+    
+  }
+
   return (
 
     <div className="drink-show-container">
@@ -30,7 +34,7 @@ class DrinkShow extends React.Component {
         <h2>Ingredients</h2>
         <ul>
 
-        {Object.values(this.state).map(value=>
+        {Object.values(this.state).map(value=> 
           <li>{Object.values(value)}</li>
           )}
           
