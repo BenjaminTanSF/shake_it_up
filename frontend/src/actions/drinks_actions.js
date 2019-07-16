@@ -28,7 +28,7 @@ export const receiveSingleDrink = drink => ({
 export const fetchAllDrinks = () => dispatch => {
   dispatch(startLoadingAllDrinks());
   return APIUtil.getDrinks().then(
-    drinks => { dispatch(receiveAllDrinks(drinks)) },
+    drinks => { dispatch(receiveAllDrinks(drinks.data)) },
     err => { dispatch(receiveDrinksErrors(err)) }
   )
 };
@@ -36,7 +36,7 @@ export const fetchAllDrinks = () => dispatch => {
 export const fetchSingleDrink = id => dispatch => {
   dispatch(startLoadingSingleDrink());
   return APIUtil.getDrinkDetails(id).then(
-    drink => { dispatch(receiveSingleDrink(drink)) },
+    drink => { dispatch(receiveSingleDrink(drink.data)) },
     err => { dispatch(receiveDrinksErrors(err)) }
   )
 };

@@ -1,7 +1,6 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-<<<<<<< HEAD
   "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
@@ -11,14 +10,10 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-=======
-  "private": true,
-  "dependencies": {
-    "axios": "^0.19.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
->>>>>>> master
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.4",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,10 +21,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-<<<<<<< HEAD
-=======
-  "proxy": "http://localhost:5000",
->>>>>>> master
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -45,8 +36,4 @@
       "last 1 safari version"
     ]
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> master
