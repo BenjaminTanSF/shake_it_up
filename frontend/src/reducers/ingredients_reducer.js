@@ -2,9 +2,9 @@ import merge from 'lodash/merge';
 
 import { RECEIVE_ALL_INGREDIENTS, RECEIVE_DRINKS_BY_INGREDIENT } from '../actions/ingredients_actions';
 
-const ingredientsReducer = (oldState = {}, action) => {
+const ingredientsReducer = (oldState = [], action) => {
   Object.freeze(oldState);
-  let nextState = merge({}, oldState);
+  let nextState = oldState.slice();
   switch (action.type) {
     case RECEIVE_ALL_INGREDIENTS:
       nextState = action.ingredients;

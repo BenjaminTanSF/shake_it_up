@@ -10,7 +10,7 @@ const mSTP = (ownProps, state) => {
 };
 
 const mDTP = dispatch => ({
-  fetchSingleDrink: dispatch(fetchSingleDrink(id))
+  fetchSingleDrink: id => dispatch(fetchSingleDrink(id))
 });
 
 export default connect(
