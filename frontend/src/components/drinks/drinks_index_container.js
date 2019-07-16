@@ -3,10 +3,10 @@ import DrinksIndex from './drinks_index';
 import { fetchAllDrinks } from '../../actions/drinks_actions';
 
 const mSTP = state => {
-  // debugger 
   return ({
-  drinks: state.entities.drinks // should return an array of drinks
-})};
+    drinks: state.entities.drinks 
+  });
+};
 
 
 const mDTP = dispatch => ({
