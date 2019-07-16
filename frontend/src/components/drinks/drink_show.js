@@ -19,17 +19,6 @@ class DrinkShow extends React.Component {
     return <h1>LOADING</h1>; 
   } 
 
-  
-//   const ShowIng = () => {
-//     let ings = [];
-//     if (Object.keys(this.props.drink).includes('Ingredient')) {
-//       ings.push(Object.values(this.props.drink))
-//     }
-//     return ings;
-//   }
-  
-// debugger
-
   return (
 
     <div className="drink-show-container">
@@ -39,7 +28,13 @@ class DrinkShow extends React.Component {
 
       <div className="drink-show-desc">
         <h2>Ingredients</h2>
-        {/* {this.props.map} */}
+        <ul>
+
+        {Object.values(this.state).map(value=>
+          <li>{Object.values(value)}</li>
+          )}
+          
+        </ul>
         <h2>Instructions</h2>
         <div className="drink-show-desc">
           {this.state.strInstructions}
