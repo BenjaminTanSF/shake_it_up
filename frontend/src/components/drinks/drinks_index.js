@@ -7,19 +7,23 @@ class DrinksIndex extends React.Component {
   }
 
   componentDidMount() {
+    // debugger
     this.props.fetchAllDrinks();
   }
   
   render () {
+    // debugger
     return (
       <div>
         <h1>Drinks Index</h1>
         <div>
           <div>
-            {/* {this.props.drinks.map(drink => {
-              <img src={drink.DrinkThumb}/>
-              // <h2>{drink.strDrink}</h2>
-            })} */}
+            {this.props.drinks.map(drink => {
+              <div>
+                <img src={drink.DrinkThumb}/>
+                {drink.strDrink}
+              </div> */}
+            {/* })}
             
           </div>
         </div>
