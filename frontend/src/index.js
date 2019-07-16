@@ -9,14 +9,6 @@ import * as serviceWorker from './serviceWorker';
 import { fetchAllDrinks, fetchSingleDrink } from './actions/drinks_actions';
 import { fetchAllIngredients, fetchDrinksByIngredient } from './actions/ingredients_actions';
 
-
-
-//testing
-window.getState = store.getState;
-window.dispatch = store.dispatch;
-window.fetchAllDrinks = fetchAllDrinks;
-window.fetchSingleDrink = fetchSingleDrink;
-
 // ReactDOM.render(<App />, document.getElementById('root'));
 
 
