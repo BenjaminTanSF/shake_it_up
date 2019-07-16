@@ -14,7 +14,6 @@ class Discover extends React.Component {
           <span>Shake it Up!</span>
         </div> */}
           <div className="discover-hero">
-          <Header />
             {/* <div id="hero-image"></div> */}
             <div id="hero-tag">
               Let's build a cocktail, together!

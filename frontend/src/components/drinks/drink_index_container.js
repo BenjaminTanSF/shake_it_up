@@ -1,10 +1,13 @@
 import { connect } from 'react-redux';
-import DrinksIndex from './drinks_index';
+import DrinksIndex from './drink_index';
 import { fetchAllDrinks } from '../../actions/drinks_actions';
 
-const mSTP = state => ({
-  drinks: Object.values(state.entities.drinks) // should return an array of drinks
-});
+const mSTP = state => {
+  return ({
+    drinks: state.entities.drinks,
+    loading: state.ui.loading.loading
+  });
+};
 
 
 const mDTP = dispatch => ({

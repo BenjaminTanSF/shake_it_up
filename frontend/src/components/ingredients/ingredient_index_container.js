@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import IngredientShow from './ingredient_show';
-import { fetchDrinksByIngredient } from '../../actions/ingredients_actions';
+import IngredientsIndex from './ingredient_index';
+import { fetchAllIngredients } from '../../actions/ingredients_actions';
 
 const mSTP = state => ({
   ingredients: state.entities.ingredients,
@@ -8,10 +8,10 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
-  fetchDrinksByIngredient: (name) => dispatch(fetchDrinksByIngredient(name))
+  fetchAllIngredients: () => dispatch(fetchAllIngredients())
 })
 
 export default connect(
   mSTP,
   mDTP
-)(IngredientShow);
+)(IngredientsIndex);

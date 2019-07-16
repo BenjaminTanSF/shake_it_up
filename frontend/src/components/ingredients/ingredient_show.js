@@ -1,16 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const IngredientShow = props => (
-  <div>
-    <h6>props.ingredient.name</h6>
-    <img src={props.ingredient.strIngredientThumb} alt={props.ingredient.name} />
-    if (props.ingredient.description) {
-      <p>{props.ingredient.description}</p>
-    }
-    <br />
-    {props.drinks.map(drink => <Link to={`/drinks/${drink.idDrink}`}>{drink.strDrink}</Link>)}
-  </div>
-);
+const IngredientShow = props => {
+  const { ingredient } = props.location.state;
+
+  return (
+    <div>
+      <h3>{ingredient.name}</h3>
+      <img src={ingredient.strIngredientThumb} alt={ingredient.name} />
+      {ingredient.description ? <p>{ingredient.description}</p> : null}
+      <br />
+      {ingredient.drinks.map(drink => (
+        <div key={drink._id}>
+          <Link to={{
+            pathname: `/drinks/${drink.idDrink}`,
+            state: { drink: drink }
+          }}
+          >{drink.strDrink}</Link>
+          <br />
+        </div>
+      ))}
+    </div>
+  )
+};
 
 export default IngredientShow;
