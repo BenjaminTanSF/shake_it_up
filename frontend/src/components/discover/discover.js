@@ -2,6 +2,7 @@ import React from 'react';
 import BaseSpiritList from '../base_spirits/base_spirits';
 import { Link } from 'react-router-dom';
 import Menu from '../menu';
+import Header from '../header';
 
 class Discover extends React.Component {
 
@@ -9,15 +10,15 @@ class Discover extends React.Component {
     return (
       <div className="discover-page-container">
         
-        <div className="discover-header">
+        {/* <div className="discover-header">
           <span>Shake it Up!</span>
-        </div>
+        </div> */}
           <div className="discover-hero">
             {/* <div id="hero-image"></div> */}
             <div id="hero-tag">
               Let's build a cocktail, together!
             </div>
-            <Link id="get-started" to="#">Get Started</Link>
+            <Link id="get-started" to="/byoc">Get Started</Link>
           </div>
           <div className="discover-featured">
             <h1>Featured Cocktails</h1>
@@ -37,7 +38,7 @@ class Discover extends React.Component {
                 <Link id="d-bs-brandy" className="discover-spirit" to="">Brandy</Link>
             </div>
           </div>
-          <Menu />
+          {/* <Menu /> */}
         {/* <div className="menu-temp"></div> */}
       </div>
     );
@@ -46,3 +47,5 @@ class Discover extends React.Component {
 }
 
 export default Discover;
+
+// TODO: Add "cocktail buddy" icon above "Get Started" link

@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
-import { Link, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import BYOC from './components/byoc/byoc';
+import Header from './components/header';
+import Menu from './components/menu';
 import Discover from './components/discover/discover';
 import DrinkIndexContainer from './components/drinks/drink_index_container';
 import DrinkShowContainer from './components/drinks/drink_show_container';
@@ -11,6 +14,7 @@ import IngredientShow from './components/ingredients/ingredient_show';
 function App() {
   return (
     <div className="shake-it-up-container">
+      <Header />
       {/* <Link to="/"> */}
       {/* <h1>Shake It Up</h1> */}
       {/* </Link> */}
@@ -21,10 +25,11 @@ function App() {
         <Route exact path="/ingredients" component={IngredientIndexContainer} />
         <Route exact path="/ingredients/:ingredient_name" component={IngredientShow} />
         <Route exact path="/drinks" component={DrinkIndexContainer} />
+        <Route exact path="/byoc" component={BYOC} />
         <Route path="/" component={Discover} />
         {/* <Route exact path="/drinks/:drink_id" component={DrinkShowContainer}/> */}
       </Switch>
-
+      < Menu />
     </div>
   );
 }
