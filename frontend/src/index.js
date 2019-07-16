@@ -10,7 +10,6 @@ import { fetchAllDrinks, fetchSingleDrink } from './actions/drinks_actions';
 // ReactDOM.render(<App />, document.getElementById('root'));
 
 
-
 //testing
 
 const store = configureStore();

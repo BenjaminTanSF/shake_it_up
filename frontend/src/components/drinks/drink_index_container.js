@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
-import DrinksIndex from './drinks_index';
+import DrinksIndex from './drink_index';
 import { fetchAllDrinks } from '../../actions/drinks_actions';
 
 const mSTP = state => {
   return ({
-    drinks: state.entities.drinks 
+    drinks: state.entities.drinks,
+    loading: state.ui.loading.loading
   });
 };
 
