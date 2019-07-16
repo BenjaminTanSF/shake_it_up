@@ -5,6 +5,7 @@ import Discover from './components/discover/discover';
 import DrinksIndexContainer from './components/drinks/drinks_index_container';
 // import { DrinksShowContainer } from './components/drinks/drinks_show_container';
 
+import IngredientsIndexContainer from './components/ingredients/ingredients_index_container';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
 
       <BrowserRouter>
         <Switch>
+          {/* <Route exact path="/ingredients/" component={IngredientsIndexContainer} /> */}
           <Route exact path="/drinks/" component={DrinksIndexContainer} />
           <Route path="/" component={Discover} />
           {/* <Route exact path="/drinks/:drink_id" component={DrinksShowContainer}/> */}

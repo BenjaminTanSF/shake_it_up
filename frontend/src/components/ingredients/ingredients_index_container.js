@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import IngredientsIndex from './base_spirit_list';
+import IngredientsIndex from './ingredients_index';
 
 const mSTP = state => ({
 
