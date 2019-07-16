@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './Root';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 //testing
 import { fetchAllDrinks, fetchSingleDrink } from './actions/drinks_actions';
+import { fetchAllIngredients, fetchDrinksByIngredient } from './actions/ingredients_actions';
+
 
 
 //testing

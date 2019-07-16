@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
-import IngredientsIndex from './base_spirit_list';
+import IngredientsIndex from './ingredients_index';
+import { fetchAllIngredients } from '../../actions/ingredients_actions';
 
 const mSTP = state => ({
-
+  ingredients: state.entities.ingredients,
+  loading: state.ui.loading.loading
 });
 
-
 const mDTP = dispatch => ({
-
+  fetchAllIngredients: () => dispatch(fetchAllIngredients())
 })
 
 export default connect(

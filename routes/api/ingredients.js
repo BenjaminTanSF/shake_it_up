@@ -6,7 +6,7 @@ const Ingredients = require('../../model/Ingredients');
 
 router.get('/', (req, res) => {
   Ingredients.find()
-    .sort({ idDrink: 1 })
+    .sort({ name: 1 })
     .then(ingredients => res.json(ingredients))
     .catch(err => res.status(404).json({ noingredientsfound: 'No ingredients found' }));
 });

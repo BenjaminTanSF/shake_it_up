@@ -8,12 +8,10 @@ import {
 } from '../actions/drinks_actions';
 import {
   RECEIVE_ALL_INGREDIENTS,
-  RECEIVE_ALL_INGREDIENT_PICS,
   RECEIVE_DRINKS_BY_INGREDIENT,
   START_LOADING_DRINKS_BY_INGREDIENT,
   RECEIVE_INGREDIENTS_ERRORS,
   START_LOADING_ALL_INGREDIENTS,
-  START_LOADING_ALL_INGREDIENT_PICS,
   CLEAR_INGREDIENTS_ERRORS
 } from '../actions/ingredients_actions';
 
@@ -32,8 +30,6 @@ const loadingReducer = (state = initialState, action) => {
       return Object.assign({}, state, { loading: false });
     case RECEIVE_ALL_INGREDIENTS:
       return Object.assign({}, state, { loading: false });
-    case RECEIVE_ALL_INGREDIENT_PICS:
-      return Object.assign({}, state, { loading: false });
     case RECEIVE_DRINKS_BY_INGREDIENT:
       return Object.assign({}, state, { loading: false });
     case RECEIVE_INGREDIENTS_ERRORS:
@@ -43,8 +39,6 @@ const loadingReducer = (state = initialState, action) => {
     case CLEAR_INGREDIENTS_ERRORS:
       return Object.assign({}, state, { loading: false });
     case START_LOADING_SINGLE_DRINK:
-      return Object.assign({}, state, { loading: true });
-    case START_LOADING_ALL_INGREDIENT_PICS:
       return Object.assign({}, state, { loading: true });
     case START_LOADING_ALL_DRINKS:
       return Object.assign({}, state, { loading: true });
