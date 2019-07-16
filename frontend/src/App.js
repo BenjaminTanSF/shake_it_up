@@ -10,9 +10,9 @@ function App() {
   return (
     <div className="shake-it-up-container">
       {/* <Link to="/"> */}
-      <h1>Shake It Up</h1>
+      {/* <h1>Shake It Up</h1> */}
       {/* </Link> */}
-      <br /><br />
+      {/* <br /><br /> */}
       {/* <Discover/> */}
 
       <BrowserRouter>
