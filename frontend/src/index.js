@@ -4,25 +4,21 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-
-
-// import configureStore from './store/store';
+import configureStore from './store/store';
 
 // testing
-import { getDrinks, getDrinkDetails, getIngredientPics, getIngredients, getDrinksByIngredient } from './util/drinks_api_util';
+import { fetchDrinksByIngredient, fetchAllIngredients } from './actions/ingredients_actions';
+import { fetchAllDrinks, fetchSingleDrink } from './actions/drinks_actions';
 
-
-
-// const store = configureStore();
+const store = configureStore();
 
 //testing
-// window.getState = store.getState;
-// window.dispatch = store.dispatch;
-window.getDrinks = getDrinks;
-window.getDrinkDetails = getDrinkDetails;
-window.getIngredientPics = getIngredientPics;
-window.getIngredients = getIngredients;
-window.getDrinksByIngredient = getDrinksByIngredient;
+window.getState = store.getState;
+window.dispatch = store.dispatch;
+window.fetchDrinksByIngredient = fetchDrinksByIngredient;
+window.fetchAllIngredients = fetchAllIngredients;
+window.fetchAllDrinks = fetchAllDrinks;
+window.fetchSingleDrink = fetchSingleDrink;
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
