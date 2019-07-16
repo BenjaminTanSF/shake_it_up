@@ -232,12 +232,10 @@ h1 {
   font-size: 30px;
 }
 
-// TODO: Add black overlay to improve readability of base spirit text
-
-.bs-overlay {
-  background: rgba(0,0,0,0.6);
-  opacity: 1;
-}
+// .bs-overlay {
+//   background: rgba(0,0,0,0.6);
+//   opacity: 1;
+// }
 
 .menu-temp {
   background-color: rgb(172, 172, 172);
@@ -280,6 +278,6 @@ h1 {
   height: 17px;
 }
 
-NavLink {
-  
+.menu-active span {
+  color: #f55e5f
 }
