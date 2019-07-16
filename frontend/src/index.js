@@ -9,6 +9,7 @@ import configureStore from './store/store';
 import { fetchAllDrinks, fetchSingleDrink } from './actions/drinks_actions';
 import { fetchAllIngredients, fetchDrinksByIngredient } from './actions/ingredients_actions';
 
+
 const store = configureStore();
 
 //testing
@@ -16,8 +17,10 @@ window.getState = store.getState;
 window.dispatch = store.dispatch;
 window.fetchAllDrinks = fetchAllDrinks;
 window.fetchSingleDrink = fetchSingleDrink;
+
 window.fetchAllIngredients = fetchAllIngredients;
 window.fetchDrinksByIngredient = fetchDrinksByIngredient;
+
 
 ReactDOM.render(<Root store={store} />, document.getElementById('root'));
 

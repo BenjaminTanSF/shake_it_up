@@ -21,3 +21,7 @@ export const getIngredients = () => {
 export const searchIngredientByName = name => {
   return axios.get(`/api/ingredients/${name}`)
 };
+
+export const searchDrinkByName  = drink_name => {
+  return axios.get(`/api/drink_search/${drink_name}`);
+}

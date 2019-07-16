@@ -6,6 +6,11 @@ export const START_LOADING_ALL_DRINKS = "START_LOADING_ALL_DRINKS";
 export const START_LOADING_SINGLE_DRINK = "START_LOADING_SINGLE_DRINK";
 export const RECEIVE_DRINKS_ERRORS = 'RECEIVE_DRINKS_ERRORS';
 export const CLEAR_DRINKS_ERRORS = 'CLEAR_DRINKS_ERRORS';
+export const START_LOADING_DRINKS_BY_SEARCH = 'START_LOADING_DRINKS_BY_SEARCH';
+
+export const startLoadingDrinksBySearch = () => ({
+  type: START_LOADING_DRINKS_BY_SEARCH
+});
 
 export const startLoadingAllDrinks = () => ({
   type: START_LOADING_ALL_DRINKS
@@ -38,6 +43,14 @@ export const fetchSingleDrink = id => dispatch => {
   return APIUtil.getDrinkDetails(id).then(
     drink => { dispatch(receiveSingleDrink(drink.data)) },
     err => { dispatch(receiveDrinksErrors(err)) }
+  )
+};
+
+export const fetchDrinksBySearch = searchTerm => dispatch => {
+  dispatch(startLoadingDrinksBySearch());
+  return APIUtil.searchDrinkByName(searchTerm).then(
+    drinks => { dispatch(receiveAllDrinks(drinks.data)) },
+    err => dispatch(receiveDrinksErrors(err))
   )
 };
 
