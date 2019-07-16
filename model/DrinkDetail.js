@@ -115,7 +115,10 @@ const DrinkDetailSchema = new Schema({
   },
   strCreativeCommonsConfirmed: {
     type: String
+  },
+  stringOfIngredients: {
+    type: String
   }
 });
 
-module.exports = DrinkDetail = mongoose.model('drinkdetails', DrinkDetailSchema);
+module.exports = DrinkDetail = mongoose.model('drinks', DrinkDetailSchema);
