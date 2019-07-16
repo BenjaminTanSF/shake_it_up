@@ -2,9 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 class DrinksIndex extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     this.props.fetchAllDrinks();
@@ -15,10 +12,12 @@ class DrinksIndex extends React.Component {
 
      <div>
        {Object.values(this.props.drinks).map(drink=>
-        <div>
-          <img src={drink.strDrinkThumb} width="100px"/>
-          <br/>
-          {drink.strDrink}
+        <div key={drink.idDrink}>
+          <Link to={`/drinks/${drink.idDrink}`}>
+            <img alt={drink.strDrink} src={drink.strDrinkThumb} width="100px"/>
+            <br/>
+            {drink.strDrink}
+          </Link>
         </div>
         )}
      </div>
