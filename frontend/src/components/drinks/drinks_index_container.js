@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import DrinksIndex from './drinks_index';
-import { fetchAlldrinks } from '../../actions/drinks_actions';
+import { fetchAllDrinks } from '../../actions/drinks_actions';
 
 const mSTP = state => ({
   drinks: Object.values(state.entities.drinks) // should return an array of drinks
@@ -8,10 +8,11 @@ const mSTP = state => ({
 
 
 const mDTP = dispatch => ({
-  fetchAlldrinks: () => dispatch(fetchAlldrinks())
+  fetchAllDrinks: () => dispatch(fetchAllDrinks())
 });
 
 export default connect(
   mSTP,
   mDTP
 )(DrinksIndex);
+

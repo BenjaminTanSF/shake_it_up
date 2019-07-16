@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class DrinksIndex extends React.Component {
   constructor(props) {
@@ -6,7 +7,7 @@ class DrinksIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchDrinks();
+    this.props.fetchAllDrinks();
   }
   
   render () {
@@ -15,11 +16,10 @@ class DrinksIndex extends React.Component {
         <h1>Drinks Index</h1>
         <div>
           <div>
-
-            {this.props.drinks.map(drink => {
+            {/* {this.props.drinks.map(drink => {
               <img src={drink.DrinkThumb}/>
-              <h2>{drink.strDrink}</h2>
-            })}
+              // <h2>{drink.strDrink}</h2>
+            })} */}
             
           </div>
         </div>
