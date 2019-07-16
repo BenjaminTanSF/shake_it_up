@@ -38,8 +38,8 @@ export const receiveDrinksByIngredient = ingredientObjs => ({
 
 export const fetchDrinksByIngredient = IngredientName => dispatch => {
   dispatch(startLoadingDrinksByIngredient());
-  return APIUtil.getDrinksByIngredient(IngredientName).then(
-    ingredientObjs => { dispatch(receiveDrinksByIngredient(ingredientObjs)) },
+  return APIUtil.searchIngredientByName(IngredientName).then(
+    ingredientObjs => { dispatch(receiveDrinksByIngredient(ingredientObjs.data)) },
     err => dispatch(receiveIngredientsErrors(err))
   )
 };
@@ -47,7 +47,7 @@ export const fetchDrinksByIngredient = IngredientName => dispatch => {
 export const fetchAllIngredients = () => dispatch => {
   dispatch(startLoadingAllIngredients());
   return APIUtil.getIngredients().then(
-    ingredients => { dispatch(receiveAllIngredients(ingredients)) },
+    ingredients => { dispatch(receiveAllIngredients(ingredients.data)) },
     err => { dispatch(receiveIngredientsErrors(err)) }
   )
 };
@@ -55,7 +55,7 @@ export const fetchAllIngredients = () => dispatch => {
 export const fetchAllIngredientPics = () => dispatch => {
   dispatch(startLoadingAllIngredientPics());
   return APIUtil.getIngredientPics().then(
-    ingredients => { dispatch(receiveAllIngredientPics(ingredients)) },
+    ingredients => { dispatch(receiveAllIngredientPics(ingredients.data)) },
     err => { dispatch(receiveIngredientsErrors(err)) }
   )
 };

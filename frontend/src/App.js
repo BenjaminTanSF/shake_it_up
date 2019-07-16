@@ -12,12 +12,12 @@ function App() {
       <Link to="/">
         {/* <h1>Shake It Up</h1> */}
       </Link>
-      <br/><br/>
-        <Switch>
-          <Route exact path="/drinks/" component={DrinkIndexContainer}/>
-          <Route exact path="/drinks/:drink_id/" component={DrinkShowContainer}/>
-          <Route path="/" component={Discover}/>
-        </Switch>
+      <br /><br />
+      <Switch>
+        <Route exact path="/drinks/" component={DrinkIndexContainer} />
+        <Route exact path="/drinks/:drink_id/" component={DrinkShowContainer} />
+        <Route path="/" component={Discover} />
+      </Switch>
 
     </div>
   );
