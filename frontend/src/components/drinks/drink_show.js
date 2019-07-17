@@ -39,8 +39,8 @@ class DrinkShow extends React.Component {
 
       <div className="drink-show-container">
 
-        <h1>{drink.strDrink}</h1>
         <img className="drink-show-img" alt={drink.strDrink} src={drink.strDrinkThumb} />
+        <h1>{drink.strDrink}</h1>
 
         <div className="drink-show-desc">
           <h2>Ingredients</h2>
