@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
-
 import '../../styles/ingredients/ingredient_index.scss';
 
 class IngredientsIndex extends React.Component {
@@ -50,26 +49,25 @@ class IngredientsIndex extends React.Component {
             </label>
           </div>
           <h1>Ingredients</h1>
-          {this.state.shownIngredients.map(ingredient => (
-            <div key={ingredient._id}>
-              <Link to={{
-                pathname: `/ingredients/${ingredient.name}`,
-                state: {
-                  ingredient: ingredient
-                }
-              }}>
-                {/* <img src={ingredient.strIngredientThumb} alt={ingredient.name} />
-                  {ingredient.name} */}
-
-                {/* placeholder until imgs move from GH to AWS */}
-                <img src="https://img.discogs.com/gG_ZrnTKaTktYrQ8TwfXletVbe8=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/L-213313-1286891070.jpeg.jpg" className="ingred-idx-img" width="90%" alt={ingredient.name} />
-                <div className="ingred-idx-name">
-                  {ingredient.name}
-                </div>
-              </Link>
-              <br />
-            </div>
-          ))}
+          {this.state.shownIngredients.map(ingredient => {
+            let fileName = ingredient.strIngredientThumb.slice(82, (ingredient.strIngredientThumb.length - 9))
+            return (
+              < div key={ingredient._id} >
+                <Link to={{
+                  pathname: `/ingredients/${ingredient.name}`,
+                  state: {
+                    ingredient: ingredient
+                  }
+                }}>
+                  <img src={process.env.PUBLIC_URL + `/images/${fileName}`} className="ingred-idx-img" width="90%" alt={ingredient.name} />
+                  <div className="ingred-idx-name">
+                    {ingredient.name}
+                  </div>
+                </Link>
+                <br />
+              </div>
+            )
+          })}
         </div>
       )
     }

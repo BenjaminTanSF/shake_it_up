@@ -13,7 +13,6 @@ class DrinksIndex extends React.Component {
       shownDrinks: props.drinks,
       searchStr: ""
     }
-    // debugger
     this.updateSearch = this.updateSearch.bind(this);
   }
 
