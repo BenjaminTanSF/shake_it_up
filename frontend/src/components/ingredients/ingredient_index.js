@@ -1,5 +1,4 @@
 import React from 'react';
-import IngredientShow from './ingredient_show';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 

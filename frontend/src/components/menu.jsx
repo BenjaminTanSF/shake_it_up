@@ -15,30 +15,30 @@ class Menu extends React.Component {
     render() {
         return (
             <div className="menu-container">
-                {/* <div className="menu-item-container"> */}
-                    <NavLink to="/byoc" className="menu-item-container" activeClassName="menu-active">
+                <div className="menu-item-container">
+                    <NavLink exact to="/" className="menu-item-container" activeClassName="menu-active">
                         <img className="menu-icon" src={ discover }></img>
                         <span>Discover</span>
                     </NavLink>
-                {/* </div> */}
-                {/* <div className="menu-item-container"> */}
+                </div>
+                <div className="menu-item-container">
                     <NavLink to="/drinks" className="menu-item-container" activeClassName="menu-active">
                         <img className="menu-icon" src={ cocktail }></img>
                         <span>Cocktails</span>
                     </NavLink>
-                {/* </div> */}
-                {/* <div className="menu-item-container"> */}
+                </div>
+                <div className="menu-item-container">
                     <NavLink to="/ingredients" className="menu-item-container" activeClassName="menu-active">
                         <img className="menu-icon" src={ ingredient }></img>
                         <span>Ingredients</span>
                     </NavLink>
-                {/* </div> */}
-                {/* <div className="menu-item-container"> */}
+                </div>
+                <div className="menu-item-container">
                     <NavLink to="/about" className="menu-item-container" activeClassName="menu-active">
                         <img className="menu-icon" src={ about }></img>
                         <span>About</span>
                     </NavLink>
-                {/* </div> */}
+                </div>
             </div>
         );
     }
@@ -46,3 +46,10 @@ class Menu extends React.Component {
 }
 
 export default Menu;
+
+// TODO: Add Featured Cocktails Image Slideshow
+// TODO: Add subtle black overlay for base spirit cards
+// TODO: Add hover & active CSS for "Get Started" button
+// TODO: Add hover & active CSS for menu items
+// TODO: Dynamically render appropriate menu icon colors based on this.props.history.location.pathname
+// TODO: Add link to "Shake it Up" header text to bring user back to Discvoer page

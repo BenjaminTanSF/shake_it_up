@@ -1,12 +1,9 @@
 import { connect } from 'react-redux';
-
-import IngredientIndex from './ingredient_index';
-
+import BYOC from './byoc';
 import { fetchAllIngredients } from '../../actions/ingredients_actions';
 
 const mSTP = state => ({
-  ingredients: state.entities.ingredients,
-  loading: state.ui.loading.loading
+  ingredients: state.entities.ingredients
 });
 
 const mDTP = dispatch => ({
@@ -16,4 +13,4 @@ const mDTP = dispatch => ({
 export default connect(
   mSTP,
   mDTP
-)(IngredientIndex);
+)(BYOC);
