@@ -20,7 +20,7 @@ class DrinksIndex extends React.Component {
        {Object.values(this.props.drinks).map(drink=>
         <div className="drink-index-tile" key={drink.idDrink}>
           <Link to={`/drinks/${drink.idDrink}`}>
-            <img alt={drink.strDrink} className="drink-idx-img" alt={drink.strDrink} src={drink.strDrinkThumb} width="70%"/>
+            <img alt={drink.strDrink} className="drink-idx-img" src={drink.strDrinkThumb} width="70%"/>
             <br/>
             <div className="drinks-index-name">
               {drink.strDrink}

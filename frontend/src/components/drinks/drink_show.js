@@ -29,13 +29,24 @@ class DrinkShow extends React.Component {
 
       <div className="drink-show-desc">
         <h2>Ingredients</h2>
-        <ul>
 
-        {Object.keys(this.state).filter(key => key.includes('strIngredient') && this.state[key] !== "").map(key => 
-          <li>{this.state[key]}</li>
+{/* // measurements */}
+<div className="drink-show-measure-ingr-wrapper">
+  <div>
+        {Object.keys(this.state).filter(key => key.includes('strMeasure') && this.state[key] !== "").map(key => 
+          <div>{this.state[key]}</div>
           )} 
+  </div>
 
-        </ul>
+  <div>
+{/* // ingredients */}
+        {Object.keys(this.state).filter(key => key.includes('strIngredient') && this.state[key] !== "").map(key =>
+          <div>{this.state[key]}</div>
+        )} 
+  </div>
+
+</div>        
+
         <h2>Instructions</h2>
         <div className="drink-show-desc">
           {this.state.strInstructions}
