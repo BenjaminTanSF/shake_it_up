@@ -181,13 +181,16 @@ h1 {
   margin-bottom: 20px;
 }
 
+.discover-slideshow-wrapper {
+  overflow-x: scroll;
+}
+
 .discover-slideshow {
   height: 200px;
   width: 400px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  overflow-x: scroll
 }
 
 .discover-slideshow-item {

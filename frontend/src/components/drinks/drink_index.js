@@ -13,7 +13,6 @@ class DrinksIndex extends React.Component {
       shownDrinks: props.drinks,
       searchStr: ""
     }
-    // debugger
     this.updateSearch = this.updateSearch.bind(this);
   }
 
@@ -57,7 +56,7 @@ class DrinksIndex extends React.Component {
         
 
         <div className="drink-tile-container">
-        {Object.values(this.state.shownDrinks).map(drink =>
+        {Object.values(this.state.shownDrinks).slice(0,20).map(drink =>
           <div className="drink-index-tile" key={drink.idDrink}>
             <Link to={`/drinks/${drink.idDrink}`}>
               <img alt={drink.strDrink} className="drink-idx-img" src={drink.strDrinkThumb} width="70%" />
