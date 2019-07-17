@@ -52,7 +52,7 @@ class DrinksIndex extends React.Component {
         </div>
         <h1>Drinks</h1>
 
-        {Object.values(this.state.shownDrinks).map(drink =>
+        {Object.values(this.state.shownDrinks).slice(0, 10).map(drink =>
           <div className="drink-index-tile" key={drink.idDrink}>
             <Link to={`/drinks/${drink.idDrink}`}>
               <img alt={drink.strDrink} className="drink-idx-img" src={drink.strDrinkThumb} width="70%" />
