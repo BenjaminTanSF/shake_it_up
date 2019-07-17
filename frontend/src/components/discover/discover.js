@@ -31,6 +31,21 @@ class Discover extends React.Component {
             <div className="discover-slideshow-item" >
               <Link to="/drinks/11375">Foxy Lady</Link>
             </div>
+            <div className="discover-slideshow-item" >
+              <Link to="/drinks/11009">Moscow Mule</Link>
+            </div>
+            <div className="discover-slideshow-item" >
+              <Link to="/drinks/14229">747</Link>
+            </div>
+            <div className="discover-slideshow-item" >
+              <Link to="/drinks/15300">3-Mile Long Island Iced Tea</Link>
+            </div>
+            <div className="discover-slideshow-item" >
+              <Link to="/drinks/17079">Baby Guinness</Link>
+            </div>
+            <div className="discover-slideshow-item" >
+              <Link to="/drinks/17267">Bahama Mama</Link>
+            </div>
           </div>
 
         </div>
