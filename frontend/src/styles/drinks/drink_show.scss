@@ -27,13 +27,19 @@
 
   .drink-show-img {
     border-radius: 20px;
+    width: 90%;
   }
 
   .drink-show-desc {
     font-family: 'Pontano Sans', sans-serif;
+    font-size: 14px;
   }
 
+}
 
-
-
+.drink-show-measure-ingr-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 20%;
+  margin-right: 20%;
 }

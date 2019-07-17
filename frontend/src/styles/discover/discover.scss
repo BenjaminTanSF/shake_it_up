@@ -1,3 +1,16 @@
+// DEBUG: Font face unable to load
+
+h1 {
+  color: black;
+  font-family: house-script,
+  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
 .shake-it-up-container {
   text-align: center; 
 }
@@ -70,8 +83,231 @@
   grid-template-rows: 95px 70px 96px;
   grid-template-areas: "rum gin" "whiskey tequila" "brandy vodka";
   color: #231f20;
-  font-family: BasisGrotesque,Avenir,Helvetica Neue,Helvetica,sans-serif;
+  font-family: house-script;
   font-weight: 500;
   font-size: 16px;
 }
 
+.discover-header {
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: house-script,
+  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 5px 0px 5px 0px;
+}
+
+.discover-header a {
+  font-family: house-script,
+  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 5px 0px 5px 0px;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.discover-hero {
+  position: relative;
+  top: 20px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+}
+
+#hero-image {
+  background-color: rgb(134, 34, 134);
+  margin: 0 20px;
+  min-width: 80px;
+  min-height: 40px;
+  height: 130px;
+}
+
+#hero-tag {
+  color: black;
+  font-size: 30px;
+  // margin: 40px 40px 40px 40px;
+  font-family: house-script,
+  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  padding: 20px;
+  width: 210px;
+  margin: auto;
+  margin-bottom: 20px;
+  line-height: 50px;
+}
+
+#cb {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+}
+
+.discover-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#get-started  {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  // background-color: rgb(248, 135, 135);
+  background-image: linear-gradient(#ff8784, #ffb880);
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-family: house-script,
+  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.discover-featured {
+  margin: 80px 20px 0 20px;
+}
+
+.discover-featured h1{
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.discover-slideshow {
+  height: 200px;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: scroll
+}
+
+.discover-slideshow-item {
+  background-color: rgb(61, 61, 61);
+  height: 200px;
+}
+
+.discover-slideshow-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.discover-base {
+  margin: 60px 20px 0 20px;
+}
+
+.discover-base h1 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+// Spirit Images
+
+#d-bs-whiskey {
+  background-image: url("../../assets/base\ spirit\ images/whiskey.jpg");
+}
+
+#d-bs-vodka {
+  background-image: url("../../assets/base\ spirit\ images/vodka.jpg");
+}
+
+#d-bs-tequila {
+  background-image: url("../../assets/base\ spirit\ images/tequila.jpg");
+}
+
+#d-bs-rum {
+  background-image: url("../../assets/base\ spirit\ images/rum.jpg");
+}
+
+#d-bs-gin {
+  background-image: url("../../assets/base\ spirit\ images/gin.jpg");
+}
+
+#d-bs-brandy {
+  background-image: url("../../assets/base\ spirit\ images/brandy.jpg");
+}
+
+.discover-base-spiritlist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-bottom: 100px;
+}
+
+.discover-spirit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px;  
+  height: 40px;
+  font-family: house-script,
+  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+
+// .bs-overlay {
+//   background: rgba(0,0,0,0.6);
+//   opacity: 1;
+// }
+
+.menu-temp {
+  background-color: rgb(172, 172, 172);
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+}
+
+// Menu Section
+
+.menu-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background: white;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  }
+
+.menu-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: house-script,
+  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.menu-active span {
+  color: #f55e5f
+}
