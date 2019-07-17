@@ -26,10 +26,10 @@ function App() {
         <Route exact path="/ingredients" component={IngredientIndexContainer} />
         <Route exact path="/ingredients/:ingredient_name" component={IngredientShow} />
         <Route exact path="/drinks" component={DrinkIndexContainer} />
+        <Route exact path="/drinks/:drink_id" component={DrinkShowContainer} />
         <Route exact path="/byoc" component={BYOCContainer} />
         <Route exact path="/byoc/:spirit_name" component={BYOCResults} />
         <Route path="/" component={Discover} />
-        {/* <Route exact path="/drinks/:drink_id" component={DrinkShowContainer}/> */}
       </Switch>
       < Menu />
     </div>
