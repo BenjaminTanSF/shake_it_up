@@ -12,6 +12,7 @@ class BYOCResults extends React.Component {
             compatibleIngredients: null,
             drinks: null
         }
+        this.updateIng = this.updateIng.bind(this);
     }
 
     componentDidMount() {
@@ -36,7 +37,7 @@ class BYOCResults extends React.Component {
                     );
                 }
             }
-        })
+        });
 
         this.setState({
             drinks,
@@ -44,13 +45,50 @@ class BYOCResults extends React.Component {
         });
     }
 
+    updateIng(ingredientName) {
+        return e => {
+            let newDrinks = this.state.drinks.filter(drink => {
+                for (let i = 1; i <= 15; i++) {
+                    if (!(drink[`strIngredient${i}`] === "" || drink[`strIngredient${i}`] === undefined || drink[`strIngredient${i}`] === null) && (drink[`strIngredient${i}`].toLowerCase() === ingredientName)) {
+                        return true;
+                    }
+                }
+                return false;
+            });
+
+            let newCompatibles = [];
+            newDrinks.forEach(drink => {
+                for (let i = 1; i <= 15; i++) {
+                    if (drink[`strIngredient${i}`] === "" || drink[`strIngredient${i}`] === undefined || drink[`strIngredient${i}`] === null) {
+                        break;
+                    } else if (!newCompatibles.map(ci => ci.name).includes(drink[`strIngredient${i}`].toLowerCase())) {
+                        newCompatibles.push(
+                            this.state.images.find(imageObj => imageObj.name === drink[`strIngredient${i}`].toLowerCase())
+                        );
+                    }
+                }
+            });
+
+            this.setState({
+                drinks: newDrinks,
+                compatibleIngredients: newCompatibles
+            })
+        }
+    };
+
     render() {
         console.log(this.state);
-        return (
-            <div className="byoc-results-container">
-
-            </div>
-        );
+        if (this.state.drinks) {
+            return (
+                <div className="byoc-results-container">
+                    <input type="button" value="TEST" onClick={this.updateIng("orange juice")} />
+                </div>
+            );
+        } else {
+            return (
+                <h1>NULL</h1>
+            )
+        }
     }
 
 }
