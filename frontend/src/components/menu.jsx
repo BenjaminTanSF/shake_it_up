@@ -54,7 +54,4 @@ class Menu extends React.Component {
 
 export default withRouter(Menu);
 
-// TODO: Add Featured Cocktails Image Slideshow
 // TODO: Add subtle black overlay for base spirit cards
-// TODO: Add hover & active CSS for "Get Started" button
-// TODO: Add hover & active CSS for menu items

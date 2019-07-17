@@ -145,6 +145,12 @@ h1 {
   line-height: 50px;
 }
 
+#cb {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+}
+
 .discover-body {
   display: flex;
   flex-direction: column;
@@ -176,9 +182,22 @@ h1 {
 }
 
 .discover-slideshow {
-  background-color: gray;
-  border-radius: 8px;
-  height: 150px;
+  height: 200px;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: scroll
+}
+
+.discover-slideshow-item {
+  background-color: rgb(61, 61, 61);
+  height: 200px;
+}
+
+.discover-slideshow-item a {
+  text-decoration: none;
+  color: white;
 }
 
 .discover-base {

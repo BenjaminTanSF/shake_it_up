@@ -1,8 +1,6 @@
 import React from 'react';
 import BaseSpiritList from '../base_spirits/base_spirits';
 import { Link } from 'react-router-dom';
-import Menu from '../menu';
-import Header from '../header';
 
 class Discover extends React.Component {
 
@@ -13,12 +11,25 @@ class Discover extends React.Component {
             <div id="hero-tag">
               Let's build a cocktail, together!
             </div>
-            <Link id="get-started" to="/byoc">Get Started</Link>
+            <Link id="get-started" to="/byoc">Get Started</Link>            
           </div>
           <div className="discover-featured">
             <h1>Featured Cocktails</h1>
-            <div className="discover-slideshow"></div>
           </div>
+          <div className="discover-slideshow">
+              <div className="discover-slideshow-item">
+                <Link to="/drinks/11003">Negroni</Link>
+              </div>
+              <div className = "discover-slideshow-item" >
+                <Link to="/drinks/17836">Acapulco</Link> 
+              </div>              
+              <div className = "discover-slideshow-item" >
+                <Link to="/drinks/11243">Chocolate Black Russian</Link> 
+              </div>              
+              <div className = "discover-slideshow-item" >
+                <Link to="/drinks/11375">Foxy Lady</Link> 
+              </div>              
+            </div>
           <div className="discover-base">
             <h1>Base Spirits</h1>
             <div className="discover-base-spiritlist">
