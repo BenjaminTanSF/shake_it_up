@@ -3,9 +3,6 @@ const router = express.Router();
 
 const DrinkDetail = require('../../model/DrinkDetail');
 
-
-console.log = console.log.bind(this);
-
 router.get('/:drink_name', (req, res) => {
   let name = req.params.drink_name;
   let regexName = name + "$";

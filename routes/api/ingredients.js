@@ -11,8 +11,6 @@ router.get('/', (req, res) => {
     .catch(err => res.status(404).json({ noingredientsfound: 'No ingredients found' }));
 });
 
-console.log = console.log.bind(this);
-
 router.get('/:ingredient_name', (req, res) => {
   let name = req.params.ingredient_name.toLowerCase();
   let regexName = name + "$";

@@ -77,7 +77,6 @@ class BYOCResults extends React.Component {
 	};
 
 	render() {
-		console.log(this.state);
 		if (this.state.drinks) {
 			return (
 				<div className="byoc-results-container">
