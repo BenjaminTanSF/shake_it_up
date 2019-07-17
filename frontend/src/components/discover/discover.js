@@ -9,12 +9,7 @@ class Discover extends React.Component {
   render() {
     return (
       <div className="discover-page-container">
-        
-        {/* <div className="discover-header">
-          <span>Shake it Up!</span>
-        </div> */}
           <div className="discover-hero">
-            {/* <div id="hero-image"></div> */}
             <div id="hero-tag">
               Let's build a cocktail, together!
             </div>
@@ -38,8 +33,6 @@ class Discover extends React.Component {
                 <Link id="d-bs-brandy" className="discover-spirit" to="">Brandy</Link>
             </div>
           </div>
-          {/* <Menu /> */}
-        {/* <div className="menu-temp"></div> */}
       </div>
     );
   }
@@ -49,3 +42,4 @@ class Discover extends React.Component {
 export default Discover;
 
 // TODO: Add "cocktail buddy" icon above "Get Started" link
+// TODO: Add link to "Shake it Up" header text to bring user back to Discover page

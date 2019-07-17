@@ -7,8 +7,8 @@ class BYOCPrompt extends React.Component {
     render() {
         return (
             <div className="byoc-container">
-               <h1>Pick your base spirit!</h1>
-                <div classname="byoc-grid-container">
+                <h1>Pick your base spirit!</h1>
+                <div className="byoc-grid-container">
                     <div className="byoc-spirits">
                         <Link id="d-bs-whiskey" className="byoc-grid-spirit" to="/byoc/:whiskey">Whiskey</Link>
                         <Link id="d-bs-vodka" className="byoc-grid-spirit" to="/byoc/:vodka">Vodka</Link>
