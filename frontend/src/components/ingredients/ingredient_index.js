@@ -19,37 +19,40 @@ class IngredientsIndex extends React.Component {
   updateSearch() {
     return e => {
       this.setState({
-        searchStr: e.target.value,
+        searchStr: e.currentTarget.value,
         shownIngredients: this.state.ingredients.filter(ingredient => (
-          ingredient.name.includes(this.state.searchStr)
+          ingredient.name.toLowerCase().includes(e.currentTarget.value.toLowerCase())
         ))
       })
     }
   }
   componentDidMount() {
-    this.props.fetchAllIngredients();
+    this.props.fetchAllIngredients(() => (this.setState({
+      ingredients: this.props.ingredients,
+      shownIngredients: this.props.ingredients,
+      searchStr: ""
+    })));
   }
 
   render() {
-    const { ingredients, loading } = this.props;
-    if (loading) { return <h1>LOADING</h1>; }
+    if (this.props.loading) { return <h1>LOADING</h1>; }
     else {
       return (
         <div className="ingred-idx-container">
 
           {/* Search Bar */}
           <div className="search-container">
-          <label>
-            <input type="text"
-              // value=""
-              // onChange=""
-              className="search"
-              placeholder="Search for a cocktail"/>
+            <label>
+              <input type="text"
+                value={this.state.searchStr}
+                onChange={this.updateSearch()}
+                className="search"
+                placeholder="Search for an ingredient" />
               {/* <span id = "emoji"> 🔍🔎 </span> */}
-          </label>
-       </div>
+            </label>
+          </div>
           <h1>Ingredients</h1>
-          {ingredients.map(ingredient => (
+          {this.state.shownIngredients.map(ingredient => (
             <div key={ingredient._id}>
               <Link to={{
                 pathname: `/ingredients/${ingredient.name}`,
