@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
-import BYOC from './components/byoc/byoc';
+import BYOCContainer from './components/byoc/byoc_container';
+import BYOCResults from './components/byoc/byoc-results';
 import Header from './components/header';
 import Menu from './components/menu';
 import Discover from './components/discover/discover';
@@ -25,7 +26,8 @@ function App() {
         <Route exact path="/ingredients" component={IngredientIndexContainer} />
         <Route exact path="/ingredients/:ingredient_name" component={IngredientShow} />
         <Route exact path="/drinks" component={DrinkIndexContainer} />
-        <Route exact path="/byoc" component={BYOC} />
+        <Route exact path="/byoc" component={BYOCContainer} />
+        <Route exact path="/byoc/:spirit_name" component={BYOCResults} />
         <Route path="/" component={Discover} />
         {/* <Route exact path="/drinks/:drink_id" component={DrinkShowContainer}/> */}
       </Switch>
