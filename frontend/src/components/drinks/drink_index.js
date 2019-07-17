@@ -1,18 +1,38 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // styles
 import '../../styles/drinks/drinks_index.scss';
 
 class DrinksIndex extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      drinks: props.drinks,
+      shownDrinks: props.drinks,
+      searchStr: ""
+    }
+    this.updateSearch = this.updateSearch.bind(this);
+  }
+
+  updateSearch() {
+    return e => {
+      this.setState({
+        searchStr: e.target.value,
+        shownDrinks: this.state.drinks.filter(drink => (
+          drink.strDrink.includes(this.state.searchStr)
+        ))
+      })
+    }
+  }
+
   componentDidMount() {
     this.props.fetchAllDrinks();
   }
-  
+
   render() {
     return (
-
 
      // Search Bar 
      <div className="drinks-index-container">
@@ -38,8 +58,9 @@ class DrinksIndex extends React.Component {
             </div>
           </Link>
         </div>
+
         )}
-     </div>
+      </div>
     )
   }
 
