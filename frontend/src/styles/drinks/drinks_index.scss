@@ -5,7 +5,8 @@
 // serif;
 
 .drinks-index-container {
-  // align-content: center;
+  align-content: center;
+  margin-bottom: 60px;
   background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
@@ -26,6 +27,7 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
  }
+
 
   h1 {
   color: black;
