@@ -30,10 +30,15 @@ export const receiveSingleDrink = drink => ({
   drink
 });
 
-export const fetchAllDrinks = () => dispatch => {
+export const fetchAllDrinks = (callback) => dispatch => {
   dispatch(startLoadingAllDrinks());
   return APIUtil.getDrinks().then(
-    drinks => { dispatch(receiveAllDrinks(drinks.data)) },
+    drinks => {
+      dispatch(receiveAllDrinks(drinks.data));
+      if (callback) {
+        callback();
+      }
+    },
     err => { dispatch(receiveDrinksErrors(err)) }
   )
 };

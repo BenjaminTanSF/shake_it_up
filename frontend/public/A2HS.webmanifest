@@ -1,0 +1,15 @@
+{
+  "background_color": "white",
+  "description": "Allows users to discover or revisit their favorite cocktail recipes",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "frontend/src/assets/icons/app_icon_192_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Shake It Up!",
+  "short_name": "ShakeItUp",
+  "start_url": "/"
+}

@@ -1,5 +1,6 @@
 .ingred-idx-container {
   align-content: center;
+  margin-bottom: 40px;
 
   h1 {
   color: black;
@@ -41,6 +42,37 @@
     sans-serif;
     font-size: 32px;
     color: black;
+  }
+
+  .search {
+    height: 40px;
+    border-radius: 2px;
+    text-indent: 25%;
+    width: 70%;
+    background-color: #fff;
+    border: 1px solid #dfe0e6;
+    color: #1c1c1f;
+    line-height: normal;
+    margin: 0;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9375em;
+    margin-bottom: 1em;
+    // outline: none;
+  }
+
+  .search::-webkit-input-placeholder {
+    -webkit-transition: opacity 0.3s linear;
+    color: gray;
+  }
+
+  .search:focus::-webkit-input-placeholder {
+    border-color: rgb(252, 154, 154) !important;
+    opacity: .3;
+  }
+
+  .search:active {
+    border-color: rgb(248, 87, 87);
   }
   
 }

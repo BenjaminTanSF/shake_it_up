@@ -10,7 +10,7 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
-  fetchAllIngredients: () => dispatch(fetchAllIngredients())
+  fetchAllIngredients: (callback) => dispatch(fetchAllIngredients(callback))
 })
 
 export default connect(
