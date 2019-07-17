@@ -4,7 +4,7 @@
   "display": "fullscreen",
   "icons": [
     {
-      "src": "frontend/src/assets/icons/app_icon_192_192.png",
+      "src": "icons/app_icon_192_192.png",
       "sizes": "192x192",
       "type": "image/png"
     }

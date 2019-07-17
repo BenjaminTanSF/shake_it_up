@@ -43,8 +43,9 @@ class DrinkShow extends React.Component {
         <div className="drink-show-desc">
           <h2>Ingredients</h2>
 
-          {/* // measurements */}
           <div className="drink-show-measure-ingr-wrapper">
+          
+            {/* // measurements */}
             <div>
               {Object.keys(this.props.drink).filter(key => key.includes('strMeasure') && this.props.drink[key] !== "").map(key =>
                 <div key={key}>{this.props.drink[key]}</div>
