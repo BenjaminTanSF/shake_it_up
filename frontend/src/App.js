@@ -17,11 +17,11 @@ function App() {
       {/* <Discover/> */}
 
       <Switch>
+        <Route exact path="/drinks/:drink_id" component={DrinkShowContainer}/>
         <Route exact path="/ingredients" component={IngredientIndexContainer} />
         <Route exact path="/ingredients/:ingredient_name" component={IngredientShow} />
         <Route exact path="/drinks" component={DrinkIndexContainer} />
         <Route path="/" component={Discover} />
-        {/* <Route exact path="/drinks/:drink_id" component={DrinksShowContainer}/> */}
       </Switch>
 
     </div>

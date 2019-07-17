@@ -19,10 +19,7 @@ class DrinkShow extends React.Component {
     return <h1>LOADING</h1>; 
   } 
 
-  const ing = () => {
-    
-  }
-
+// debugger
   return (
 
     <div className="drink-show-container">
@@ -34,10 +31,10 @@ class DrinkShow extends React.Component {
         <h2>Ingredients</h2>
         <ul>
 
-        {Object.values(this.state).map(value=> 
-          <li>{Object.values(value)}</li>
-          )}
-          
+        {Object.keys(this.state).filter(key => key.includes('strIngredient') && this.state[key] !== "").map(key => 
+          <li>{this.state[key]}</li>
+          )} 
+
         </ul>
         <h2>Instructions</h2>
         <div className="drink-show-desc">
