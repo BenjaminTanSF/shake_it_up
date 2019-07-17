@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import DrinksIndex from './drink_index';
+import DrinkIndex from './drink_index';
 import { fetchAllDrinks } from '../../actions/drinks_actions';
 
 const mSTP = state => {
@@ -17,5 +17,5 @@ const mDTP = dispatch => ({
 export default connect(
   mSTP,
   mDTP
-)(DrinksIndex);
+)(DrinkIndex);
 
