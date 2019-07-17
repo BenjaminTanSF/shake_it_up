@@ -17,12 +17,6 @@ class DrinkShow extends React.Component {
   if (this.props.loading) {
     return <h1>LOADING</h1>; 
   } 
-<<<<<<< HEAD
-  
-  
-debugger
-=======
->>>>>>> fc8973bd8be87a23ca67195c23995252745e7150
 
   return (
 
@@ -33,11 +27,9 @@ debugger
 
       <div className="drink-show-desc">
         <h2>Ingredients</h2>
-<<<<<<< HEAD
         <ul>
           
         </ul>
-=======
 
         {/* // measurements */}
         <div className="drink-show-measure-ingr-wrapper">
@@ -56,7 +48,6 @@ debugger
 
         </div>        
 
->>>>>>> fc8973bd8be87a23ca67195c23995252745e7150
         <h2>Instructions</h2>
         <div className="drink-show-desc">
           {this.props.drink.strInstructions}
