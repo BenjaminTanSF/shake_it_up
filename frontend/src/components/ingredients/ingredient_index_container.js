@@ -1,5 +1,7 @@
 import { connect } from 'react-redux';
+
 import IngredientIndex from './ingredient_index';
+
 import { fetchAllIngredients } from '../../actions/ingredients_actions';
 
 const mSTP = state => ({

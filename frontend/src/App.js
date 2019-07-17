@@ -8,7 +8,6 @@ import Menu from './components/menu';
 import Discover from './components/discover/discover';
 import DrinkIndexContainer from './components/drinks/drink_index_container';
 import DrinkShowContainer from './components/drinks/drink_show_container';
-
 import IngredientIndexContainer from './components/ingredients/ingredient_index_container';
 import IngredientShow from './components/ingredients/ingredient_show';
 
@@ -23,6 +22,7 @@ function App() {
       {/* <Discover/> */}
 
       <Switch>
+
         <Route exact path="/ingredients" component={IngredientIndexContainer} />
         <Route exact path="/ingredients/:ingredient_name" component={IngredientShow} />
         <Route exact path="/drinks" component={DrinkIndexContainer} />
