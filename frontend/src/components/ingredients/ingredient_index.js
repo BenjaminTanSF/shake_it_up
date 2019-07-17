@@ -49,7 +49,7 @@ class IngredientsIndex extends React.Component {
             </label>
           </div>
           <h1>Ingredients</h1>
-          {this.state.shownIngredients.slice(0, 10).map(ingredient => {
+          {this.state.shownIngredients.map(ingredient => {
             let fileName = ingredient.strIngredientThumb.slice(82, (ingredient.strIngredientThumb.length - 9))
             return (
               < div key={ingredient._id} >
