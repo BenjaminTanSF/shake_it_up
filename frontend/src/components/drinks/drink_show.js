@@ -10,6 +10,7 @@ class DrinkShow extends React.Component {
   }
 
   componentDidMount() {
+    // debugger
     this.props.fetchSingleDrink(this.props.match.params.drink_id).then(this.setState(this.props.drink));
   }
 
@@ -24,8 +25,8 @@ class DrinkShow extends React.Component {
 
     <div className="drink-show-container">
 
-      <h1>{this.state.strDrink}</h1>
-      <img className="drink-show-img" width="90%" alt={this.state.strDrink} src={this.state.strDrinkThumb}/>
+      <h1>{this.props.drink.strDrink}</h1>
+      <img className="drink-show-img" width="90%" alt={this.props.drink.strDrink} src={this.props.drink.strDrinkThumb}/>
 
       <div className="drink-show-desc">
         <h2>Ingredients</h2>
@@ -33,15 +34,15 @@ class DrinkShow extends React.Component {
 {/* // measurements */}
 <div className="drink-show-measure-ingr-wrapper">
   <div>
-        {Object.keys(this.state).filter(key => key.includes('strMeasure') && this.state[key] !== "").map(key => 
-          <div>{this.state[key]}</div>
+        {Object.keys(this.props.drink).filter(key => key.includes('strMeasure') && this.props.drink[key] !== "").map(key => 
+          <div>{this.props.drink[key]}</div>
           )} 
   </div>
 
   <div>
 {/* // ingredients */}
-        {Object.keys(this.state).filter(key => key.includes('strIngredient') && this.state[key] !== "").map(key =>
-          <div>{this.state[key]}</div>
+        {Object.keys(this.props.drink).filter(key => key.includes('strIngredient') && this.props.drink[key] !== "").map(key =>
+          <div>{this.props.drink[key]}</div>
         )} 
   </div>
 
@@ -49,7 +50,7 @@ class DrinkShow extends React.Component {
 
         <h2>Instructions</h2>
         <div className="drink-show-desc">
-          {this.state.strInstructions}
+          {this.props.drink.strInstructions}
         </div>
 
       </div>

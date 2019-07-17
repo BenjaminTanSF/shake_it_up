@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import '../../styles/ingredients/ingredient_show.scss';
+
+
 const IngredientShow = props => {
   const { ingredient } = props.location.state;
 

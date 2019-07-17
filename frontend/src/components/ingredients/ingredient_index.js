@@ -3,6 +3,8 @@ import IngredientShow from './ingredient_show';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
+import '../../styles/ingredients/ingredient_index.scss';
+
 class IngredientsIndex extends React.Component {
   componentDidMount() {
     this.props.fetchAllIngredients();
