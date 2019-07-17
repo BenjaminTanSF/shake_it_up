@@ -15,14 +15,14 @@ class DrinksIndex extends React.Component {
 
      <div className="drinks-index-container">
 
-       <h1>All Drinks</h1>
+       <h1>Drinks</h1>
        
        {Object.values(this.props.drinks).map(drink=>
         <div className="drink-index-tile" key={drink.idDrink}>
           <Link to={`/drinks/${drink.idDrink}`}>
             <img alt={drink.strDrink} className="drink-idx-img" src={drink.strDrinkThumb} width="70%"/>
             <br/>
-            <div className="drinks-index-name">
+            <div className="drink-index-name">
               {drink.strDrink}
             </div>
           </Link>

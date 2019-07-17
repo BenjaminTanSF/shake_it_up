@@ -1,6 +1,5 @@
 import React from 'react';
 
-// styles
 import '../../styles/drinks/drink_show.scss';
 
 class DrinkShow extends React.Component { 
@@ -10,7 +9,6 @@ class DrinkShow extends React.Component {
   }
 
   componentDidMount() {
-    // debugger
     this.props.fetchSingleDrink(this.props.match.params.drink_id).then(this.setState(this.props.drink));
   }
 
@@ -20,33 +18,32 @@ class DrinkShow extends React.Component {
     return <h1>LOADING</h1>; 
   } 
 
-// debugger
   return (
 
     <div className="drink-show-container">
 
       <h1>{this.props.drink.strDrink}</h1>
-      <img className="drink-show-img" width="90%" alt={this.props.drink.strDrink} src={this.props.drink.strDrinkThumb}/>
+      <img className="drink-show-img" alt={this.props.drink.strDrink} src={this.props.drink.strDrinkThumb}/>
 
       <div className="drink-show-desc">
         <h2>Ingredients</h2>
 
-{/* // measurements */}
-<div className="drink-show-measure-ingr-wrapper">
-  <div>
-        {Object.keys(this.props.drink).filter(key => key.includes('strMeasure') && this.props.drink[key] !== "").map(key => 
-          <div>{this.props.drink[key]}</div>
+        {/* // measurements */}
+        <div className="drink-show-measure-ingr-wrapper">
+          <div>
+            {Object.keys(this.props.drink).filter(key => key.includes('strMeasure') && this.props.drink[key] !== "").map(key => 
+              <div>{this.props.drink[key]}</div>
+              )} 
+          </div>
+
+        {/* // ingredients */}
+          <div>
+          {Object.keys(this.props.drink).filter(key => key.includes('strIngredient') && this.props.drink[key] !== "").map(key =>
+            <div>{this.props.drink[key]}</div>
           )} 
-  </div>
+          </div>
 
-  <div>
-{/* // ingredients */}
-        {Object.keys(this.props.drink).filter(key => key.includes('strIngredient') && this.props.drink[key] !== "").map(key =>
-          <div>{this.props.drink[key]}</div>
-        )} 
-  </div>
-
-</div>        
+        </div>        
 
         <h2>Instructions</h2>
         <div className="drink-show-desc">
