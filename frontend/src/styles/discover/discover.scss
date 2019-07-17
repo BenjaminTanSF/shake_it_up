@@ -102,6 +102,17 @@ h1 {
   padding: 5px 0px 5px 0px;
 }
 
+.discover-header a {
+  font-family: house-script,
+  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 5px 0px 5px 0px;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
 .discover-hero {
   position: relative;
   top: 20px;
@@ -132,6 +143,12 @@ h1 {
   margin: auto;
   margin-bottom: 20px;
   line-height: 50px;
+}
+
+#cb {
+  width: 15px;
+  height: 15px;
+  position: absolute;
 }
 
 .discover-body {
@@ -165,9 +182,22 @@ h1 {
 }
 
 .discover-slideshow {
-  background-color: gray;
-  border-radius: 8px;
-  height: 150px;
+  height: 200px;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: scroll
+}
+
+.discover-slideshow-item {
+  background-color: rgb(61, 61, 61);
+  height: 200px;
+}
+
+.discover-slideshow-item a {
+  text-decoration: none;
+  color: white;
 }
 
 .discover-base {
