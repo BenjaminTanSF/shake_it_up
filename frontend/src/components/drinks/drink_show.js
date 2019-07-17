@@ -18,6 +18,21 @@ class DrinkShow extends React.Component {
       return <h1>LOADING</h1>;
     }
 
+    const DisplayInstrucs = () => {
+      if (this.props.drink.strInstructions !== "") {
+        return (
+          <>
+            <h2>Instructions</h2>
+            <div className="drink-show-desc">
+              {this.props.drink.strInstructions}
+            </div>
+          </>
+        )
+      } else {
+        return null;
+      }
+    }
+
     return (
 
       <div className="drink-show-container">
@@ -44,11 +59,8 @@ class DrinkShow extends React.Component {
             </div>
 
           </div>
-
-          <h2>Instructions</h2>
-          <div className="drink-show-desc">
-            {this.props.drink.strInstructions}
-          </div>
+          
+          <DisplayInstrucs/>
 
         </div>
 
