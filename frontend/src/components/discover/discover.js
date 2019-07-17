@@ -42,4 +42,3 @@ class Discover extends React.Component {
 export default Discover;
 
 // TODO: Add "cocktail buddy" icon above "Get Started" link
-// TODO: Add link to "Shake it Up" header text to bring user back to Discover page
