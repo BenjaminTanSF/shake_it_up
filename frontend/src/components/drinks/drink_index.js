@@ -51,7 +51,7 @@ class DrinksIndex extends React.Component {
           </label>
         </div>
         <div id="drink-index-h1-container">
-          <h1>Cocktails</h1>
+          <h1 id="cocktails-h1">Cocktails</h1>
         </div>
         
 
