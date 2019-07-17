@@ -1,7 +1,8 @@
 import React from 'react';
-import IngredientShow from './ingredient_show';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
+
+import '../../styles/ingredients/ingredient_index.scss';
 
 class IngredientsIndex extends React.Component {
   componentDidMount() {
@@ -13,9 +14,8 @@ class IngredientsIndex extends React.Component {
     if (loading) { return <h1>LOADING</h1>; }
     else {
       return (
-        <div>
-          <h1>Ingredients Index</h1>
-          <ul>
+        <div className="ingred-idx-container">
+          <h1>Ingredients</h1>
             {ingredients.map(ingredient => (
               <div key={ingredient._id}>
                 <Link to={{
@@ -24,13 +24,18 @@ class IngredientsIndex extends React.Component {
                     ingredient: ingredient
                   }
                 }}>
-                  <img src={ingredient.strIngredientThumb} alt={ingredient.name} />
-                  {ingredient.name}
+                  {/* <img src={ingredient.strIngredientThumb} alt={ingredient.name} />
+                  {ingredient.name} */}
+
+                  {/* placeholder until imgs move from GH to AWS */}
+                  <img src="https://img.discogs.com/gG_ZrnTKaTktYrQ8TwfXletVbe8=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/L-213313-1286891070.jpeg.jpg" className="ingred-idx-img" width="90%" alt={ingredient.name} /> 
+                  <div className="ingred-idx-name">
+                    {ingredient.name}
+                  </div>
                 </Link>
                 <br />
               </div>
             ))}
-          </ul>
         </div>
       )
     }
