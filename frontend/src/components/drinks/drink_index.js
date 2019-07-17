@@ -13,51 +13,56 @@ class DrinksIndex extends React.Component {
       shownDrinks: props.drinks,
       searchStr: ""
     }
+    // debugger
     this.updateSearch = this.updateSearch.bind(this);
   }
 
   updateSearch() {
     return e => {
       this.setState({
-        searchStr: e.target.value,
+        searchStr: e.currentTarget.value,
         shownDrinks: this.state.drinks.filter(drink => (
-          drink.strDrink.includes(this.state.searchStr)
+          drink.strDrink.toLowerCase().includes(e.currentTarget.value.toLowerCase())
         ))
       })
     }
   }
 
   componentDidMount() {
-    this.props.fetchAllDrinks();
+    this.props.fetchAllDrinks(() => (this.setState({
+      drinks: this.props.drinks,
+      shownDrinks: this.props.drinks,
+      searchStr: ""
+    })));
   }
 
   render() {
     return (
 
-     // Search Bar 
-     <div className="drinks-index-container">
-       <div className="search-container">
+      // Search Bar 
+      <div className="drinks-index-container">
+        <div className="search-container">
           <label>
-          <input type="text"
-              // value=""
-              // onChange=""
+            <input type="text"
+              value={this.state.searchStr}
+              onChange={this.updateSearch()}
               className="search"
-              placeholder="Search for a cocktail"/>
-              {/* <span id = "emoji"> 🔍🔎 </span> */}
+              placeholder="Search for a cocktail" />
+            {/* <span id = "emoji"> 🔍🔎 </span> */}
           </label>
-       </div>
-       <h1>Drinks</h1>
-       
-       {Object.values(this.props.drinks).map(drink=>
-        <div className="drink-index-tile" key={drink.idDrink}>
-          <Link to={`/drinks/${drink.idDrink}`}>
-            <img alt={drink.strDrink} className="drink-idx-img" src={drink.strDrinkThumb} width="70%"/>
-            <br/>
-            <div className="drink-index-name">
-              {drink.strDrink}
-            </div>
-          </Link>
         </div>
+        <h1>Drinks</h1>
+
+        {Object.values(this.state.shownDrinks).map(drink =>
+          <div className="drink-index-tile" key={drink.idDrink}>
+            <Link to={`/drinks/${drink.idDrink}`}>
+              <img alt={drink.strDrink} className="drink-idx-img" src={drink.strDrinkThumb} width="70%" />
+              <br />
+              <div className="drink-index-name">
+                {drink.strDrink}
+              </div>
+            </Link>
+          </div>
 
         )}
       </div>
