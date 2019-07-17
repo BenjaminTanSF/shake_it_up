@@ -38,6 +38,8 @@ class IngredientsIndex extends React.Component {
     else {
       return (
         <div className="ingred-idx-container">
+
+          {/* Search Bar */}
           <div className="search-container">
             <label>
               <input type="text"
