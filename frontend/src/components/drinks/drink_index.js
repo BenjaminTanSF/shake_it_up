@@ -13,8 +13,19 @@ class DrinksIndex extends React.Component {
   render() {
     return (
 
-     <div className="drinks-index-container">
 
+     // Search Bar 
+     <div className="drinks-index-container">
+       <div className="search-container">
+          <label>
+          <input type="text"
+              // value=""
+              // onChange=""
+              className="search"
+              placeholder="Search for a cocktail"/>
+              {/* <span id = "emoji"> 🔍🔎 </span> */}
+          </label>
+       </div>
        <h1>Drinks</h1>
        
        {Object.values(this.props.drinks).map(drink=>

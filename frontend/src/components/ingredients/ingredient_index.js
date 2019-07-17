@@ -15,6 +15,16 @@ class IngredientsIndex extends React.Component {
     else {
       return (
         <div className="ingred-idx-container">
+          <div className="search-container">
+          <label>
+            <input type="text"
+              // value=""
+              // onChange=""
+              className="search"
+              placeholder="Search for a cocktail"/>
+              {/* <span id = "emoji"> 🔍🔎 </span> */}
+          </label>
+       </div>
           <h1>Ingredients</h1>
             {ingredients.map(ingredient => (
               <div key={ingredient._id}>
