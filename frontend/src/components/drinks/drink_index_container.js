@@ -11,7 +11,7 @@ const mSTP = state => {
 
 
 const mDTP = dispatch => ({
-  fetchAllDrinks: () => dispatch(fetchAllDrinks())
+  fetchAllDrinks: (callback) => dispatch(fetchAllDrinks(callback))
 });
 
 export default connect(

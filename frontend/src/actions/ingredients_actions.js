@@ -33,10 +33,15 @@ export const fetchDrinksByIngredient = IngredientName => dispatch => {
   )
 };
 
-export const fetchAllIngredients = () => dispatch => {
+export const fetchAllIngredients = (callback) => dispatch => {
   dispatch(startLoadingAllIngredients());
   return APIUtil.getIngredients().then(
-    ingredients => { dispatch(receiveAllIngredients(ingredients.data)) },
+    ingredients => {
+      dispatch(receiveAllIngredients(ingredients.data));
+      if (callback) {
+        callback();
+      }
+    },
     err => { dispatch(receiveIngredientsErrors(err)) }
   )
 };
