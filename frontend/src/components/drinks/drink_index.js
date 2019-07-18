@@ -13,7 +13,6 @@ class DrinksIndex extends React.Component {
       shownDrinks: props.drinks,
       searchStr: ""
     }
-    // debugger
     this.updateSearch = this.updateSearch.bind(this);
   }
 
@@ -51,20 +50,23 @@ class DrinksIndex extends React.Component {
             {/* <span id = "emoji"> 🔍🔎 </span> */}
           </label>
         </div>
-        <h1>Drinks</h1>
+        <div id="drink-index-h1-container">
+          <h1 id="cocktails-h1">Cocktails</h1>
+        </div>
 
-        {Object.values(this.state.shownDrinks).map(drink =>
-          <div className="drink-index-tile" key={drink.idDrink}>
-            <Link to={`/drinks/${drink.idDrink}`}>
-              <img alt={drink.strDrink} className="drink-idx-img" src={drink.strDrinkThumb} width="70%" />
-              <br />
-              <div className="drink-index-name">
-                {drink.strDrink}
-              </div>
-            </Link>
-          </div>
 
-        )}
+        <div className="drink-tile-container">
+          {Object.values(this.state.shownDrinks).map(drink =>
+            <div className="drink-index-tile" key={drink.idDrink}>
+              <Link to={`/drinks/${drink.idDrink}`}>
+                <img alt={drink.strDrink} className="drink-idx-img" src={drink.strDrinkThumb} width="70%" />
+                <span className="drink-index-name">{drink.strDrink}</span>
+              </Link>
+              <hr></hr>
+            </div>
+          )}
+
+        </div>
       </div>
     )
   }
@@ -72,3 +74,7 @@ class DrinksIndex extends React.Component {
 
 }
 export default DrinksIndex;
+
+// TODO: Styling for Drinks Index results
+// TODO: Styling / Interaction Design for Search Bar
+// TODO: Add drink ingredients below drink title

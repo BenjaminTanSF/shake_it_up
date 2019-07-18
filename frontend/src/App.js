@@ -11,17 +11,13 @@ import DrinkShowContainer from './components/drinks/drink_show_container';
 import IngredientIndexContainer from './components/ingredients/ingredient_index_container';
 import IngredientShow from './components/ingredients/ingredient_show';
 
+
 function App() {
   return (
     <div className="shake-it-up-container">
-      <Link to="/">
-      </Link>
-      <br/><br/>
-        <Switch>
-          <Route exact path="/drinks/" component={DrinkIndexContainer}/>
-          <Route exact path="/drinks/:drink_id/" component={DrinkShowContainer}/>
-          <Route path="/" component={Discover}/>
+      <Header />
       
+      <Switch>
         <Route exact path="/ingredients" component={IngredientIndexContainer} />
         <Route exact path="/ingredients/:ingredient_name" component={IngredientShow} />
         <Route exact path="/drinks/:drink_id" component={DrinkShowContainer} />
@@ -31,6 +27,7 @@ function App() {
         <Route exact path="/byoc/:spirit_name" component={BYOCResults} />
         <Route path="/" component={Discover} />
       </Switch>
+
       < Menu />
     </div>
   );
