@@ -53,19 +53,19 @@ class DrinksIndex extends React.Component {
         <div id="drink-index-h1-container">
           <h1 id="cocktails-h1">Cocktails</h1>
         </div>
-        
+
 
         <div className="drink-tile-container">
-        {Object.values(this.state.shownDrinks).slice(0,20).map(drink =>
-          <div className="drink-index-tile" key={drink.idDrink}>
-            <Link to={`/drinks/${drink.idDrink}`}>
-              <img alt={drink.strDrink} className="drink-idx-img" src={drink.strDrinkThumb} width="70%" />
-              <span className="drink-index-name">{drink.strDrink}</span>
-            </Link>
-            <hr></hr>
-          </div>
-        )}
-        
+          {Object.values(this.state.shownDrinks).map(drink =>
+            <div className="drink-index-tile" key={drink.idDrink}>
+              <Link to={`/drinks/${drink.idDrink}`}>
+                <img alt={drink.strDrink} className="drink-idx-img" src={drink.strDrinkThumb} width="70%" />
+                <span className="drink-index-name">{drink.strDrink}</span>
+              </Link>
+              <hr></hr>
+            </div>
+          )}
+
         </div>
       </div>
     )
