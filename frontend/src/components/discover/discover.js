@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 class Discover extends React.Component {
 
   render() {
-    console.log('discover');
     return (
       <div className="discover-page-container">
         <div className="discover-hero">
@@ -23,7 +22,7 @@ class Discover extends React.Component {
             <div className="discover-slideshow-item">
               <Link to="/drinks/11003">
                 <img className="discover-slideshow-img" src="https://www.thecocktaildb.com/images/media/drink/qgdu971561574065.jpg" alt="Negroni" />
-              <div className="discover-slideshow-title">Negroni</div>
+                <div className="discover-slideshow-title">Negroni</div>
               </Link>
             </div>
             <div className="discover-slideshow-item" >
@@ -34,25 +33,25 @@ class Discover extends React.Component {
             </div>
             <div className="discover-slideshow-item" >
               <Link to="/drinks/11243">
-                <img className="discover-slideshow-img" src="https://www.thecocktaildb.com/images/media/drink/yyvywx1472720879.jpg" alt="Chocolate Black Russian"/>
-                  <div className="discover-slideshow-title">Chocolate Black Russian</div>
+                <img className="discover-slideshow-img" src="https://www.thecocktaildb.com/images/media/drink/yyvywx1472720879.jpg" alt="Chocolate Black Russian" />
+                <div className="discover-slideshow-title">Chocolate Black Russian</div>
               </Link>
             </div>
             <div className="discover-slideshow-item" >
               <Link to="/drinks/11375">
-                <img className="discover-slideshow-img" src="https://www.thecocktaildb.com/images/media/drink/r9cz3q1504519844.jpg" alt="Foxy Lady"/>
+                <img className="discover-slideshow-img" src="https://www.thecocktaildb.com/images/media/drink/r9cz3q1504519844.jpg" alt="Foxy Lady" />
                 <div className="discover-slideshow-title">Foxy Lady</div>
               </Link>
             </div>
             <div className="discover-slideshow-item" >
               <Link to="/drinks/11009">
-                <img className="discover-slideshow-img" src="https://www.thecocktaildb.com/images/media/drink/3pylqc1504370988.jpg" alt="Moscow Mule"/>
+                <img className="discover-slideshow-img" src="https://www.thecocktaildb.com/images/media/drink/3pylqc1504370988.jpg" alt="Moscow Mule" />
                 <div className="discover-slideshow-title">Moscow Mule</div>
               </Link>
             </div>
             <div className="discover-slideshow-item" >
               <Link to="/drinks/14229">
-                <img className="discover-slideshow-img" src="https://www.thecocktaildb.com/images/media/drink/xxsxqy1472668106.jpg" alt="747"/>
+                <img className="discover-slideshow-img" src="https://www.thecocktaildb.com/images/media/drink/xxsxqy1472668106.jpg" alt="747" />
                 <div className="discover-slideshow-title">747</div>
               </Link>
             </div>
@@ -74,25 +73,23 @@ class Discover extends React.Component {
                 <div className="discover-slideshow-title">Banana Daiquiri</div>
               </Link>
             </div>
-            <div className="discover-slideshow-item" >
-              <Link to="/drinks/11009">Moscow Mule</Link>
-            </div>
-            <div className="discover-slideshow-item" >
-              <Link to="/drinks/14229">747</Link>
-            </div>
-            <div className="discover-slideshow-item" >
-              <Link to="/drinks/15300">3-Mile Long Island Iced Tea</Link>
-            </div>
-            <div className="discover-slideshow-item" >
-              <Link to="/drinks/17079">Baby Guinness</Link>
-            </div>
-            <div className="discover-slideshow-item" >
-              <Link to="/drinks/17267">Bahama Mama</Link>
-            </div>
           </div>
 
         </div>
-        <BaseSpiritList />
+        <div className="discover-base">
+          <h1>Base Spirits</h1>
+          <div className="discover-base-spiritlist">
+            {/* <Link id="d-bs-whiskey" className="discover-spirit" to="">Whiskey</Link> */}
+            <div className="bs-overlay">
+              <Link id="d-bs-whiskey" className="discover-spirit" to="">Whiskey</Link>
+            </div>
+            <Link id="d-bs-vodka" className="discover-spirit" to="">Rum</Link>
+            <Link id="d-bs-tequila" className="discover-spirit" to="">Vodka</Link>
+            <Link id="d-bs-rum" className="discover-spirit" to="">Tequila</Link>
+            <Link id="d-bs-gin" className="discover-spirit" to="">Gin</Link>
+            <Link id="d-bs-brandy" className="discover-spirit" to="">Brandy</Link>
+          </div>
+        </div>
       </div>
     );
   }
