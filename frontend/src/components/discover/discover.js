@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 class Discover extends React.Component {
 
   render() {
+    console.log('discover');
     return (
       <div className="discover-page-container">
         <div className="discover-hero">
@@ -73,23 +74,25 @@ class Discover extends React.Component {
                 <div className="discover-slideshow-title">Banana Daiquiri</div>
               </Link>
             </div>
+            <div className="discover-slideshow-item" >
+              <Link to="/drinks/11009">Moscow Mule</Link>
+            </div>
+            <div className="discover-slideshow-item" >
+              <Link to="/drinks/14229">747</Link>
+            </div>
+            <div className="discover-slideshow-item" >
+              <Link to="/drinks/15300">3-Mile Long Island Iced Tea</Link>
+            </div>
+            <div className="discover-slideshow-item" >
+              <Link to="/drinks/17079">Baby Guinness</Link>
+            </div>
+            <div className="discover-slideshow-item" >
+              <Link to="/drinks/17267">Bahama Mama</Link>
+            </div>
           </div>
 
         </div>
-        <div className="discover-base">
-          <h1>Base Spirits</h1>
-          <div className="discover-base-spiritlist">
-            {/* <Link id="d-bs-whiskey" className="discover-spirit" to="">Whiskey</Link> */}
-            <div className="bs-overlay">
-              <Link id="d-bs-whiskey" className="discover-spirit" to="">Whiskey</Link>
-            </div>
-            <Link id="d-bs-vodka" className="discover-spirit" to="">Rum</Link>
-            <Link id="d-bs-tequila" className="discover-spirit" to="">Vodka</Link>
-            <Link id="d-bs-rum" className="discover-spirit" to="">Tequila</Link>
-            <Link id="d-bs-gin" className="discover-spirit" to="">Gin</Link>
-            <Link id="d-bs-brandy" className="discover-spirit" to="">Brandy</Link>
-          </div>
-        </div>
+        <BaseSpiritList />
       </div>
     );
   }
