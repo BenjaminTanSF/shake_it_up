@@ -1,3 +1,5 @@
+// Base Spirit Selection
+
 .byoc-container {
     display: flex;
     flex-direction: column;
@@ -36,4 +38,29 @@
     font-weight: 400;
     font-style: normal;
     font-size: 30px;
+}
+
+// Compatible Ingredients
+
+.byoc-results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.byoc-result-compatible-card {
+    
+}
+
+// Compatible Cocktails
+
+.byoc-result-drinks-container {
+    width: 90%;
+    margin: 0px 20px;
+}
+
+.byoc-result-drink-card img {
+    width: 100%;
 }

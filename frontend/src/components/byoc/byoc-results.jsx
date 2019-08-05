@@ -91,7 +91,7 @@ class BYOCResults extends React.Component {
 							let fileName = ingredient.imageURL.slice(82, (ingredient.imageURL.length - 9))
 							return (
 								<div className="byoc-result-compatible-card" key={ingredient.name} onClick={this.updateIng(ingredient.name)}>
-									<img src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} />
+									{/* <img src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} /> */}
 									<span>{ingredient.name}</span>
 								</div>
 							)
@@ -100,8 +100,8 @@ class BYOCResults extends React.Component {
 
 					<br />
 
-					<h1>Potential Drinks</h1>
 					<div className="byoc-result-drinks-container">
+						<h1>Potential Drinks</h1>
 						{this.state.drinks.map(drink => (
 							<div className="byoc-result-drink-card" key={drink.idDrink}>
 								<Link

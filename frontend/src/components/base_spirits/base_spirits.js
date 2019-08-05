@@ -8,40 +8,21 @@ class BaseSpiritList extends React.Component {
 
 
   render() {
-    
     return (
-      <div className="base-spirit-container">
-        <div className="item-1">
-          <Link to="/drinks/">
-            Rum
-          </Link>
+      <div className="discover-base">
+      <h1>Base Spirits</h1>
+      <div className="discover-base-spiritlist">
+        {/* <Link id="d-bs-whiskey" className="discover-spirit" to="">Whiskey</Link> */}
+        <div className="bs-overlay">
+          <Link id="d-bs-whiskey" className="discover-spirit" to="ingredients/whiskey">Whiskey</Link>
         </div>
-        <div className="item-2">
-          <Link to ="/drinks/">
-            Gin
-          </Link>
-        </div>
-        <div className="item-3">
-          <Link to ="/drinks/">
-            Whiskey
-          </Link>
-        </div>
-        <div className="item-4">
-        <Link to ="/drinks/">
-          Tequila
-        </Link>  
-        </div>
-        <div className="item-5">
-        <Link to ="/drinks/">
-          Brandy
-        </Link>
-        </div>
-        <div className="item-6">
-        <Link to ="/drinks/">
-          Vodka
-        </Link>
-        </div>
+        <Link id="d-bs-vodka" className="discover-spirit" to="ingredients/rum">Rum</Link>
+        <Link id="d-bs-tequila" className="discover-spirit" to="ingredients/vodka">Vodka</Link>
+        <Link id="d-bs-rum" className="discover-spirit" to="ingredients/tequila">Tequila</Link>
+        <Link id="d-bs-gin" className="discover-spirit" to="ingredients/gin">Gin</Link>
+        <Link id="d-bs-brandy" className="discover-spirit" to="ingredients/brandy">Brandy</Link>
       </div>
+    </div>
 
 
     );
