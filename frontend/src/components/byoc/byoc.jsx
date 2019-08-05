@@ -15,6 +15,10 @@ class BYOCPrompt extends React.Component {
 			}
 		));
 
+		if (this.props.loading) {
+			return <h1>LOADING</h1>;
+		}
+
 		return (
 			<div className="byoc-container">
 				<h1>Pick your base spirit!</h1>
