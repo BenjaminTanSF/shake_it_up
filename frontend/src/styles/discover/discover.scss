@@ -184,7 +184,7 @@ h1 {
 .discover-slideshow-wrapper {
   overflow-x: scroll;
   align-items: center;
-
+  overflow-y:hidden;
   position: relative;
 }
 
@@ -211,15 +211,19 @@ h1 {
 }
 
 .discover-slideshow-title {
-  font-size: 24px;
+  font-size: 32px;
   font-family: house-script, sans-serif;
   color: white;
   font-weight: 400;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 10px;
+  top: -71px;
+  // bottom: 10px;
   margin: auto;
+  // max-height: 100px;
+  // padding-top: 200px;
+    padding-bottom: 40px;
   // -webkit-text-fill-color: white; /*overrides color*/
   // -webkit-text-stroke-width: 1px;
   // -webkit-text-stroke-color: black;
