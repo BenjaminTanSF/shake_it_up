@@ -183,6 +183,8 @@ h1 {
 
 .discover-slideshow-wrapper {
   overflow-x: scroll;
+  align-items: center;
+  align-content: center;
 }
 
 .discover-slideshow {
@@ -196,6 +198,11 @@ h1 {
 .discover-slideshow-item {
   background-color: rgb(61, 61, 61);
   height: 200px;
+}
+
+.discover-slideshow-img {
+  height: 50%;
+  border-radius: 5px;
 }
 
 .discover-slideshow-item a {
