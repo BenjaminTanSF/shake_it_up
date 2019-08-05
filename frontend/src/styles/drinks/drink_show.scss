@@ -10,6 +10,7 @@
   align-content: center;
   margin-bottom: 55px;
   background-color: #f7f7f7;
+  // margin-bottom: 25px;
 
   h1 {
   color: black;
@@ -44,12 +45,31 @@
     font-family: 'Pontano Sans', sans-serif;
     font-size: 14px;
   }
-
 }
 
 .drink-show-measure-ingr-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-left: 20%;
   margin-right: 20%;
+}
+
+.ds-tile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 8px;
+  width: 90%;
+}
+
+
+ hr {
+    width: 95%;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }

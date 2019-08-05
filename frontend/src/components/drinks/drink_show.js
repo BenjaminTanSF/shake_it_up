@@ -39,34 +39,58 @@ class DrinkShow extends React.Component {
 
       <div className="drink-show-container">
 
+
         <img className="drink-show-img" alt={drink.strDrink} src={drink.strDrinkThumb} />
         <h1>{drink.strDrink}</h1>
 
         <div className="drink-show-desc">
+
+          <div className="ds-tile-container">
           <h2>Ingredients</h2>
+            <div className="drink-show-measure-ingr-wrapper">
 
-          <div className="drink-show-measure-ingr-wrapper">
+              {/* // measurements */}
+              <div>
+                {Object.keys(drink).filter(key => key.includes('strMeasure') && drink[key] !== "").map(key =>
+                  <div className="ds-measure-item" key={key}>
+                    {drink[key]}
+                    <hr />
+                  </div>
+                )}
+              </div>
 
-            {/* // measurements */}
-            <div>
-              {Object.keys(drink).filter(key => key.includes('strMeasure') && drink[key] !== "").map(key =>
-                <div key={key}>{drink[key]}</div>
-              )}
-            </div>
-
-            {/* // ingredients */}
-            <div>
-              {Object.keys(drink).filter(key => key.includes('strIngredient') && drink[key] !== "").map(key =>
-                <div key={key}>{drink[key]}</div>
-              )}
+              {/* // ingredients */}
+              <div>
+                {Object.keys(drink).filter(key => key.includes('strIngredient') && drink[key] !== "").map(key =>
+                  <div className="ds-ing-item" key={key}>
+                    {drink[key]}
+                    <hr/>
+                  </div>
+                )}
+              </div>
             </div>
 
           </div>
 
-          <DisplayInstrucs />
+
+          <div>&nbsp;</div>
+
+          {/* <DisplayInstrucs /> */}
+
+          {drink.strInstructions !== "" ? 
+          <>
+            <div className="ds-tile-container">
+              <h2>Instructions</h2>
+              <div className="drink-show-desc">
+                {drink.strInstructions}
+              </div>
+            </div>
+          </> 
+            : null}
 
         </div>
 
+        <div>&nbsp;</div>
       </div>)
   }
 
