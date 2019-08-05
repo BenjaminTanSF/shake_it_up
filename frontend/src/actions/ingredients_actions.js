@@ -25,10 +25,11 @@ export const receiveDrinksByIngredient = ingredientObjs => ({
   ingredientObjs
 });
 
-export const fetchDrinksByIngredient = IngredientName => dispatch => {
+export const fetchDrinksByIngredient = (IngredientName, callback) => dispatch => {
   dispatch(startLoadingDrinksByIngredient());
   return APIUtil.searchIngredientByName(IngredientName).then(
-    ingredientObjs => { dispatch(receiveDrinksByIngredient(ingredientObjs.data)) },
+    ingredientObjs => { dispatch(receiveDrinksByIngredient(ingredientObjs.data));
+    if(callback) {callback();} },
     err => dispatch(receiveIngredientsErrors(err))
   )
 };
