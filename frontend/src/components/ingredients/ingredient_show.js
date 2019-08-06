@@ -52,7 +52,7 @@ class  IngredientShow extends React.Component  {
       <div className="ingred-show-container">
         <h1>{CapIngredName(ingredient.name)}</h1>
         <div className="is-img-wrapper">
-          <img src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} />
+          <img className="ingred-show-img" src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} />
         </div>
         <div className="is-tile-container">
           <h2>Description</h2>

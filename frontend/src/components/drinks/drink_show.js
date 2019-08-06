@@ -50,8 +50,8 @@ class DrinkShow extends React.Component {
         }
       }
 
-      return result.map(item => 
-      <>
+      return result.map(item =>
+        <>
           <div className="ds-item-wrapper">
             <div className="ds-ing-meas">
               {(() => {
@@ -70,46 +70,47 @@ class DrinkShow extends React.Component {
               {item[0][1]}
             </div>
             <hr />
+          </div>
         </>
-          )
-        }
+      )
+    }
 
-        return (
+    return (
 
       <div className="drink-show-container">
 
-            <div className="drink-show-img-container">
-              <img className="drink-show-img" alt={drink.strDrink} src={drink.strDrinkThumb} />
-              <div className="drink-show-title">
-                <h1>{drink.strDrink}</h1>
-              </div>
-            </div>
-
-            <div>&nbsp;</div>
-
-            <div className="drink-show-desc">
-
-              <div className="ds-tile-container">
-                <h2>Ingredients</h2>
-                <hr />
-
-                <div className="drink-show-measure-ingr-wrapper">
-                  <DisplayIngredients />
-                </div>
-
-              </div>
-
-              <div>&nbsp;</div>
-
-              <DisplayInstructions />
-
-            </div>
-
-            <div>&nbsp;</div>
+        <div className="drink-show-img-container">
+          <img className="drink-show-img" alt={drink.strDrink} src={drink.strDrinkThumb} />
+          <div className="drink-show-title">
+            <h1>{drink.strDrink}</h1>
           </div>
-          )
-        }
-      }
-      
-      export default DrinkShow;
-      
+        </div>
+
+        <div>&nbsp;</div>
+
+        <div className="drink-show-desc">
+
+          <div className="ds-tile-container">
+            <h2>Ingredients</h2>
+            <hr />
+
+            <div className="drink-show-measure-ingr-wrapper">
+              <DisplayIngredients />
+            </div>
+
+          </div>
+
+          <div>&nbsp;</div>
+
+          <DisplayInstructions />
+
+        </div>
+
+        <div>&nbsp;</div>
+      </div>
+    )
+  }
+}
+
+export default DrinkShow;
+
