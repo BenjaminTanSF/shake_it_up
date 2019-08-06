@@ -36,39 +36,49 @@ class  IngredientShow extends React.Component  {
 
     let fileName = undefined;
     
-    if (ingredient.strIngredientThumb) fileName = ingredient.strIngredientThumb.slice(82, (ingredient.strIngredientThumb.length - 9))
+    if (ingredient.strIngredientThumb) fileName = ingredient.strIngredientThumb.slice(82, (ingredient.strIngredientThumb.length - 9));
 
-  return (
-    <div className="ingred-show-container">
-      <h1>{ingredient.name}</h1>
-      <img src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} />
-      
-      <div className="is-tile-container">
-        <h2>Description</h2>
-        {ingredient.description ? <p>{ingredient.description}</p> : null}
-      </div>
+    const CapIngredName = (str) => {
+      let result = [];
+      let words = str.split(" ");
+      for (let i=0; i< words.length; i++) {
+        let word = words[i];
+        result.push(word.slice(0,1).toUpperCase() + word.slice(1));
+      }
+      return result.join(" ");
+    };
 
-      <br />
-      <div className="is-tile-container">
-        <div className="ingred-show-desc">
+    return (
+      <div className="ingred-show-container">
+        <h1>{CapIngredName(ingredient.name)}</h1>
+        <img src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} />
+        
+        <div className="is-tile-container">
+          <h2>Description</h2>
+          <hr/>
+          <div className="is-show-desc">
+            {ingredient.description ? <p>{ingredient.description}</p> : null}
+          </div>
+        </div>
+        <br />
+        <div className="is-tile-container">
           <h2>Drinks this can make...</h2>
           <hr/>
+          {ingredient.drinks.map(drink => (
+            <div className="is-drink-item" key={drink._id}>
+              <Link to={{
+                pathname: `/drinks/${drink.idDrink}`,
+                state: { drink: drink }
+              }}
+              >{drink.strDrink}
+              </Link>
+              <hr/>
+            </div>
+          ))}
         </div>
-        {ingredient.drinks.map(drink => (
-          <div className="is-drink-item" key={drink._id}>
-            <Link to={{
-              pathname: `/drinks/${drink.idDrink}`,
-              state: { drink: drink }
-            }}
-            >{drink.strDrink}
-            </Link>
-            <hr/>
-          </div>
-        ))}
       </div>
-    </div>
-  )
-        }
+    )
+  }
 }
 
 export default withRouter(IngredientShow);
