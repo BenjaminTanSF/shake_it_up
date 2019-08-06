@@ -13,6 +13,7 @@ class BYOCResults extends React.Component {
 			drinks: null
 		}
 		this.updateIng = this.updateIng.bind(this);
+		this.compatibleIngAmount = this.compatibleIngAmount.bind(this);
 	}
 
 	componentDidMount() {
@@ -80,13 +81,17 @@ class BYOCResults extends React.Component {
 		}
 	};
 
+	compatibleIngAmount() {
+		return this.state.compatibleIngredients.length ? "byoc-results-ci-header" : "byoc-results-ci-header-dn";
+	}
+
 	render() {
 		console.log(this.state);
 		if (this.state.drinks) {
 			return (
 				<div className="byoc-results-container">
 					<div className="byoc-results-compatibles-container">
-						<h1>Compatible Ingredients</h1>
+						<h1 id={ this.compatibleIngAmount() }>Compatible Ingredients</h1>
 						<div className="byoc-result-compatible-ingredients">
 							{this.state.compatibleIngredients.map(ingredient => {
 								let fileName = ingredient.imageURL.slice(82, (ingredient.imageURL.length - 9))
@@ -131,4 +136,5 @@ class BYOCResults extends React.Component {
 export default BYOCResults;
 
 // TODO: Tapping a compatible ingredient resets the carousel to the beginning
-// TODO: 
+// TODO: Compatible cocktails carousel
+// TODO: Styling for ingredients carousel
