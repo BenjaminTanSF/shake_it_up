@@ -76,3 +76,6 @@ class BYOCPrompt extends React.Component {
 
 export default BYOCPrompt;
 
+// TODO: Reduce size of base spirit cards to accomodate for smartphone controls
+// that sit beneath the browser
+
