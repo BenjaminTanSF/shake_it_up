@@ -20,7 +20,7 @@ class DrinkShow extends React.Component {
       return <h1>LOADING</h1>;
     }
 
-    // const DisplayInstrucs = () => {
+    // const DisplayInstructions = () => {
     //   if (drink.strInstructions !== "") {
     //     return (
     //       <>
@@ -35,19 +35,37 @@ class DrinkShow extends React.Component {
     //   }
     // }
 
-    const Ings = () => {
-      let result = [];
+    const DisplayIngredients = () => {
+      let result = []; // [['1/2 Lime'], ['1 Egg Yolk']]
       for (let i=1; i<=15; i++) {
         if (drink[`strIngredient${i}`] !== "" && drink[`strIngredient${i}`] !== " ") {
-          result.push(drink[`strMeasure${i}`]+" "+drink[`strIngredient${i}`]);
+          // result.push(drink[`strMeasure${i}`]+" "+drink[`strIngredient${i}`]);
+          let sub = [];
+          sub.push([drink[`strMeasure${i}`], drink[`strIngredient${i}`]]);
+          result.push(sub);
         }
       }
 
+      // return result.map(item => 
+      //  <div className="ds-ing-item">
+      //   {item}
+      //   <hr />
+      // </div>
+      // )
+
       return result.map(item => 
-       <div className="ds-ing-item">
-        {item}
-        <hr />
-      </div>
+      <>
+        <div className="ds-item-wrapper">
+          <div className="ds-ing-meas">
+            {item[0][0]}
+          </div>
+          <div className="ds-ing-item">
+            {item[0][1]}
+          </div>
+        </div>
+        <hr/>
+      </>
+
       )
     }
 
@@ -72,7 +90,7 @@ class DrinkShow extends React.Component {
    
             <div className="drink-show-measure-ingr-wrapper">
               <div>
-                <Ings/>
+                <DisplayIngredients/>
               </div>
             </div>
 
@@ -80,7 +98,7 @@ class DrinkShow extends React.Component {
 
           <div>&nbsp;</div>
 
-          {/* <DisplayInstrucs /> */}
+          {/* <DisplayInstructions /> */}
 
           {drink.strInstructions !== "" ? 
           <>

@@ -41,7 +41,6 @@
   text-align: left;
   margin-top: 0;
   margin-bottom: 0;
-  text-align: center;
 }
 
   .drink-show-img {
@@ -51,7 +50,7 @@
 
   .drink-show-desc {
     font-family: 'Pontano Sans', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     padding: 0 5px 0 5px;
   }
 
@@ -98,6 +97,20 @@
   position: relative;
 }
 
-.ds-ing-item {
+.ds-item-wrapper {
+  display: flex;
+  justify-content: space-aroud;
+}
+
+.ds-ing-meas {
+  margin-left: 28%;
+  text-align: left;
   width: 100%;
 }
+
+.ds-ing-item {
+  text-align: left;
+  margin-left: -25%;
+  width: 100%;
+}
+
