@@ -36,12 +36,15 @@ class DrinkShow extends React.Component {
     // }
 
     const DisplayIngredients = () => {
-      let result = []; // [['1/2 Lime'], ['1 Egg Yolk']]
+      let result = []; // [['1/2, Lime'], ['1, Egg Yolk']]
       for (let i=1; i<=15; i++) {
         if (drink[`strIngredient${i}`] !== "" && drink[`strIngredient${i}`] !== " ") {
           // result.push(drink[`strMeasure${i}`]+" "+drink[`strIngredient${i}`]);
           let sub = [];
-          sub.push([drink[`strMeasure${i}`], drink[`strIngredient${i}`]]);
+          let measure = drink[`strMeasure${i}`];
+          let ingred = drink[`strIngredient${i}`];
+          // if (!measure || !measure.match(/\[[0-9]+\]/)) measure = 1;
+          sub.push([measure, ingred]);
           result.push(sub);
         }
       }
@@ -52,12 +55,19 @@ class DrinkShow extends React.Component {
       //   <hr />
       // </div>
       // )
+      
 
       return result.map(item => 
       <>
         <div className="ds-item-wrapper">
           <div className="ds-ing-meas">
-            {item[0][0]}
+            {(() => {
+              if (item[0][0] === "" || item[0][0] === " " || item[0][0] === "\n") {
+                return 1;
+              } else {
+                return item[0][0];
+              }
+            })()}
           </div>
           <div className="ds-ing-item">
             {item[0][1]}
@@ -65,7 +75,6 @@ class DrinkShow extends React.Component {
         </div>
         <hr/>
       </>
-
       )
     }
 
