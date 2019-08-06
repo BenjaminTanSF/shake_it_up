@@ -89,6 +89,19 @@
     margin: 0px 20px;
 }
 
+.byoc-result-drinks-carousel {
+    display: flex;
+    overflow-x: scroll;
+    color: white;
+    height: 340px;
+}
+
+.byoc-result-drink-card {
+    height: 100%;
+    min-width: 340px;
+    margin-right: 20px;
+}
+
 .byoc-result-drink-card img {
-    width: 100%;
+    height: 100%;
 }

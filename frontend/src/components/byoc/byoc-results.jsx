@@ -109,18 +109,16 @@ class BYOCResults extends React.Component {
 
 					<div className="byoc-result-drinks-container">
 						<h1>Potential Drinks</h1>
+						<div className="byoc-result-drinks-carousel">
 						{this.state.drinks.map(drink => (
 							<div className="byoc-result-drink-card" key={drink.idDrink}>
-								<Link
-									to={{
-										pathname: `/drinks/${drink.idDrink}`
-									}}
-								>
+								<Link to={{ pathname: `/drinks/${drink.idDrink}` }}>
 									<img src={drink.strDrinkThumb} alt={drink.strDrink} />
 									<span>{drink.strDrink}</span>
 								</Link>
 							</div>
 						))}
+						</div>
 					</div>
 				</div>
 			);
@@ -138,3 +136,4 @@ export default BYOCResults;
 // TODO: Tapping a compatible ingredient resets the carousel to the beginning
 // TODO: Compatible cocktails carousel
 // TODO: Styling for ingredients carousel
+// TODO: Fix min-width for compatible ingredient cards. Some of the names don't fit
