@@ -44,7 +44,7 @@ class DrinkShow extends React.Component {
         let sub = [];
         let measure = drink[`strMeasure${i}`];
         let ingred = drink[`strIngredient${i}`];
-        if ((measure !== "" && ingred !== " ") && (measure !== null && ingred !== null)) {
+        if ((measure !== "" && ingred !== "") && (measure !== " " && ingred !== " ") && (measure !== null && ingred !== null)) {
           sub.push([measure, ingred]);
           result.push(sub);
         }
@@ -55,7 +55,11 @@ class DrinkShow extends React.Component {
         <div className="ds-item-wrapper">
           <div className="ds-ing-meas">
             {(() => {
-              if (item[0][0] === "" || item[0][0] === " " || item[0][0] === "\n") {
+              if (
+                (item[0][0] === "" && item[0][0] === " " && item[0][0] === "\n") 
+                && 
+                (!item[0][1] === "" && !item[0][1] === " " && !item[0][1] === "\n")
+                ) {
                 return 1;
               } else {
                 return item[0][0];

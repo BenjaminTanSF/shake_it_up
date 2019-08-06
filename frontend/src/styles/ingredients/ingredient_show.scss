@@ -1,6 +1,9 @@
+body {background-color: #f7f7f7;}
+
 .ingred-show-container {
   align-content: center;
   margin-bottom: 55px;
+  background-color: #f7f7f7;
 
   h1 {
   color: black;
@@ -10,38 +13,70 @@
   font-style: normal;
   font-size: 42px;
   text-align: left;
-  margin-bottom: 20px;
   text-align: center;
 }
 
   h2 {
-  color: black;
-  font-family: house-script,
-  sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 32px;
-  text-align: left;
-  margin-bottom: 20px;
-  text-align: center;
+    color: black;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
   .ingred-show-img {
     border-radius: 20px;
-    width: 100%;
+    // width: 100%;
+    width: 100vw;
   }
 
   .ingred-show-desc {
     font-family: house-script,sans-serif;
     font-size: 30px;
+    width: 100%;
   }
 
   a {
     text-decoration: none;
     font-family: 'Pontano Sans', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     color: black;
   }
 
+  hr {
+    width: 95%;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 1px;
+  } 
+
 }
 
+.is-tile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  margin: 5px 20px;
+  border-radius: 15px;
+  width: 90%;
+  padding-bottom: 10px;
+}
+
+.is-drink-item {
+  width: 100%;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  // height: 16px;
+}
+
+.is-img-wrapper {
+  display: block;
+  max-width: 95vw;
+}
