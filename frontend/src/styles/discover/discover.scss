@@ -86,6 +86,8 @@ h1 {
   font-size: 16px;
 }
 
+// Splash page app title header
+
 .discover-header {
   background: rgb(32, 32, 32);
   color: white;
@@ -110,6 +112,8 @@ h1 {
   font-size: 24px;
   text-decoration: none;
 }
+
+// Splash Page hero section
 
 .discover-hero {
   position: relative;
@@ -170,6 +174,8 @@ h1 {
   font-style: normal;
 }
 
+// Splash Page featured header
+
 .discover-featured {
   margin: 80px 20px 0 20px;
 }
@@ -179,15 +185,18 @@ h1 {
   margin-bottom: 20px;
 }
 
+// Splash Page slideshow
+
 .discover-slideshow-wrapper {
   overflow-x: scroll;
   align-items: center;
   overflow-y:hidden;
   position: relative;
+  height: 300px;
 }
 
 .discover-slideshow {
-  height: 200px;
+  height: 100%;
   width: 100%;
   display: flex;
   // justify-content: space-around;
@@ -198,12 +207,13 @@ h1 {
 
 .discover-slideshow-item {
   // background-color: rgb(61, 61, 61);
-  height: 200px;
+  height: 100%;
   padding: 0 3px 0 3px;
+  margin-right: 10px;
 }
 
 .discover-slideshow-img {
-  height: 110%;
+  height: 100%;
   border-radius: 5px;
 }
 
@@ -240,6 +250,8 @@ h1 {
   color: black;
   position: relative;
 }
+
+// Splash Page base spirit section
 
 .discover-base {
   margin: 60px 20px 0 20px;
