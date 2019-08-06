@@ -85,17 +85,19 @@ class BYOCResults extends React.Component {
 		if (this.state.drinks) {
 			return (
 				<div className="byoc-results-container">
-					<h1>Compatible Ingredients</h1>
 					<div className="byoc-results-compatibles-container">
-						{this.state.compatibleIngredients.map(ingredient => {
-							let fileName = ingredient.imageURL.slice(82, (ingredient.imageURL.length - 9))
-							return (
-								<div className="byoc-result-compatible-card" key={ingredient.name} onClick={this.updateIng(ingredient.name)}>
-									{/* <img src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} /> */}
-									<span>{ingredient.name}</span>
-								</div>
-							)
-						})}
+						<h1>Compatible Ingredients</h1>
+						<div className="byoc-result-compatible-ingredients">
+							{this.state.compatibleIngredients.map(ingredient => {
+								let fileName = ingredient.imageURL.slice(82, (ingredient.imageURL.length - 9))
+								return (
+									<div className="byoc-result-compatible-card" key={ingredient.name} onClick={this.updateIng(ingredient.name)}>
+										{/* <img src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} /> */}
+										<span>{ingredient.name}</span>
+									</div>
+								)
+							})}
+						</div>
 					</div>
 
 					<br />
@@ -128,3 +130,5 @@ class BYOCResults extends React.Component {
 
 export default BYOCResults;
 
+// TODO: Tapping a compatible ingredient resets the carousel to the beginning
+// TODO: 
