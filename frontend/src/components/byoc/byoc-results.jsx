@@ -14,6 +14,8 @@ class BYOCResults extends React.Component {
 		}
 		this.updateIng = this.updateIng.bind(this);
 		this.compatibleIngAmount = this.compatibleIngAmount.bind(this);
+		this.resetIngCarousel = this.resetIngCarousel.bind(this);
+		this.resetDrinkCarousel = this.resetDrinkCarousel.bind(this);
 	}
 
 	componentDidMount() {
@@ -52,6 +54,7 @@ class BYOCResults extends React.Component {
 				ingredients: this.state.ingredients.concat({ name: ingredientName })
 			});
 
+			// Filter compatible drinks and produce new set of results
 			let newDrinks = this.state.drinks.filter(drink => {
 				for (let i = 1; i <= 15; i++) {
 					if (!(drink[`strIngredient${i}`] === "" || drink[`strIngredient${i}`] === undefined || drink[`strIngredient${i}`] === null) && (drink[`strIngredient${i}`].toLowerCase() === ingredientName)) {
@@ -61,6 +64,7 @@ class BYOCResults extends React.Component {
 				return false;
 			});
 
+			// Filter compatible ingredients and produce new set of results
 			let newCompatibles = [];
 			newDrinks.forEach(drink => {
 				for (let i = 1; i <= 15; i++) {
@@ -78,11 +82,24 @@ class BYOCResults extends React.Component {
 				drinks: newDrinks,
 				compatibleIngredients: newCompatibles
 			})
+			this.resetIngCarousel();    // reset scroll position of ingredient carousel
+			this.resetDrinkCarousel();  // reset scroll position of drink carousel
 		}
 	};
 
+	// Remove "Compatible Ingredients" <h1> from page if only 1 potential drink remains
 	compatibleIngAmount() {
 		return this.state.compatibleIngredients.length ? "byoc-results-ci-header" : "byoc-results-ci-header-dn";
+	}
+
+	// Reset the comptabile ingredients carousel to start position
+	resetIngCarousel() {
+		document.querySelector('.byoc-result-compatible-ingredients').scrollLeft = 0;
+	}
+
+	// Reset the potential drinks carousel to start position
+	resetDrinkCarousel() {
+		document.querySelector('.byoc-result-drinks-carousel').scrollLeft = 0;
 	}
 
 	render() {
@@ -94,7 +111,7 @@ class BYOCResults extends React.Component {
 					{/* Compatible Ingredients */}
 					<div className="byoc-results-compatibles-container">
 						<h1 id={ this.compatibleIngAmount() }>Compatible Ingredients</h1>
-						<div className="byoc-result-compatible-ingredients">
+						<div className={ `byoc-result-compatible-ingredients carousel` }>
 							{this.state.compatibleIngredients.map(ingredient => {
 								let fileName = ingredient.imageURL.slice(82, (ingredient.imageURL.length - 9))
 								return (
@@ -136,6 +153,4 @@ class BYOCResults extends React.Component {
 
 export default BYOCResults;
 
-// TODO: Tapping a compatible ingredient resets the carousel to the beginning
 // TODO: Styling for ingredients carousel
-// TODO: Center drink titles on cards
