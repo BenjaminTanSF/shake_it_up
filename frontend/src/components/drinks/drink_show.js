@@ -69,8 +69,8 @@ class DrinkShow extends React.Component {
             <div className="ds-ing-item">
               {item[0][1]}
             </div>
-            <hr />
           </div>
+          <hr />
         </>
       )
     }
