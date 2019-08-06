@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="shake-it-up-container">
       <Header />
-      
+
       <Switch>
         <Route exact path="/ingredients" component={IngredientIndexContainer} />
         <Route exact path="/ingredients/:ingredient_name" component={IngredientShowContainer} />
