@@ -54,6 +54,7 @@ class BYOCResults extends React.Component {
 				ingredients: this.state.ingredients.concat({ name: ingredientName })
 			});
 
+			// Filter compatible drinks and produce new set of results
 			let newDrinks = this.state.drinks.filter(drink => {
 				for (let i = 1; i <= 15; i++) {
 					if (!(drink[`strIngredient${i}`] === "" || drink[`strIngredient${i}`] === undefined || drink[`strIngredient${i}`] === null) && (drink[`strIngredient${i}`].toLowerCase() === ingredientName)) {
@@ -63,6 +64,7 @@ class BYOCResults extends React.Component {
 				return false;
 			});
 
+			// Filter compatible ingredients and produce new set of results
 			let newCompatibles = [];
 			newDrinks.forEach(drink => {
 				for (let i = 1; i <= 15; i++) {
@@ -80,8 +82,8 @@ class BYOCResults extends React.Component {
 				drinks: newDrinks,
 				compatibleIngredients: newCompatibles
 			})
-			this.resetIngCarousel();
-			this.resetDrinkCarousel();
+			this.resetIngCarousel();    // reset scroll position of ingredient carousel
+			this.resetDrinkCarousel();  // reset scroll position of drink carousel
 		}
 	};
 
@@ -151,6 +153,4 @@ class BYOCResults extends React.Component {
 
 export default BYOCResults;
 
-// TODO: Tapping a compatible ingredient resets the carousel to the beginning
 // TODO: Styling for ingredients carousel
-// TODO: Center drink titles on cards

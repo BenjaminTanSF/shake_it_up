@@ -74,7 +74,7 @@
 }
 
 .carousel {
-    
+
 }
 
 
@@ -120,7 +120,6 @@
 
 .byoc-result-drinkTitle {
     position: absolute;
-    // bottom: 40px;
     top: -60px;
     left: 0;
     right: 0;
@@ -130,5 +129,8 @@
     font-weight: 400;
     font-style: normal;
     font-size: 30px;
-    background-color: black;
+    text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
