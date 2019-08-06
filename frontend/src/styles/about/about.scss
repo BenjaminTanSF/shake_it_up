@@ -14,9 +14,6 @@ serif;
     height: 100vh;
 }
 
-.about-header {
-}
-
 .about-header h1 {
     color: black;
     font-family: $h1-font;
@@ -50,14 +47,6 @@ serif;
     opacity: 1
 }
 
-.about-body-projectRepo {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
 @keyframes flickerAnimation {
     0% { opacity: 1; }
     50% { opacity: 0; }
@@ -77,8 +66,43 @@ serif;
 }
 
 .animate-flicker {
-    -webkit-animation: flickerAnimation 5s infinite;
-    -moz-animation: flickerAnimation 5s infinite;
-    animation: flickerAnimation 5s infinite;
+    -webkit-animation: flickerAnimation 3s infinite ease-in;
+    -moz-animation: flickerAnimation 3s infinite ease-in;
+    animation: flickerAnimation 3s infinite ease-in;
 }
+
+// GitHub Section
+
+.about-body-projectRepo {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+// Team Section
+
+.about-body-teammates {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 40px;
+
+}
+
+.about-body-teammates span {
+    text-align: left;
+    font-weight: 700;
+}
+
+.about-body-teammates li {
+    text-align: left;
+    list-style-type: none;
+}
+
+
+
+
 

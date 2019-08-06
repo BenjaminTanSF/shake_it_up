@@ -18,6 +18,13 @@ class About extends React.Component {
                             <img className={ `about-body-icon` } src={ GitHub } alt="GitHub"/>
                         </a>
                     </div>
+                    <div className="about-body-teammates">
+                        <span>Team</span>
+                        <li>Benjamin Tan</li>
+                        <li>Frankie Siino</li>
+                        <li>Phillip Krasnick</li>
+                        <li>Rob Roy</li>
+                    </div>
                 </div>
             </div>
         ); 
