@@ -11,7 +11,11 @@ class Discover extends React.Component {
           <div id="hero-tag">
             Let's build a cocktail, together!
             </div>
-          <Link id="get-started" to="/byoc">Get Started</Link>
+          <Link id="get-started" to="/byoc">
+            <span>Get Started</span>
+            <img src={ require('../../assets/cocktailbuddy.jpg') } alt="cocktail-buddy"></img>
+          </Link>
+
         </div>
         <div className="discover-featured">
           <h1>Featured Cocktails</h1>
