@@ -20,34 +20,58 @@ class DrinkShow extends React.Component {
       return <h1>LOADING</h1>;
     }
 
-    // const DisplayInstrucs = () => {
-    //   if (drink.strInstructions !== "") {
-    //     return (
-    //       <>
-    //         <h2>Instructions</h2>
-    //         <div className="drink-show-desc">
-    //           {drink.strInstructions}
-    //         </div>
-    //       </>
-    //     )
-    //   } else {
-    //     return null;
-    //   }
-    // }
+    const DisplayInstructions = () => {
+      if (drink.strInstructions !== "") {
+        return (
+          <>
+            <div className="ds-tile-container">
+              <h2>Instructions</h2>
+              <hr />
+              <div className="drink-show-desc">
+                {drink.strInstructions}
+              </div>
+            </div>
+          </> 
+        )
+      } else {
+        return null;
+      }
+    }
 
-    const Ings = () => {
-      let result = [];
+    const DisplayIngredients = () => {
+      let result = []; // [['meas1, ingred1'], ['meas2, ingred2']]
       for (let i=1; i<=15; i++) {
-        if (drink[`strIngredient${i}`] !== "" && drink[`strIngredient${i}`] !== " ") {
-          result.push(drink[`strMeasure${i}`]+" "+drink[`strIngredient${i}`]);
+        let sub = [];
+        let measure = drink[`strMeasure${i}`];
+        let ingred = drink[`strIngredient${i}`];
+        if ((measure !== "" && ingred !== "") && (measure !== " " && ingred !== " ") && (measure !== null && ingred !== null)) {
+          sub.push([measure, ingred]);
+          result.push(sub);
         }
       }
-
+      
       return result.map(item => 
-       <div className="ds-ing-item">
-        {item}
-        <hr />
-      </div>
+      <>
+        <div className="ds-item-wrapper">
+          <div className="ds-ing-meas">
+            {(() => {
+              if (
+                (item[0][0] === "" && item[0][0] === " " && item[0][0] === "\n") 
+                && 
+                (!item[0][1] === "" && !item[0][1] === " " && !item[0][1] === "\n")
+                ) {
+                return 1;
+              } else {
+                return item[0][0];
+              }
+            })()}
+          </div>
+          <div className="ds-ing-item">
+            {item[0][1]}
+          </div>
+        </div>
+        <hr/>
+      </>
       )
     }
 
@@ -71,35 +95,21 @@ class DrinkShow extends React.Component {
           <hr/>
    
             <div className="drink-show-measure-ingr-wrapper">
-              <div>
-                <Ings/>
-              </div>
+              <DisplayIngredients/>
             </div>
 
           </div>
 
           <div>&nbsp;</div>
 
-          {/* <DisplayInstrucs /> */}
-
-          {drink.strInstructions !== "" ? 
-          <>
-            <div className="ds-tile-container">
-              <h2>Instructions</h2>
-              <hr/>
-              <div className="drink-show-desc">
-                {drink.strInstructions}
-              </div>
-            </div>
-          </> 
-            : null}
+          <DisplayInstructions />
 
         </div>
 
         <div>&nbsp;</div>
-      </div>)
+      </div>
+    )
   }
-
 }
 
 export default DrinkShow;

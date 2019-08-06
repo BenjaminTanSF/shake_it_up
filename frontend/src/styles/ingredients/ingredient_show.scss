@@ -29,7 +29,8 @@ body {background-color: #f7f7f7;}
 
   .ingred-show-img {
     border-radius: 20px;
-    width: 100%;
+    // width: 100%;
+    width: 100vw;
   }
 
   .ingred-show-desc {
@@ -75,3 +76,7 @@ body {background-color: #f7f7f7;}
   // height: 16px;
 }
 
+.is-img-wrapper {
+  display: block;
+  max-width: 95vw;
+}
