@@ -78,8 +78,11 @@
     border-radius: 10px;
     padding: 10px;
     margin-right: 10px;
-    display: block;
+    display: flex;
     min-width: 80px;
+    min-height: 56px;
+    align-items: center;
+    justify-content: center;
 }
 
 // Compatible Cocktails
@@ -113,7 +116,8 @@
 .byoc-result-drinkTitle {
     position: absolute;
     bottom: 40px;
-    right: 35%;
+    left: 0;
+    right: 0;
     color: white;
     font-family: house-script,
     sans-serif;

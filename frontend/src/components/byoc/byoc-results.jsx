@@ -138,4 +138,4 @@ export default BYOCResults;
 
 // TODO: Tapping a compatible ingredient resets the carousel to the beginning
 // TODO: Styling for ingredients carousel
-// TODO: Fix min-width for compatible ingredient cards. Some of the names don't fit
+// TODO: Center drink titles on cards
