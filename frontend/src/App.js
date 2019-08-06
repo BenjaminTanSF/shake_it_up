@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
 import BYOCContainer from './components/byoc/byoc_container';
-import BYOCResults from './components/byoc/byoc-results';
+import BYOCResultsContainer from './components/byoc/byoc-results-container';
 import Header from './components/header';
 import Menu from './components/menu';
 import Discover from './components/discover/discover';
@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="shake-it-up-container">
       <Header />
-      
+
       <Switch>
         <Route exact path="/ingredients" component={IngredientIndexContainer} />
         <Route exact path="/ingredients/:ingredient_name" component={IngredientShowContainer} />
@@ -24,7 +24,7 @@ function App() {
         <Route exact path="/drinks" component={DrinkIndexContainer} />
         <Route exact path="/drinks/:drink_id" component={DrinkShowContainer} />
         <Route exact path="/byoc" component={BYOCContainer} />
-        <Route exact path="/byoc/:spirit_name" component={BYOCResults} />
+        <Route exact path="/byoc/:spirit_name" component={BYOCResultsContainer} />
         <Route path="/" component={Discover} />
       </Switch>
 

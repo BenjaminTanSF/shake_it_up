@@ -15,6 +15,10 @@ class BYOCPrompt extends React.Component {
 			}
 		));
 
+		if (this.props.loading) {
+			return <h1>LOADING</h1>;
+		}
+
 		return (
 			<div className="byoc-container">
 				<h1>Pick your base spirit!</h1>
@@ -71,4 +75,7 @@ class BYOCPrompt extends React.Component {
 }
 
 export default BYOCPrompt;
+
+// TODO: Reduce size of base spirit cards to accomodate for smartphone controls
+// that sit beneath the browser
 
