@@ -93,15 +93,31 @@
     display: flex;
     overflow-x: scroll;
     color: white;
-    height: 340px;
+    height: 300px;
 }
 
 .byoc-result-drink-card {
-    height: 100%;
-    min-width: 340px;
-    margin-right: 20px;
+    height: 95%;
+    min-width: 300px;
 }
 
-.byoc-result-drink-card img {
+.byoc-result-drink-card a img {
     height: 100%;
+    border-radius: 25px;
+}
+
+.byoc-result-drink-link {
+    position: relative
+}
+
+.byoc-result-drinkTitle {
+    position: absolute;
+    bottom: 40px;
+    right: 35%;
+    color: white;
+    font-family: house-script,
+    sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
 }
