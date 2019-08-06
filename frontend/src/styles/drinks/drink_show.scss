@@ -7,6 +7,7 @@
 // sans-serif;
 
 .drink-show-container {
+  position: relative;
   align-content: center;
   margin-bottom: 55px;
   background-color: #f7f7f7;
@@ -14,25 +15,32 @@
 
   h1 {
   color: black;
-  font-family: 'Oswald',
-  sans-serif;
+  // font-family: 'Oswald', sans-serif;
+  font-family: house-script, sans-serif;
+  color: #fff;
   font-weight: 400;
   font-style: normal;
-  font-size: 30px;
+  font-size: 42px;
   text-align: left;
   margin-bottom: 20px;
   text-align: center;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
   h2 {
   color: black;
   font-family: 'Playfair Display',
   serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-size: 32px;
   text-align: left;
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
   text-align: center;
 }
 
@@ -44,14 +52,26 @@
   .drink-show-desc {
     font-family: 'Pontano Sans', sans-serif;
     font-size: 14px;
+    padding: 0 5px 0 5px;
   }
+
+  hr {
+    width: 95%;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 1px;
+  } 
+
 }
 
 .drink-show-measure-ingr-wrapper {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-around;
   margin-left: 20%;
   margin-right: 20%;
+  width: 100%;
 }
 
 .ds-tile-container {
@@ -61,15 +81,23 @@
   align-items: center;
   background: #fff;
   margin: 0 20px;
-  border-radius: 8px;
+  border-radius: 15px;
   width: 90%;
+  padding-bottom: 10px;
 }
 
+.drink-show-title {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 
- hr {
-    width: 95%;
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+.drink-show-img-container {
+  position: relative;
+}
+
+.ds-ing-item {
+  width: 100%;
 }

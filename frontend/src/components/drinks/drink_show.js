@@ -20,58 +20,63 @@ class DrinkShow extends React.Component {
       return <h1>LOADING</h1>;
     }
 
-    const DisplayInstrucs = () => {
-      if (drink.strInstructions !== "") {
-        return (
-          <>
-            <h2>Instructions</h2>
-            <div className="drink-show-desc">
-              {drink.strInstructions}
-            </div>
-          </>
-        )
-      } else {
-        return null;
+    // const DisplayInstrucs = () => {
+    //   if (drink.strInstructions !== "") {
+    //     return (
+    //       <>
+    //         <h2>Instructions</h2>
+    //         <div className="drink-show-desc">
+    //           {drink.strInstructions}
+    //         </div>
+    //       </>
+    //     )
+    //   } else {
+    //     return null;
+    //   }
+    // }
+
+    const Ings = () => {
+      let result = [];
+      for (let i=1; i<15; i++) {
+        if (drink[`strIngredient${i}`] !== "" && drink[`strIngredient${i}`] !== " ") {
+          result.push(drink[`strMeasure${i}`]+" "+drink[`strIngredient${i}`]);
+        }
       }
+
+      return result.map(item => 
+       <div className="ds-ing-item">
+        {item}
+        <hr />
+      </div>
+      )
     }
 
     return (
 
       <div className="drink-show-container">
-
-
-        <img className="drink-show-img" alt={drink.strDrink} src={drink.strDrinkThumb} />
-        <h1>{drink.strDrink}</h1>
+        
+        <div className="drink-show-img-container">
+          <img className="drink-show-img" alt={drink.strDrink} src={drink.strDrinkThumb} />
+          <div className="drink-show-title">
+            <h1>{drink.strDrink}</h1>
+          </div>
+        </div>
+        
+        <div>&nbsp;</div>
 
         <div className="drink-show-desc">
 
           <div className="ds-tile-container">
           <h2>Ingredients</h2>
+          <hr/>
+   
             <div className="drink-show-measure-ingr-wrapper">
-
-              {/* // measurements */}
               <div>
-                {Object.keys(drink).filter(key => key.includes('strMeasure') && drink[key] !== "").map(key =>
-                  <div className="ds-measure-item" key={key}>
-                    {drink[key]}
-                    <hr />
-                  </div>
-                )}
-              </div>
-
-              {/* // ingredients */}
-              <div>
-                {Object.keys(drink).filter(key => key.includes('strIngredient') && drink[key] !== "").map(key =>
-                  <div className="ds-ing-item" key={key}>
-                    {drink[key]}
-                    <hr/>
-                  </div>
-                )}
+                <Ings/>
               </div>
             </div>
 
           </div>
-
 
           <div>&nbsp;</div>
 
@@ -81,6 +86,7 @@ class DrinkShow extends React.Component {
           <>
             <div className="ds-tile-container">
               <h2>Instructions</h2>
+              <hr/>
               <div className="drink-show-desc">
                 {drink.strInstructions}
               </div>
