@@ -37,7 +37,7 @@ class DrinkShow extends React.Component {
 
     const Ings = () => {
       let result = [];
-      for (let i=1; i<15; i++) {
+      for (let i=1; i<=15; i++) {
         if (drink[`strIngredient${i}`] !== "" && drink[`strIngredient${i}`] !== " ") {
           result.push(drink[`strMeasure${i}`]+" "+drink[`strIngredient${i}`]);
         }
