@@ -1,3 +1,5 @@
+// Base Spirit Selection
+
 .byoc-container {
     display: flex;
     flex-direction: column;
@@ -36,4 +38,92 @@
     font-weight: 400;
     font-style: normal;
     font-size: 30px;
+}
+
+// Compatible Ingredients
+
+.byoc-results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.byoc-results-compatibles-container {
+    margin: 0px 20px;
+}
+
+#byoc-results-ci-header {
+    color: black;
+    font-family: house-script,
+    sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#byoc-results-ci-header-dn {
+    display: none;
+}
+
+.byoc-result-compatible-ingredients {
+    display: flex;
+    overflow-x: scroll;
+    color: white;
+}
+
+.byoc-result-compatible-card {
+    background-color: #646464;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 10px;
+    display: flex;
+    min-width: 80px;
+    min-height: 56px;
+    align-items: center;
+    justify-content: center;
+}
+
+// Compatible Cocktails
+
+.byoc-result-drinks-container {
+    width: 90%;
+    margin: 0px 20px;
+}
+
+.byoc-result-drinks-carousel {
+    display: flex;
+    overflow-x: scroll;
+    color: white;
+    height: 250px;
+}
+
+.byoc-result-drink-card {
+    height: 95%;
+    min-width: 250px;
+}
+
+.byoc-result-drink-card a img {
+    height: 100%;
+    border-radius: 25px;
+}
+
+.byoc-result-drink-link {
+    position: relative
+}
+
+.byoc-result-drinkTitle {
+    position: absolute;
+    // bottom: 40px;
+    top: -60px;
+    left: 0;
+    right: 0;
+    color: white;
+    font-family: house-script,
+    sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    background-color: black;
 }

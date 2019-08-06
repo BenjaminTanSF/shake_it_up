@@ -25,25 +25,25 @@ class Menu extends React.Component {
                 <div className="menu-item-container">
                     <NavLink exact to="/" className="menu-item-container" activeClassName="menu-active">
                         <img className="menu-icon" src={ pathname === "/" ? discoverActive : discover}></img>
-                        <span>Discover</span>
+                        {/* <span>Discover</span> */}
                     </NavLink>
                 </div>
                 <div className="menu-item-container">
                     <NavLink to="/drinks" className="menu-item-container" activeClassName="menu-active">
                         <img className="menu-icon" src={pathname.includes("drinks") ? cocktailActive : cocktail}></img>
-                        <span>Cocktails</span>
+                        {/* <span>Cocktails</span> */}
                     </NavLink>
                 </div>
                 <div className="menu-item-container">
                     <NavLink to="/ingredients" className="menu-item-container" activeClassName="menu-active">
                         <img className="menu-icon" src={ pathname.includes("ingredients") ? ingredientActive : ingredient }></img>
-                        <span>Ingredients</span>
+                        {/* <span>Ingredients</span> */}
                     </NavLink>
                 </div>
                 <div className="menu-item-container">
                     <NavLink to="/about" className="menu-item-container" activeClassName="menu-active">
                         <img className="menu-icon" src={ pathname.includes("about") ? aboutActive : about }></img>
-                        <span>About</span>
+                        {/* <span>About</span> */}
                     </NavLink>
                 </div>
             </div>

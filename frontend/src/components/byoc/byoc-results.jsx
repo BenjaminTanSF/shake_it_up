@@ -13,6 +13,7 @@ class BYOCResults extends React.Component {
 			drinks: null
 		}
 		this.updateIng = this.updateIng.bind(this);
+		this.compatibleIngAmount = this.compatibleIngAmount.bind(this);
 	}
 
 	componentDidMount() {
@@ -80,40 +81,47 @@ class BYOCResults extends React.Component {
 		}
 	};
 
+	compatibleIngAmount() {
+		return this.state.compatibleIngredients.length ? "byoc-results-ci-header" : "byoc-results-ci-header-dn";
+	}
+
 	render() {
 		console.log(this.state);
 		if (this.state.drinks) {
 			return (
 				<div className="byoc-results-container">
-					<h1>Compatible Ingredients</h1>
+
+					{/* Compatible Ingredients */}
 					<div className="byoc-results-compatibles-container">
-						{this.state.compatibleIngredients.map(ingredient => {
-							let fileName = ingredient.imageURL.slice(82, (ingredient.imageURL.length - 9))
-							return (
-								<div className="byoc-result-compatible-card" key={ingredient.name} onClick={this.updateIng(ingredient.name)}>
-									<img src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} />
-									<span>{ingredient.name}</span>
-								</div>
-							)
-						})}
+						<h1 id={ this.compatibleIngAmount() }>Compatible Ingredients</h1>
+						<div className="byoc-result-compatible-ingredients">
+							{this.state.compatibleIngredients.map(ingredient => {
+								let fileName = ingredient.imageURL.slice(82, (ingredient.imageURL.length - 9))
+								return (
+									<div className="byoc-result-compatible-card" key={ingredient.name} onClick={this.updateIng(ingredient.name)}>
+										{/* <img src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} /> */}
+										<span>{ingredient.name}</span>
+									</div>
+								)
+							})}
+						</div>
 					</div>
 
 					<br />
 
-					<h1>Potential Drinks</h1>
+					{/* Compatible Drinks */}
 					<div className="byoc-result-drinks-container">
+						<h1>Potential Drinks</h1>
+						<div className="byoc-result-drinks-carousel">
 						{this.state.drinks.map(drink => (
 							<div className="byoc-result-drink-card" key={drink.idDrink}>
-								<Link
-									to={{
-										pathname: `/drinks/${drink.idDrink}`
-									}}
-								>
+								<Link to={{ pathname: `/drinks/${drink.idDrink}` }} className="byoc-result-drink-link">
 									<img src={drink.strDrinkThumb} alt={drink.strDrink} />
-									<span>{drink.strDrink}</span>
+									<span className="byoc-result-drinkTitle">{drink.strDrink}</span>
 								</Link>
 							</div>
 						))}
+						</div>
 					</div>
 				</div>
 			);
@@ -128,3 +136,6 @@ class BYOCResults extends React.Component {
 
 export default BYOCResults;
 
+// TODO: Tapping a compatible ingredient resets the carousel to the beginning
+// TODO: Styling for ingredients carousel
+// TODO: Center drink titles on cards
