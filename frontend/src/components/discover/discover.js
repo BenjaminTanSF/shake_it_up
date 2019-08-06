@@ -76,20 +76,8 @@ class Discover extends React.Component {
           </div>
 
         </div>
-        <div className="discover-base">
-          <h1>Base Spirits</h1>
-          <div className="discover-base-spiritlist">
-            {/* <Link id="d-bs-whiskey" className="discover-spirit" to="">Whiskey</Link> */}
-            <div className="bs-overlay">
-              <Link id="d-bs-whiskey" className="discover-spirit" to="">Whiskey</Link>
-            </div>
-            <Link id="d-bs-vodka" className="discover-spirit" to="">Rum</Link>
-            <Link id="d-bs-tequila" className="discover-spirit" to="">Vodka</Link>
-            <Link id="d-bs-rum" className="discover-spirit" to="">Tequila</Link>
-            <Link id="d-bs-gin" className="discover-spirit" to="">Gin</Link>
-            <Link id="d-bs-brandy" className="discover-spirit" to="">Brandy</Link>
-          </div>
-        </div>
+
+        <BaseSpiritList />
       </div>
     );
   }
