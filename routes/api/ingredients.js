@@ -12,10 +12,13 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:ingredient_name', (req, res) => {
-  let name = req.params.ingredient_name.toLowerCase();
-  let regexName = name + "$";
+  let spaceCorrected = req.params.ingredient_name.split('%20').join(' '); 
+  let arr = spaceCorrected.toLowerCase().split(',');
+  let parensArr = arr.map((ele, idx) => 
+  idx ? '(^'+ ele + '$)' : '('+ ele + '$)');
+  let regexQuery = parensArr.join('|');
   Ingredients.find({
-    name: { $regex: regexName }
+    name: { $regex: regexQuery }
   })
     .sort({ name: 1 })
     .then(ingredients => res.json(ingredients))
