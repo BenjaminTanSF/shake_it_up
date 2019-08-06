@@ -31,7 +31,7 @@ class DrinkShow extends React.Component {
                 {drink.strInstructions}
               </div>
             </div>
-          </> 
+          </>
         )
       } else {
         return null;
@@ -40,7 +40,7 @@ class DrinkShow extends React.Component {
 
     const DisplayIngredients = () => {
       let result = []; // [['meas1, ingred1'], ['meas2, ingred2']]
-      for (let i=1; i<=15; i++) {
+      for (let i = 1; i <= 15; i++) {
         let sub = [];
         let measure = drink[`strMeasure${i}`];
         let ingred = drink[`strIngredient${i}`];
@@ -49,53 +49,53 @@ class DrinkShow extends React.Component {
           result.push(sub);
         }
       }
-      
-      return result.map(item => 
-      <>
-        <div className="ds-item-wrapper">
-          <div className="ds-ing-meas">
-            {(() => {
-              if (
-                (item[0][0] === "" && item[0][0] === " " && item[0][0] === "\n") 
-                && 
-                (!item[0][1] === "" && !item[0][1] === " " && !item[0][1] === "\n")
+
+      return result.map(item =>
+        <>
+          <div className="ds-item-wrapper">
+            <div className="ds-ing-meas">
+              {(() => {
+                if (
+                  (item[0][0] === "" && item[0][0] === " " && item[0][0] === "\n")
+                  &&
+                  (!item[0][1] === "" && !item[0][1] === " " && !item[0][1] === "\n")
                 ) {
-                return 1;
-              } else {
-                return item[0][0];
-              }
-            })()}
+                  return 1;
+                } else {
+                  return item[0][0];
+                }
+              })()}
+            </div>
+            <div className="ds-ing-item">
+              {item[0][1]}
+            </div>
+            <hr />
           </div>
-          <div className="ds-ing-item">
-            {item[0][1]}
-          </div>
-        </div>
-        <hr/>
-      </>
+        </>
       )
     }
 
     return (
 
       <div className="drink-show-container">
-        
+
         <div className="drink-show-img-container">
           <img className="drink-show-img" alt={drink.strDrink} src={drink.strDrinkThumb} />
           <div className="drink-show-title">
             <h1>{drink.strDrink}</h1>
           </div>
         </div>
-        
+
         <div>&nbsp;</div>
 
         <div className="drink-show-desc">
 
           <div className="ds-tile-container">
-          <h2>Ingredients</h2>
-          <hr/>
-   
+            <h2>Ingredients</h2>
+            <hr />
+
             <div className="drink-show-measure-ingr-wrapper">
-              <DisplayIngredients/>
+              <DisplayIngredients />
             </div>
 
           </div>
