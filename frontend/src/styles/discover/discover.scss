@@ -1,5 +1,3 @@
-
-
 h1 {
   color: black;
   font-family: house-script,
@@ -183,24 +181,64 @@ h1 {
 
 .discover-slideshow-wrapper {
   overflow-x: scroll;
+  align-items: center;
+  overflow-y:hidden;
+  position: relative;
 }
 
 .discover-slideshow {
   height: 200px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  // justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin-left: 15px;
 }
 
 .discover-slideshow-item {
-  background-color: rgb(61, 61, 61);
+  // background-color: rgb(61, 61, 61);
   height: 200px;
+  padding: 0 3px 0 3px;
+}
+
+.discover-slideshow-img {
+  height: 110%;
+  border-radius: 5px;
+}
+
+.discover-slideshow-title {
+  font-size: 32px;
+  font-family: house-script, sans-serif;
+  color: white;
+  font-weight: 400;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -75px;
+  // bottom: 10px;
+  margin: auto;
+  // max-height: 100px;
+  // padding-top: 200px;
+    padding-bottom: 40px;
+  // -webkit-text-fill-color: white; /*overrides color*/
+  // -webkit-text-stroke-width: 1px;
+  // -webkit-text-stroke-color: black;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
 .discover-slideshow-item a {
   text-decoration: none;
-  color: white;
+  // color: white;
+  font-size: 24px;
+  font-family: house-script, sans-serif;
+  font-weight: 400;
+  color: black;
+  position: relative;
 }
 
 .discover-base {
@@ -263,6 +301,11 @@ h1 {
   font-weight: 400;
   font-style: normal;
   font-size: 30px;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
 // .bs-overlay {
