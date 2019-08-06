@@ -37,42 +37,42 @@ class DrinkShow extends React.Component {
 
     const Ings = () => {
       let result = [];
-      for (let i=1; i<=15; i++) {
+      for (let i = 1; i <= 15; i++) {
         if (drink[`strIngredient${i}`] !== "" && drink[`strIngredient${i}`] !== " ") {
-          result.push(drink[`strMeasure${i}`]+" "+drink[`strIngredient${i}`]);
+          result.push(drink[`strMeasure${i}`] + " " + drink[`strIngredient${i}`]);
         }
       }
 
-      return result.map(item => 
-       <div className="ds-ing-item">
-        {item}
-        <hr />
-      </div>
+      return result.map(item =>
+        <div className="ds-ing-item">
+          {item}
+          <hr />
+        </div>
       )
     }
 
     return (
 
       <div className="drink-show-container">
-        
+
         <div className="drink-show-img-container">
           <img className="drink-show-img" alt={drink.strDrink} src={drink.strDrinkThumb} />
           <div className="drink-show-title">
             <h1>{drink.strDrink}</h1>
           </div>
         </div>
-        
+
         <div>&nbsp;</div>
 
         <div className="drink-show-desc">
 
           <div className="ds-tile-container">
-          <h2>Ingredients</h2>
-          <hr/>
-   
+            <h2>Ingredients</h2>
+            <hr />
+
             <div className="drink-show-measure-ingr-wrapper">
               <div>
-                <Ings/>
+                <Ings />
               </div>
             </div>
 
@@ -82,16 +82,16 @@ class DrinkShow extends React.Component {
 
           {/* <DisplayInstrucs /> */}
 
-          {drink.strInstructions !== "" ? 
-          <>
-            <div className="ds-tile-container">
-              <h2>Instructions</h2>
-              <hr/>
-              <div className="drink-show-desc">
-                {drink.strInstructions}
+          {drink.strInstructions !== "" ?
+            <>
+              <div className="ds-tile-container">
+                <h2>Instructions</h2>
+                <hr />
+                <div className="drink-show-desc">
+                  {drink.strInstructions}
+                </div>
               </div>
-            </div>
-          </> 
+            </>
             : null}
 
         </div>
