@@ -1,11 +1,12 @@
+.loader-component {
+    margin-top: 300px;
+}
+
 .loader-body {
     position: relative;
     margin: 0;
     height: 100%;
     background: linear-gradient(steelblue, beige);
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    text-align: center;
 }
 
 #loader {
@@ -107,11 +108,11 @@
     box-shadow: inset 0 0 10px rgba(255, 255, 255, .6);
 }
 
-#cubes div:nth-child(1) {
+#cube1 {
     bottom: 0;
 }
 
-#cubes div:nth-child(2) {
+#cube2 {
     bottom: 45px;
     left: 25px;
     transform: rotate(32deg);
@@ -120,7 +121,7 @@
     -webkit-transform-origin: center bottom;
 }
 
-#cubes div:nth-child(3) {
+#cube3 {
     bottom: 90px;
     left: 20px;
     transform: rotate(-34deg);
