@@ -90,7 +90,7 @@ class DrinkShow extends React.Component {
           </div>
         </div>
 
-        <div>&nbsp;</div>
+        <div >&nbsp;</div>
 
         <div className="drink-show-desc">
 
@@ -104,7 +104,7 @@ class DrinkShow extends React.Component {
 
           </div>
 
-          <div>&nbsp;</div>
+          <div className='ds-divider'>&nbsp;</div>
 
           <DisplayInstructions />
 
