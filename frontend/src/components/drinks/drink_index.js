@@ -81,6 +81,3 @@ class DrinksIndex extends React.Component {
 }
 export default DrinksIndex;
 
-// TODO: Styling for Drinks Index results
-// TODO: Styling / Interaction Design for Search Bar
-// TODO: Add drink ingredients below drink title
