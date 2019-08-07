@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import byocStyles from '../../styles/discover/byoc.scss'
+import byocStyles from '../../styles/discover/byoc.scss';
+import LoadingIcon from '../loading_icon/loading_icon';
 
 class BYOCPrompt extends React.Component {
 	componentDidMount() {
 		if (!this.props.ingredientsFullyLoaded)
-		this.props.fetchAllIngredients();
+			this.props.fetchAllIngredients();
 	}
 
 	render() {
@@ -17,7 +18,7 @@ class BYOCPrompt extends React.Component {
 		));
 
 		if (this.props.loading) {
-			return <h1>LOADING</h1>;
+			return <LoadingIcon />;
 		}
 
 		return (

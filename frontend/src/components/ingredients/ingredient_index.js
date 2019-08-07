@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import '../../styles/ingredients/ingredient_index.scss';
 import Loader from '../loader/cocktail_loader';
+import LoadingIcon from '../loading_icon/loading_icon';
 
 class IngredientsIndex extends React.Component {
 
@@ -28,15 +29,15 @@ class IngredientsIndex extends React.Component {
   }
   componentDidMount() {
     if (!this.props.ingredientsFullyLoaded)
-    this.props.fetchAllIngredients(() => (this.setState({
-      ingredients: this.props.ingredients,
-      shownIngredients: this.props.ingredients,
-      searchStr: ""
-    })));
+      this.props.fetchAllIngredients(() => (this.setState({
+        ingredients: this.props.ingredients,
+        shownIngredients: this.props.ingredients,
+        searchStr: ""
+      })));
   }
 
   render() {
-    if (this.props.loading) { return <h1>LOADING</h1>; }
+    if (this.props.loading) { return <LoadingIcon /> }
     // if (this.props.loading) { return <Loader id="loader-component"/>; }
     else {
       return (
@@ -57,25 +58,25 @@ class IngredientsIndex extends React.Component {
             <h1>Ingredients</h1>
           </div>
 
-        <div className="ingred-tile-container">
-          {this.state.shownIngredients.map(ingredient => {
-            let fileName = ingredient.strIngredientThumb.slice(82, (ingredient.strIngredientThumb.length - 9))
-            return (
-              < div key={ingredient._id} className="ingred-index-tile">
-                <Link to={{
-                  pathname: `/ingredients/${ingredient.name}`,
-                  state: {
-                    ingredient: ingredient
-                  }
-                }}>
-                  <img src={process.env.PUBLIC_URL + `/images/${fileName}`} className="ingred-idx-img" width="90%" alt={ingredient.name} />
-                  <span className="ingred-index-name">{ingredient.name}</span>
-                </Link>
-                <hr></hr>
-                <br />
-              </div>
-            )
-          })}
+          <div className="ingred-tile-container">
+            {this.state.shownIngredients.map(ingredient => {
+              let fileName = ingredient.strIngredientThumb.slice(82, (ingredient.strIngredientThumb.length - 9))
+              return (
+                < div key={ingredient._id} className="ingred-index-tile">
+                  <Link to={{
+                    pathname: `/ingredients/${ingredient.name}`,
+                    state: {
+                      ingredient: ingredient
+                    }
+                  }}>
+                    <img src={process.env.PUBLIC_URL + `/images/${fileName}`} className="ingred-idx-img" width="90%" alt={ingredient.name} />
+                    <span className="ingred-index-name">{ingredient.name}</span>
+                  </Link>
+                  <hr></hr>
+                  <br />
+                </div>
+              )
+            })}
           </div>
         </div>
       )

@@ -1,15 +1,16 @@
 import React from 'react';
+import LoadingIcon from '../loading_icon/loading_icon';
 
 import '../../styles/drinks/drink_show.scss';
 
 class DrinkShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {drink: this.props.drink || {}};
+    this.state = { drink: this.props.drink || {} };
   }
 
   componentDidMount() {
-    this.props.fetchSingleDrink(this.props.match.params.drink_id, () => this.setState({drink: this.props.drink}));
+    this.props.fetchSingleDrink(this.props.match.params.drink_id, () => this.setState({ drink: this.props.drink }));
   }
 
 
@@ -18,11 +19,10 @@ class DrinkShow extends React.Component {
 
     let drinks = this.props.drinks || [];
     let drink = drinks.find(dr => {
-      return dr.idDrink + ''=== drinkId + ''}) || {};
-    
-    if (this.props.loading) {
-      return <h1>LOADING</h1>;
-    }
+      return dr.idDrink + '' === drinkId + ''
+    }) || {};
+
+    if (this.props.loading) { return <LoadingIcon />; }
 
     const DisplayInstructions = () => {
       if (drink.strInstructions !== "") {
