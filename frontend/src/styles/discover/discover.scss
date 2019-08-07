@@ -1,7 +1,7 @@
 h1 {
   color: black;
   font-family: house-script,
-  sans-serif;
+    sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 30px;
@@ -10,7 +10,7 @@ h1 {
 }
 
 .shake-it-up-container {
-  text-align: center; 
+  text-align: center;
 }
 
 .base-spirit-container {
@@ -22,24 +22,17 @@ h1 {
   }
 }
 
-.base-spirit-tile-rum {
+.base-spirit-tile-rum {}
 
-}
-.base-spirit-tile-gin {
+.base-spirit-tile-gin {}
 
-}
-.base-spirit-tile-whiskey {
+.base-spirit-tile-whiskey {}
 
-}
-.base-spirit-tile-tequila {
+.base-spirit-tile-tequila {}
 
-}
-.base-spirit-tile-brandy {
+.base-spirit-tile-brandy {}
 
-}
-.base-spirit-tile-vodka {
-
-}
+.base-spirit-tile-vodka {}
 
 // begin grid
 
@@ -48,26 +41,31 @@ h1 {
   border: 1px solid black;
   padding: 30px;
 }
+
 .item-2 {
   grid-area: gin;
   border: 1px solid black;
   padding: 30px;
 }
+
 .item-3 {
   grid-area: whiskey;
   border: 1px solid black;
   padding: 30px;
 }
+
 .item-4 {
   grid-area: tequila;
   border: 1px solid black;
   padding: 30px;
 }
+
 .item-5 {
   grid-area: brandy;
   border: 1px solid black;
   padding: 30px;
 }
+
 .item-6 {
   grid-area: vodka;
   border: 1px solid black;
@@ -79,7 +77,7 @@ h1 {
   display: grid;
   grid-template-columns: 130px 130px;
   grid-template-rows: 95px 70px 96px;
-  grid-template-areas: "rum gin" "whiskey tequila" "brandy vodka";
+  grid-template-areas: "rum gin""whiskey tequila""brandy vodka";
   color: #231f20;
   font-family: house-script;
   font-weight: 500;
@@ -96,7 +94,7 @@ h1 {
   justify-content: center;
   align-items: center;
   font-family: house-script,
-  sans-serif;
+    sans-serif;
   font-weight: 400;
   font-style: normal;
   padding: 5px 0px 5px 0px;
@@ -104,7 +102,7 @@ h1 {
 
 .discover-header a {
   font-family: house-script,
-  sans-serif;
+    sans-serif;
   font-weight: 400;
   font-style: normal;
   padding: 5px 0px 5px 0px;
@@ -136,7 +134,7 @@ h1 {
   font-size: 30px;
   // margin: 40px 40px 40px 40px;
   font-family: house-script,
-  sans-serif;
+    sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 60px;
@@ -159,7 +157,7 @@ h1 {
   justify-content: center;
 }
 
-#get-started  {
+#get-started {
   text-decoration: none;
   color: white;
   font-size: 30px;
@@ -169,7 +167,7 @@ h1 {
   border-radius: 20px;
   padding: 10px 30px;
   font-family: house-script,
-  sans-serif;
+    sans-serif;
   font-weight: 400;
   font-style: normal;
   position: relative;
@@ -191,7 +189,7 @@ h1 {
   margin: 80px 20px 0 20px;
 }
 
-.discover-featured h1{
+.discover-featured h1 {
   text-align: left;
   margin-bottom: 20px;
 }
@@ -201,7 +199,7 @@ h1 {
 .discover-slideshow-wrapper {
   overflow-x: scroll;
   align-items: center;
-  overflow-y:hidden;
+  overflow-y: hidden;
   position: relative;
   height: 300px;
 }
@@ -241,15 +239,15 @@ h1 {
   margin: auto;
   // max-height: 100px;
   // padding-top: 200px;
-    padding-bottom: 40px;
+  padding-bottom: 40px;
   // -webkit-text-fill-color: white; /*overrides color*/
   // -webkit-text-stroke-width: 1px;
   // -webkit-text-stroke-color: black;
   text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .discover-slideshow-item a {
@@ -317,18 +315,18 @@ h1 {
   font-size: 16px;
   text-decoration: none;
   border-radius: 5px;
-  padding: 10px;  
+  padding: 10px;
   height: 40px;
   font-family: house-script,
-  sans-serif;
+    sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 30px;
   text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 // .bs-overlay {
@@ -356,7 +354,7 @@ h1 {
   width: 100%;
   background: white;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-  }
+}
 
 .menu-item-container {
   display: flex;
@@ -364,7 +362,7 @@ h1 {
   justify-content: center;
   align-items: center;
   font-family: house-script,
-  sans-serif;
+    sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
@@ -384,5 +382,35 @@ h1 {
 // Mobile break point - Desktop code here
 @media screen and (min-width: 415px) {
   // CSS code here
+
+  // Base Spirits Section
+  .discover-base-spiritlist {
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 86px;
+  }
+
+  .discover-spirit {
+    height: 260px;
+    font-size: 50px;
+    opacity: .8;
+    transition: opacity .25s ease-in-out;
+    background-position: top;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .discover-spirit:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+  }
+
+  .discover-base {
+    margin: 60px 80px 0 80px;
+  }
+
+  #base-spirit-h1 {
+    font-size: 50px;
+  }
 
 }
