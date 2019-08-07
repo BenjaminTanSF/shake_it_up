@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LoadingIcon from '../loading_icon/loading_icon';
 
 // styles
 import '../../styles/drinks/drinks_index.scss';
@@ -29,19 +30,17 @@ class DrinksIndex extends React.Component {
 
   componentDidMount() {
     if (!this.props.drinksFullyLoaded)
-    this.props.fetchAllDrinks(() => (this.setState({
-      drinks: this.props.drinks,
-      shownDrinks: this.props.drinks,
-      searchStr: ""
-    })));
+      this.props.fetchAllDrinks(() => (this.setState({
+        drinks: this.props.drinks,
+        shownDrinks: this.props.drinks,
+        searchStr: ""
+      })));
   }
 
   render() {
 
-    if (this.props.loading) {
-      return <h1>LOADING</h1>;
-    }
-    
+    if (this.props.loading) { return <LoadingIcon />; }
+
     return (
 
       // Search Bar 
