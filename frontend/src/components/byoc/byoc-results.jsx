@@ -7,12 +7,12 @@ class BYOCResults extends React.Component {
 	constructor(props) {
 		super(props);
 		let loaded = false;
-		if (props.ingredients.length){
+		if (props.location.state){
 			loaded = true;
 		}
 		let lstate = props.location.state || {};
 		this.state = {
-			base: lstate.ingredients || [],
+			base: lstate.base || [],
 			ingredients: [],
 			images: lstate.images || [],
 			compatibleIngredients: [],
@@ -28,8 +28,6 @@ class BYOCResults extends React.Component {
 
 	setDrinks(cb){
 		let drinks = [];
-		console.log('SD:');
-		console.log(this.state);
 		this.state.base.forEach(ing => {
 			let ingDrinks = ing.drinks;
 			ingDrinks.forEach(drink => {
@@ -52,8 +50,6 @@ class BYOCResults extends React.Component {
 			let pathString= this.props.match.params.spirit_name.split('%20').join(' ');
 			let pathIngredients = pathString.split(',');
 			pathIngredients = this.state.ingredients.concat(this.state.base).map(ing => ing.name);
-			console.log("sc:");
-			console.log(this.state);
 			let compatibleIngredients = [];
 			let compatibleIngNames = compatibleIngredients.map(ci => ci.name);
 			drinks.forEach((drink, drinkIdx) => {
@@ -86,9 +82,6 @@ class BYOCResults extends React.Component {
 			}	
 			)}
 			else {	this.setState({compatibleIngredients});	}
-			
-			console.log('sc ci:');
-			console.log(compatibleIngNames);
 		}
 
 
@@ -170,10 +163,6 @@ class BYOCResults extends React.Component {
 	}
 
 	render() {
-		console.log('state:');
-		console.log(this.state);
-		console.log('lstate:');
-		console.log(this.props.location.state);
 		if (this.state.drinks) {
 			return (
 				<div className="byoc-results-container">

@@ -5,17 +5,21 @@ import '../../styles/drinks/drink_show.scss';
 class DrinkShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.drink || {};
+    this.state = {drink: this.props.drink || {}};
   }
 
   componentDidMount() {
-    this.props.fetchSingleDrink(this.props.match.params.drink_id).then(this.setState(this.props.drink));
+    this.props.fetchSingleDrink(this.props.match.params.drink_id, () => this.setState({drink: this.props.drink}));
   }
 
+
   render() {
+    let drinkId = this.props.match.params.drink_id;
 
-    let drink = this.props.drink || {};
-
+    let drinks = this.props.drinks || [];
+    let drink = drinks.find(dr => {
+      return dr.idDrink + ''=== drinkId + ''}) || {};
+    
     if (this.props.loading) {
       return <h1>LOADING</h1>;
     }

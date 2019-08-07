@@ -43,10 +43,12 @@ export const fetchAllDrinks = (callback) => dispatch => {
   )
 };
 
-export const fetchSingleDrink = id => dispatch => {
+export const fetchSingleDrink = (id, callback) => dispatch => {
   dispatch(startLoadingSingleDrink());
   return APIUtil.getDrinkDetails(id).then(
-    drink => { dispatch(receiveSingleDrink(drink.data)) },
+    drink => { dispatch(receiveSingleDrink(drink.data));
+      if(callback){callback()} 
+    },
     err => { dispatch(receiveDrinksErrors(err)) }
   )
 };
