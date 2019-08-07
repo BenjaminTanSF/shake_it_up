@@ -3,7 +3,8 @@ import BYOC from './byoc';
 import { fetchAllIngredients } from '../../actions/ingredients_actions';
 
 const mSTP = state => ({
-  ingredients: state.entities.ingredients,
+  ingredients: state.entities.ingredients.array,
+  ingredientsFullyLoaded: state.entities.ingredients.fullyLoaded,
   loading: state.ui.loading.loading
 });
 

@@ -4,7 +4,8 @@ import { fetchAllDrinks } from '../../actions/drinks_actions';
 
 const mSTP = state => {
   return ({
-    drinks: state.entities.drinks,
+    drinks: state.entities.drinks.array,
+    drinksFullyLoaded: state.entities.drinks.fullyLoaded,
     loading: state.ui.loading.loading
   });
 };

@@ -26,6 +26,7 @@ class IngredientsIndex extends React.Component {
     }
   }
   componentDidMount() {
+    if (!this.props.ingredientsFullyLoaded)
     this.props.fetchAllIngredients(() => (this.setState({
       ingredients: this.props.ingredients,
       shownIngredients: this.props.ingredients,
