@@ -2,7 +2,7 @@ let obj = {
   1: {
     strDrink: "Blue Bird",
     strInstructions: "",
-    strDrinkThumb: "",
+    strDrinkThumb: "https://raw.githubusercontent.com/BenjaminT88/shake_it_up/master/frontend/public/images/BlueBird.png",
     strIngredient1: "blueberry schnapps",
     strIngredient2: "vodka",
     strIngredient3: "lime juice",
@@ -42,7 +42,7 @@ let obj = {
   3: {
     strDrink: "InstaDrunk",
     strInstructions: "",
-    strDrinkThumb: "",
+    strDrinkThumb: "https://raw.githubusercontent.com/BenjaminT88/shake_it_up/master/frontend/public/images/FaceMash.png",
     strIngredient1: "absinthe",
     strIngredient2: "gin",
     strIngredient3: "whiskey",
@@ -62,7 +62,7 @@ let obj = {
   4: {
     strDrink: "Strike",
     strInstructions: "",
-    strDrinkThumb: "",
+    strDrinkThumb: "https://raw.githubusercontent.com/BenjaminT88/shake_it_up/master/frontend/public/images/Strike.png",
     strIngredient1: "apple schnapps",
     strIngredient2: "light rum",
     strIngredient3: "fresh lime juice",
@@ -82,7 +82,7 @@ let obj = {
   5: {
     strDrink: "DUUDE",
     strInstructions: "",
-    strDrinkThumb: "",
+    strDrinkThumb: "https://raw.githubusercontent.com/BenjaminT88/shake_it_up/master/frontend/public/images/DUUDE.png",
     strIngredient1: "dark rum",
     strIngredient2: "dark creme de cacao",
     strIngredient3: "blackstrap rum",
@@ -102,7 +102,7 @@ let obj = {
   6: {
     strDrink: "Space Out",
     strInstructions: "",
-    strDrinkThumb: "",
+    strDrinkThumb: "https://raw.githubusercontent.com/BenjaminT88/shake_it_up/master/frontend/public/images/SpaceOut.png",
     strIngredient1: "blackberry brandy",
     strIngredient2: "dark creme de cacao",
     strIngredient3: "espresso",
