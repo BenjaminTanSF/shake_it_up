@@ -7,14 +7,14 @@ class CocktailLoader extends React.Component {
         super(props);
         this.state = {
             loaded: 0,
-            lemonOpacity: 0,
-            strawOpacity: 0,
-            glassOpacity: 0,
-            drinkOpacity: 0,
-            cubesOpacity: 0,
-            cube1Opacity: 0,
-            cube2Opacity: 0,
-            cube3Opacity: 0,
+            lemonOpacity: 1,
+            strawOpacity: 1,
+            glassOpacity: 1,
+            drinkOpacity: 1,
+            cubesOpacity: 1,
+            cube1Opacity: 1,
+            cube2Opacity: 1,
+            cube3Opacity: 1,
             drinkTop: 100
         }
 
@@ -33,7 +33,7 @@ class CocktailLoader extends React.Component {
     }
 
     componentDidMount() {
-        this.loading();
+        // this.loading();
     }
 
     loading() {
@@ -88,10 +88,11 @@ class CocktailLoader extends React.Component {
             //     strawOpacity: 0,
             //     cubesOpacity: 0
             // })
-            worker = setTimeout(increment, 30);
+            worker = setInterval(increment, 1);
         }
 
         function stopLoading() {
+            // debugger;
             clearInterval(worker);
         }
         
