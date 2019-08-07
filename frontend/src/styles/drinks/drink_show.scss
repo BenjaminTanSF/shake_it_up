@@ -43,7 +43,6 @@
   // margin-bottom: 25px;
 
   h1 {
-  color: black;
   // font-family: 'Oswald', sans-serif;
   font-family: house-script, sans-serif;
   color: #fff;
@@ -136,7 +135,7 @@
 @media screen and (min-width: 415px) {
   // CSS code here
   .drink-show-img {
-    width: 40%;
+    width: 50vw;
     float: left;
   }
   .ds-tile-container {
@@ -145,11 +144,25 @@
     justify-content: center;
     align-items: center;
     background: #fff;
-    margin: 0 20px;
+    margin: 0 .5vw;
     border-radius: 15px;
-    width: 22%;
-    padding-bottom: 10px;
+    width: 38vw;
+    padding-bottom: 1vw;
     margin-left: auto;
+  }
+  .drink-show-title {
+    position: relative;
+    bottom: 0%;
+    left: 0;
+    right: 0vw;
+    top: 0;
+    margin: auto;
+  }
+  .drink-show-container{
+    h1 {
+      color: black;
+      text-shadow: none;
+    }
   }
   .ds-divider{
     display: hidden;
