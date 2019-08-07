@@ -56,7 +56,7 @@ class IngredientsIndex extends React.Component {
             </label>
           </div>
           <div id="ingred-index-h1-container">
-            <h1>Ingredients</h1>
+            <h1 id="ingred-index-h1">Ingredients</h1>
           </div>
 
           <div className="ingred-tile-container">

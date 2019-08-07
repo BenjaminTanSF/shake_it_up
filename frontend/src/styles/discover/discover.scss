@@ -381,8 +381,8 @@ h1 {
   color: #f55e5f
 }
 
-// Mobile break point
-@media screen and (max-width: 414px) {
+// Mobile break point - Desktop code here
+@media screen and (min-width: 415px) {
   // CSS code here
 
 }

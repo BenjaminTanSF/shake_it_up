@@ -38,6 +38,24 @@ class  IngredientShow extends React.Component  {
     
     if (ingredient.strIngredientThumb) fileName = ingredient.strIngredientThumb.slice(82, (ingredient.strIngredientThumb.length - 9));
 
+    const DisplayDescription = () => {
+      if (ingredient.description !== "" && ingredient.description !== null) {
+        return (
+          <>
+            <div className="is-tile-container">
+              <h2>Description</h2>
+              <hr />
+              <div className="is-show-desc">
+                {ingredient.description}
+              </div>
+            </div>
+          </>
+        )
+      } else {
+        return null;
+      }
+    }
+
     const CapIngredName = (str) => {
       let result = [];
       let words = str.split(" ");
@@ -54,13 +72,7 @@ class  IngredientShow extends React.Component  {
         <div className="is-img-wrapper">
           <img className="ingred-show-img" src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} />
         </div>
-        <div className="is-tile-container">
-          <h2>Description</h2>
-          <hr/>
-          <div className="is-show-desc">
-            {ingredient.description ? <p>{ingredient.description}</p> : null}
-          </div>
-        </div>
+        <DisplayDescription/>
         <br />
         <div className="is-tile-container">
           <h2>Drinks this can make...</h2>

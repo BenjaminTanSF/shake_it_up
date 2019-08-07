@@ -140,8 +140,8 @@
     1px 1px 0 #000;
 }
 
-// Mobile break point
-@media screen and (max-width: 414px) {
+// Mobile break point - Desktop code here
+@media screen and (min-width: 415px) {
   // CSS code here
   .byoc-spirits {
     display: grid;
