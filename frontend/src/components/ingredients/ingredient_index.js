@@ -11,7 +11,8 @@ class IngredientsIndex extends React.Component {
     this.state = {
       ingredients: props.ingredients,
       shownIngredients: props.ingredients,
-      searchStr: ""
+      searchStr: "",
+      loaderTime: true
     }
     this.updateSearch = this.updateSearch.bind(this);
   }
@@ -28,6 +29,8 @@ class IngredientsIndex extends React.Component {
   }
   componentDidMount() {
     if (!this.props.ingredientsFullyLoaded)
+    this.setState({loaderTime: true});
+    setTimeout(() => this.setState({loaderTime: false}), 1900);
     this.props.fetchAllIngredients(() => (this.setState({
       ingredients: this.props.ingredients,
       shownIngredients: this.props.ingredients,
@@ -36,8 +39,8 @@ class IngredientsIndex extends React.Component {
   }
 
   render() {
-    if (this.props.loading) { return <h1>LOADING</h1>; }
-    // if (this.props.loading) { return <Loader id="loader-component"/>; }
+    // if (this.props.loading) { return <h1>LOADING</h1>; }
+    if (this.props.loading || this.state.loaderTime) { return <Loader id="loader-component"/>; }
     else {
       return (
         <div className="ingred-idx-container">

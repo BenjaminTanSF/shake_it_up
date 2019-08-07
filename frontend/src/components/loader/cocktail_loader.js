@@ -10,7 +10,7 @@ class CocktailLoader extends React.Component {
             lemonOpacity: 1,
             strawOpacity: 1,
             glassOpacity: 1,
-            drinkOpacity: 1,
+            drinkOpacity: .4,
             cubesOpacity: 1,
             cube1Opacity: 1,
             cube2Opacity: 1,
@@ -33,7 +33,7 @@ class CocktailLoader extends React.Component {
     }
 
     componentDidMount() {
-        // this.loading();
+        this.loading();
     }
 
     loading() {
@@ -88,7 +88,7 @@ class CocktailLoader extends React.Component {
             //     strawOpacity: 0,
             //     cubesOpacity: 0
             // })
-            worker = setInterval(increment, 1);
+            worker = setInterval(increment, 15);
         }
 
         function stopLoading() {
