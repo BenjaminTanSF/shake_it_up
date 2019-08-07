@@ -97,7 +97,7 @@
     left: 0;
 }
 
-#cubes div {
+.cube {
     /*display: none;*/
     position: absolute;
     width: 50px;
@@ -129,10 +129,10 @@
     -webkit-transform-origin: center bottom;
 }
 
-#coaster {
-    width: 130%;
-    height: 4px;
-    margin-left: -15%;
-    background: steelblue;
-    border-radius: 2px;
-}
+// #coaster {
+//     width: 130%;
+//     height: 4px;
+//     margin-left: -15%;
+//     background: steelblue;
+//     border-radius: 2px;
+// }
