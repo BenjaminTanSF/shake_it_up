@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import '../../styles/ingredients/ingredient_index.scss';
+import Loader from '../loader/cocktail_loader';
 
 class IngredientsIndex extends React.Component {
 
@@ -36,6 +37,7 @@ class IngredientsIndex extends React.Component {
 
   render() {
     if (this.props.loading) { return <h1>LOADING</h1>; }
+    // if (this.props.loading) { return <Loader id="loader-component"/>; }
     else {
       return (
         <div className="ingred-idx-container">
