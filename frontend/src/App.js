@@ -10,6 +10,7 @@ import DrinkIndexContainer from './components/drinks/drink_index_container';
 import DrinkShowContainer from './components/drinks/drink_show_container';
 import IngredientIndexContainer from './components/ingredients/ingredient_index_container';
 import IngredientShowContainer from './components/ingredients/ingredient_show_container';
+import About from './components/about/about';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/drinks/:drink_id" component={DrinkShowContainer} />
         <Route exact path="/byoc" component={BYOCContainer} />
         <Route exact path="/byoc/:spirit_name" component={BYOCResultsContainer} />
+        <Route exact path="/about" component={About} />
         <Route path="/" component={Discover} />
       </Switch>
 
