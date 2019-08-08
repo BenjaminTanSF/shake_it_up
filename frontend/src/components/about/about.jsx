@@ -75,10 +75,13 @@ class About extends React.Component {
                     </div>
                     <div className="about-body-tech">
                         <span>Technology Stack</span>
-                        <li>MongoDB</li>
-                        <li>Express</li>
-                        <li>React.js / Redux</li>
-                        <li>Node.js</li>
+                        <div className="about-body-tech-iconsContainer">
+                            <img className="about-tech-icon" src={require('../../assets/icons/Mongo.png')} alt="MongoDB" />
+                            <img className="about-tech-icon" src={require('../../assets/icons/Express.svg')} alt="Express.js" />
+                            <img className="about-tech-icon" src={require('../../assets/icons/React.png')} alt="React" />
+                            <img className="about-tech-icon" src={require('../../assets/icons/Redux.png')} alt="Redux" />
+                            <img className="about-tech-icon" src={require('../../assets/icons/Node.png')} alt="Node.js" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,4 +92,3 @@ class About extends React.Component {
 export default About;
 
 // TODO: Consider adding technology icons in "Technology Stack" section
-// TODO: Consider adding team photos under "Team" section
