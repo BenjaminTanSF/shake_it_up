@@ -151,23 +151,27 @@
     }
 
     .byoc-result-compatible-card {
-        background-color: transparent;
+        // background-color: transparent;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid black;
         border-radius: 10px;
         padding: 10px;
         margin-right: 10px;
         display: flex;
-        min-width: 80px;
-        min-height: 56px;
+        min-width: 115px;
+        min-height: 80px;
         align-items: center;
         justify-content: center;
     }
 
     .byoc-ing-name {
-    text-shadow: 
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
+        text-shadow: 
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
     }
 
 }
