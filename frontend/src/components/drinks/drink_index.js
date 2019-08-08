@@ -64,7 +64,7 @@ class DrinksIndex extends React.Component {
           {Object.values(this.state.shownDrinks).map(drink =>
             <div className="drink-index-tile" key={drink.idDrink}>
               <Link to={`/drinks/${drink.idDrink}`}>
-                <img alt={drink.strDrink} className="drink-idx-img" src={drink.strDrinkThumb} width="70%" />
+                <img alt={drink.strDrink} className="drink-index-img" src={drink.strDrinkThumb} />
                 <span className="drink-index-name">{drink.strDrink}</span>
               </Link>
               <hr></hr>
@@ -80,6 +80,3 @@ class DrinksIndex extends React.Component {
 }
 export default DrinksIndex;
 
-// TODO: Styling for Drinks Index results
-// TODO: Styling / Interaction Design for Search Bar
-// TODO: Add drink ingredients below drink title
