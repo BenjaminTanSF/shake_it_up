@@ -383,6 +383,15 @@ h1 {
 @media screen and (min-width: 415px) {
   // CSS code here
 
+  // Hero Section
+
+  #hero-tag {
+    font-size: 70px;
+    width: 45%;
+    margin-bottom: 40px;
+    line-height: 55px;
+  }
+
   // Base Spirits Section
   .discover-base-spiritlist {
     grid-template-columns: repeat(6, 1fr);
