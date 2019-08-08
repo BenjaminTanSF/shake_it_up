@@ -108,7 +108,7 @@
   .search {
     height: 40px;
     border-radius: 20px;
-    text-indent: 25%;
+    text-align: center;
     width: 100%;
     background-color: #fff;
     border: 1px solid #dfe0e6;
@@ -120,6 +120,10 @@
     font-size: .9375em;
     margin-bottom: 1em;
     outline: none;
+  }
+
+  .search::placeholder {
+    text-align: center;
   }
 
   .search::-webkit-input-placeholder {
