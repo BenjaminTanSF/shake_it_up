@@ -38,12 +38,6 @@ serif;
 .about-body-icon {
     width: 75px;
     height: 75px;
-    opacity: .8;
-    transition: all .2s ease-in-out;
-}
-
-.about-body-icon:hover {
-    opacity: 1
 }
 
 @keyframes flickerAnimation {
@@ -229,4 +223,48 @@ serif;
 @media screen and (min-width: 415px) {
   // CSS code here
 
+    .about-body {
+        height: 100%;
+    }
+
+    .about-body-content {
+        height: 435px;
+    }
+
+    .about-team-cardContainer {
+        width: 22%;
+        height: 90%;
+    }
+
+    .about-team-card-image {
+        width: 90%;
+        height: 70%;
+    }
+
+    .about-team-card-content span {
+        margin-top: 5px;
+    }
+
+    .about-team-card-icons-container {
+        margin-top: 10px;
+        align-content: flex-end;
+    }
+
+    #Phil {
+        background-position: 0px -55px;
+    }
+
+    .about-team-card-icon {
+        opacity: .8;
+        // transition: all .25s ease-in-out;
+    }
+
+    .about-team-card-icon:hover {
+        opacity: 1
+    }
+
+    .about-tech-icon {
+        width: 75px;
+        height: 75px;
+    }
 }

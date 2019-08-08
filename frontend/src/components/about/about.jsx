@@ -38,7 +38,7 @@ class About extends React.Component {
                                 <div className="about-team-card-content">
                                     <span>Frankie Siino</span>
                                     <div className="about-team-card-icons-container">
-                                        <a href="https://github.com/fsiino" target="_blank"><img id="GitHub-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" /></a>
+                                        <a href="https://github.com/fsiino" target="_blank"><img id="GitHub-icon" className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" /></a>
                                         <a href="https://www.linkedin.com/in/fsiino/" target="_blank"><img className="about-team-card-icon" src={require('../../assets/icons/linkedin.jpg')} alt="LinkedIn" /></a>
                                         <a href="https://www.frankiesiino.com/" target="_blank"><img id="portfolio-icon" className="about-team-card-icon" src={require('../../assets/icons/PersonalSite.png')} alt="Portfolio" /></a>
                                     </div>
@@ -76,11 +76,11 @@ class About extends React.Component {
                     <div className="about-body-tech">
                         <span>Technology Stack</span>
                         <div className="about-body-tech-iconsContainer">
-                            <img className="about-tech-icon" src={require('../../assets/icons/Mongo.png')} alt="MongoDB" />
-                            <img className="about-tech-icon" src={require('../../assets/icons/Express.svg')} alt="Express.js" />
-                            <img className="about-tech-icon" src={require('../../assets/icons/React.png')} alt="React" />
-                            <img className="about-tech-icon" src={require('../../assets/icons/Redux.png')} alt="Redux" />
-                            <img className="about-tech-icon" src={require('../../assets/icons/Node.png')} alt="Node.js" />
+                            <img className="about-tech-icon" src={require('../../assets/icons/Mongo.png')} alt="MongoDB" title="MongoDB" />
+                            <img className="about-tech-icon" src={require('../../assets/icons/Express.svg')} alt="Express.js" title="Express.js" />
+                            <img className="about-tech-icon" src={require('../../assets/icons/React.png')} alt="React" title="React" />
+                            <img className="about-tech-icon" src={require('../../assets/icons/Redux.png')} alt="Redux" title="Redux"/>
+                            <img className="about-tech-icon" src={require('../../assets/icons/Node.png')} alt="Node.js" title="Node.js" />
                         </div>
                     </div>
                 </div>
