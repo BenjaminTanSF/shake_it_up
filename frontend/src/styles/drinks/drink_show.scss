@@ -5,16 +5,47 @@
 // serif;
 // font-family: 'Oswald',
 // sans-serif;
+.drink-show-img {
+  width: 100%;
+}
+
+.desktop-ds-title{
+  display: none;
+}
+.ds-tile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 15px;
+  width: 90%;
+  padding-bottom: 10px;
+}
+
+
+
+.drink-show-desc {
+  font-size: 16px;
+  padding: 0 5px 0 5px;
+  margin: 0;
+}
+
+.drink-show-container {
+  margin: 0;
+  margin-bottom: 55px;
+}
+
 
 .drink-show-container {
   position: relative;
   align-content: center;
-  margin-bottom: 55px;
+  margin: 40px;
   background-color: #f7f7f7;
   // margin-bottom: 25px;
 
   h1 {
-  color: black;
   // font-family: 'Oswald', sans-serif;
   font-family: house-script, sans-serif;
   color: #fff;
@@ -42,11 +73,7 @@
   margin-bottom: 0;
 }
 
-  .drink-show-img {
-    // border-radius: 20px;
-    width: 100%;
-  }
-
+  
   .drink-show-desc {
     font-family: 'Pontano Sans', sans-serif;
     font-size: 16px;
@@ -70,16 +97,10 @@
   width: 100%;
 }
 
-.ds-tile-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-  margin: 0 20px;
-  border-radius: 15px;
-  width: 90%;
-  padding-bottom: 10px;
+
+
+.ds-divider{
+  display: none;
 }
 
 .drink-show-title {
@@ -116,5 +137,44 @@
 // Mobile break point - Desktop code here
 @media screen and (min-width: 415px) {
   // CSS code here
+  .drink-show-container{
+    display: flex;
 
+    .desktop-ds-title{
+      display: block;
+    }
+
+  .drink-show-img {
+    width: 50vw;
+  }
+  .ds-tile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    margin: 0 3vw;
+    border-radius: 15px;
+    width: 38vw;
+    padding-bottom: 1vw;
+  }
+  .drink-show-title {
+    // position: absolute;
+    // bottom: 50vw;
+    // left: 50vw;
+    // right: 0;
+    // top: 0;
+    // margin: auto;
+    display: none;
+  }
+  
+    h1 {
+      color: black;
+      text-shadow: none;
+    }
+  
+  .ds-divider{
+    display: none;
+  }
+}
 }
