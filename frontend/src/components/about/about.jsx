@@ -21,46 +21,52 @@ class About extends React.Component {
                     <div className="about-body-content">
                         <span>Team</span>
                         <div className="about-team-cardsContainer">
+                            {/* cards container */}
                             <div className="about-team-cardContainer">
-                                cardContainer
-                                <div className="about-team-card-image">
+                                <div id="Ben" className="about-team-card-image"></div>
+                                <div className="about-team-card-content">
+                                    <span>Benjamin Tan</span>
                                     <div classname="about-team-card-icons-container">
-                                        <div className="about-team-card-icon"></div>
-                                        <div className="about-team-card-icon"></div>
-                                        <div className="about-team-card-icon"></div>
+                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub"/>
+                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub"/>
+                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub"/>
                                     </div>
                                 </div>
                             </div>
                             <div className="about-team-cardContainer">
-                                cardContainer
-                                <div className="about-team-card-image">
+                                <div id="Frankie" className="about-team-card-image"></div>
+                                <div className="about-team-card-content">
+                                    <span>Frankie Siino</span>
                                     <div classname="about-team-card-icons-container">
-                                        <div className="about-team-card-icon"></div>
-                                        <div className="about-team-card-icon"></div>
-                                        <div className="about-team-card-icon"></div>
+                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
+                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
+                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
                                     </div>
                                 </div>
                             </div>
                             <div className="about-team-cardContainer">
-                                cardContainer
-                                <div className="about-team-card-image">
+                                <div id="Phil" className="about-team-card-image"></div>
+                                <div className="about-team-card-content">
+                                    <span>Phillip Krasnick</span>
                                     <div classname="about-team-card-icons-container">
-                                        <div className="about-team-card-icon"></div>
-                                        <div className="about-team-card-icon"></div>
-                                        <div className="about-team-card-icon"></div>
+                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
+                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
+                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
                                     </div>
                                 </div>
                             </div>
                             <div className="about-team-cardContainer">
-                                cardContainer
-                                <div className="about-team-card-image">
+                                <div id="Rob" className="about-team-card-image"></div>
+                                <div className="about-team-card-content">
+                                    <span>Rob Roby</span>
                                     <div classname="about-team-card-icons-container">
-                                        <div className="about-team-card-icon"></div>
-                                        <div className="about-team-card-icon"></div>
-                                        <div className="about-team-card-icon"></div>
+                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
+                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
+                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
                         {/* <a href="https://benjamintan.dev/" target="_blank"><li>Benjamin Tan</li></a>
                         <a href="https://www.frankiesiino.com/" target="_blank"><li>Frankie Siino</li></a>
