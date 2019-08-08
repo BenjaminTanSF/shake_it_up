@@ -1,4 +1,4 @@
-.ingred-idx-container {
+.ingred-index-container {
   align-content: center;
   margin-bottom: 60px;
   background-color: #f7f7f7;
@@ -63,11 +63,6 @@
   }
 
   .ingred-index-tile a {
-    // align-content: center;
-    // align-items: center;
-    // text-align: center;
-    // border-radius: 25px;
-    // height: 300px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -86,11 +81,11 @@
 
   }
 
-  .ingred-idx-img {
+  .ingred-index-img {
     border-radius: 8px;
     height: 50px;
     width: 50px;
-    margin-left: 10px
+    margin-left: 10px;
   }
   
   a {
@@ -140,5 +135,161 @@
 // Mobile break point - Desktop code here
 @media screen and (min-width: 415px) {
   // CSS code here
+
+  .ingred-index-container {
+    align-content: center;
+    margin-bottom: 60px;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 52px;
+
+  #ingred-index-h1-container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+  }
+
+  hr {
+    display: none;
+    width: 95%;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  h1 {
+    color: black;
+    font-family: 'DM Serif Display',
+    serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    position: relative;
+    // text-decoration: rgb(245, 110, 76) solid underline;
+  }
+
+  #ingred-index-h1:before {
+    content: "";
+    height: 5px;
+    background-color: #f16762;
+    width: 161px;
+    position: absolute;
+    display: block;
+    left: 40%;
+    bottom: 0;
+    margin-left: -63px;
+  }
+
+  .ingred-tile-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    width: 80vw;
+  }
+
+  .ingred-index-tile {
+    width: 20%;
+    height: 20%;
+    position: relative;
+    margin: 1% 1% 1% 1%;
+    min-height: 300px;
+    height: 400px;
+    display: inline-block;
+    vertical-align: middle;
+
+    a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+   }
+  }
+
+  .ingred-index-name {
+    position: absolute;
+    top: auto;
+    bottom: 7%;
+    left: 0;
+    right: 0;
+    color: black;
+    background: white;
+    // text-shadow: -1px -1px 0 #000,
+    //   1px -1px 0 #000,
+    //   -1px 1px 0 #000,
+    //   1px 1px 0 #000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 50%;
+  }
+
+  .ingred-index-img {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    margin: auto;
+    border-radius: 8px;
+    height: auto;
+    width: 100%;
+    vertical-align: middle;
+    margin-left: 0;
+    max-height: 400px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-family: house-script,
+    sans-serif;
+    font-size: 42px;
+    color: black;
+  }
+
+  .search-container {
+    width: 70%
+  }
+
+  .search {
+    height: 40px;
+    border-radius: 20px;
+    text-indent: 0%;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dfe0e6;
+    color: #1c1c1f;
+    line-height: normal;
+    margin: 0;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9375em;
+    margin-bottom: 1em;
+    outline: none;
+    text-align: center;
+  }
+
+  .search::-webkit-input-placeholder {
+    -webkit-transition: opacity 0.3s linear;
+    color: gray;
+  }
+
+  .search:focus::-webkit-input-placeholder {
+    border-color: rgb(252, 154, 154) !important;
+    opacity: .3;
+  }
+
+  .search:active {
+    border-color: rgb(248, 87, 87);
+  }
+  
+}
 
 }
