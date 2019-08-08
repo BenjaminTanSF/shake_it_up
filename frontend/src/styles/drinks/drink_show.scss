@@ -9,6 +9,9 @@
   width: 100%;
 }
 
+.desktop-ds-title{
+  display: none;
+}
 .ds-tile-container {
   display: flex;
   flex-direction: column;
@@ -134,9 +137,15 @@
 // Mobile break point - Desktop code here
 @media screen and (min-width: 415px) {
   // CSS code here
+  .drink-show-container{
+    display: flex;
+
+    .desktop-ds-title{
+      display: block;
+    }
+
   .drink-show-img {
     width: 50vw;
-    float: left;
   }
   .ds-tile-container {
     display: flex;
@@ -144,27 +153,28 @@
     justify-content: center;
     align-items: center;
     background: #fff;
-    margin: 0 .5vw;
+    margin: 0 3vw;
     border-radius: 15px;
     width: 38vw;
     padding-bottom: 1vw;
-    margin-left: auto;
   }
   .drink-show-title {
-    position: relative;
-    bottom: 0%;
-    left: 0;
-    right: 0vw;
-    top: 0;
-    margin: auto;
+    // position: absolute;
+    // bottom: 50vw;
+    // left: 50vw;
+    // right: 0;
+    // top: 0;
+    // margin: auto;
+    display: none;
   }
-  .drink-show-container{
+  
     h1 {
       color: black;
       text-shadow: none;
     }
-  }
+  
   .ds-divider{
-    display: hidden;
+    display: none;
   }
+}
 }

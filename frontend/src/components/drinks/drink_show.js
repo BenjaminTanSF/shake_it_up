@@ -95,9 +95,12 @@ class DrinkShow extends React.Component {
         <div className="drink-show-desc">
 
           <div className="ds-tile-container">
+          <div className = 'desktop-ds-title'>
+          <h1>{drink.strDrink}</h1>
+          </div>
             <h2>Ingredients</h2>
             <hr />
-
+          
             <div className="drink-show-measure-ingr-wrapper">
               <DisplayIngredients />
             </div>

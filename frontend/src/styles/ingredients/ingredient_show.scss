@@ -15,7 +15,9 @@ body {background-color: #f7f7f7;}
   text-align: left;
   text-align: center;
 }
-
+.desktop-ingred-title{
+  display: none;
+}
   h2 {
     color: black;
     font-family: 'Playfair Display', serif;
@@ -84,5 +86,28 @@ body {background-color: #f7f7f7;}
 // Mobile break point - Desktop code here
 @media screen and (min-width: 415px) {
   // CSS code here
+  .ingred-show-container{
+    .is-centerer{
+      margin: 0 auto;
+      display: inline-flex;
+    .ingred-show-img{
+      // height: 45vw;
+      width: auto;
+      height: 85vh;
+      max-width: 85vh;
+    }
+    
+    .mobile-ingred-title{
+      display: none;
+    }
+    .desktop-ingred-title{
+      display: block;
+    }
 
+    .is-tile-container {
+      width: 40vw;
+    }
+
+    }
+  } 
 }
