@@ -12,7 +12,8 @@ class IngredientsIndex extends React.Component {
     this.state = {
       ingredients: props.ingredients,
       shownIngredients: props.ingredients,
-      searchStr: ""
+      searchStr: "",
+      loaderTime: true
     }
     this.updateSearch = this.updateSearch.bind(this);
   }

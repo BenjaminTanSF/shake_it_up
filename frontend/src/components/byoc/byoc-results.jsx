@@ -84,8 +84,6 @@ class BYOCResults extends React.Component {
 			else {	this.setState({compatibleIngredients});	}
 		}
 
-
-
 	 componentDidMount() {
 		if (this.state.loaded) {
 			 this.setDrinks(() => this.setCompatibles());
