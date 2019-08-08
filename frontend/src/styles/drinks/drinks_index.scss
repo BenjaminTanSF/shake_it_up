@@ -21,7 +21,7 @@
  }
 
   input.search::placeholder { 
-   text-align: left;
+   text-align: center;
  }
 
  hr {
@@ -116,8 +116,8 @@
   .search {
     height: 40px;
     border-radius: 20px;
-    text-indent: 25%;
     width: 100%;
+    text-align: center;
     background-color: #fff;
     border: 1px solid #dfe0e6;
     color: #1c1c1f;

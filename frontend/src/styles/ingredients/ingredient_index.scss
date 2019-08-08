@@ -103,7 +103,7 @@
   .search {
     height: 40px;
     border-radius: 20px;
-    text-indent: 25%;
+    text-align: center;
     width: 100%;
     background-color: #fff;
     border: 1px solid #dfe0e6;
@@ -115,6 +115,10 @@
     font-size: .9375em;
     margin-bottom: 1em;
     outline: none;
+  }
+
+  .search::placeholder {
+    text-align: center;
   }
 
   .search::-webkit-input-placeholder {
@@ -136,6 +140,11 @@
 @media screen and (min-width: 415px) {
   // CSS code here
 
+  // Search Bar
+  .ingred-idx-container .search {
+    width: 40%;
+  }
+  
   .ingred-index-container {
     align-content: center;
     margin-bottom: 60px;
@@ -292,4 +301,3 @@
   
 }
 
-}
