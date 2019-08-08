@@ -172,10 +172,13 @@ class BYOCResults extends React.Component {
 							{this.state.compatibleIngredients.map(ingredient => {
 								let fileName = ingredient.imageURL.slice(82, (ingredient.imageURL.length - 9))
 								return (
-									<div className="byoc-result-compatible-card" key={ingredient.name} onClick={this.updateIng(ingredient.name)}>
+									<div style={{ "background-image": `url('${process.env.PUBLIC_URL + `/images/${fileName}'`})` }} className="byoc-result-compatible-card" key={ingredient.name} onClick={this.updateIng(ingredient.name)}>
 										{/* <img src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} /> */}
-										<span>{ingredient.name}</span>
+										<span className="byoc-ing-name">{ingredient.name}</span>
 									</div>
+									// 	{/* <img src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} /> */}
+									// 	<span>{ingredient.name}</span>
+									// </div>
 								)
 							})}
 						</div>

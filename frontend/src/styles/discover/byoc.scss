@@ -176,4 +176,81 @@
     font-size: 30px;
    
 }
+  .byoc-result-drinks-container {
+      width: 100%;
+      margin: 0px 20px;
+    }
+
+    .byoc-result-compatible-ingredients {
+        display: flex;
+        overflow-x: scroll;
+        color: white;
+    }
+
+    .byoc-result-compatible-card {
+        // background-color: transparent;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        margin-right: 10px;
+        display: flex;
+        min-width: 115px;
+        min-height: 80px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .byoc-ing-name {
+        text-shadow: 
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+    }
+
+    #byoc-results-ci-header {
+        color: black;
+        font-family: house-script,
+        sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 42px;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .byoc-result-drinks-container {
+        h1 {
+            font-size: 42px;
+        }
+    }
+
+    .byoc-results-container {
+        /* width */
+        ::-webkit-scrollbar {
+            width: 20px;
+        }
+    
+        /* Track */
+        // ::-webkit-scrollbar-track {
+        //     box-shadow: inset 0 0 5px grey; 
+        //     border-radius: 10px;
+        // }
+    
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to right, #ff8784, #ffb880);
+            border-radius: 10px;
+        }
+
+    }
+
 }
+
+
+
+
+  

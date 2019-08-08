@@ -42,7 +42,7 @@ class IngredientsIndex extends React.Component {
     // if (this.props.loading) { return <Loader id="loader-component"/>; }
     else {
       return (
-        <div className="ingred-idx-container">
+        <div className="ingred-index-container">
 
           {/* Search Bar */}
           <div className="search-container">
@@ -70,7 +70,7 @@ class IngredientsIndex extends React.Component {
                       ingredient: ingredient
                     }
                   }}>
-                    <img src={process.env.PUBLIC_URL + `/images/${fileName}`} className="ingred-idx-img" width="90%" alt={ingredient.name} />
+                    <img src={process.env.PUBLIC_URL + `/images/${fileName}`} className="ingred-index-img" width="90%" alt={ingredient.name} />
                     <span className="ingred-index-name">{ingredient.name}</span>
                   </Link>
                   <hr></hr>
