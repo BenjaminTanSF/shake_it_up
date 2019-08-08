@@ -73,7 +73,7 @@ class About extends React.Component {
                         <a href="https://www.phillipkrasnick.com/" target="_blank"><li>Phillip Krasnick</li></a>
                         <a href="https://robmroy.github.io/" target="_blank"><li>Rob Roy</li></a>   */}
                     </div>
-                    <div className="about-body-content">
+                    <div className="about-body-tech">
                         <span>Technology Stack</span>
                         <li>MongoDB</li>
                         <li>Express</li>

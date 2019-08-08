@@ -26,7 +26,7 @@ serif;
 
 .about-body {
     background-color: #fff;
-    height: 100%;
+    // height: 100%;
     border-radius: 8px;
     width: 90%;
     display: flex;
@@ -84,6 +84,7 @@ serif;
 
 .about-body-content {
     width: 90%;
+    height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -108,9 +109,9 @@ serif;
 
 .about-team-cardsContainer {
     width: 100%;
-    height: 300px;
-    margin: auto;
-    background: orange;
+    height: 350px;
+    // margin: auto;
+    // background: orange;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -119,7 +120,7 @@ serif;
 
 .about-team-cardContainer {
     // border-radius: 25px;
-    background: cornflowerblue;
+    // background: cornflowerblue;
     width: 48%;
     height: 70%;
     display: flex;
@@ -131,38 +132,38 @@ serif;
 
 #Ben {
     background-image: url("../../assets/team_images/ben.jpg");
-    background-position: center;
+    background-position: top;
     background-size: cover;
     // border-top-left-radius: 25px;
 }
 
 #Frankie {
     background-image: url("../../assets/team_images/Frankie.jpeg");
-    background-position: center;
+    background-position: top;
     background-size: cover;
 }
 
 #Phil {
     background-image: url("../../assets/team_images/software_engineer.jpg");
-    background-position: center;
+    background-position: top;
     background-size: cover;
 }
 
 #Rob {
-    background-image: url("../../assets/team_images/software_engineer.jpg");
-    background-position: center;
+    background-image: url("../../assets/team_images/Rob.png");
+    background-position: top;
     background-size: cover;
 }
 
 .about-team-card-image {
     position: relative;
     width: 100%;
-    height: 70%;
+    height: 60%;
 }
 
 .about-team-card-content {
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     left: 0;
     right: 0
 }
@@ -179,9 +180,28 @@ serif;
 }
 
 .about-team-card-icon {
-    width: 25px;
-    height: 25px;
-    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px
+}
+
+// Tech Section
+
+.about-body-tech {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    // margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+.about-body-tech span {
+    text-align: left;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
 
