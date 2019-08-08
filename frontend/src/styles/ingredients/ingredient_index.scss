@@ -63,11 +63,6 @@
   }
 
   .ingred-index-tile a {
-    // align-content: center;
-    // align-items: center;
-    // text-align: center;
-    // border-radius: 25px;
-    // height: 300px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -90,7 +85,7 @@
     border-radius: 8px;
     height: 50px;
     width: 50px;
-    margin-left: 10px
+    margin-left: 10px;
   }
   
   a {
@@ -208,15 +203,12 @@
     height: 20%;
     position: relative;
     margin: 1% 1% 1% 1%;
-    border: 1px solid red;
     min-height: 300px;
+    height: 400px;
+    display: inline-block;
+    vertical-align: middle;
 
     a {
-      // align-content: center;
-      // align-items: center;
-      // text-align: center;
-      // border-radius: 25px;
-      // height: 300px;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -228,22 +220,30 @@
     position: absolute;
     top: auto;
     bottom: 7%;
-    left: 25%;
-    right: 25%;
-    color: white;
-    text-shadow: -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
+    left: 0;
+    right: 0;
+    color: black;
+    background: white;
+    // text-shadow: -1px -1px 0 #000,
+    //   1px -1px 0 #000,
+    //   -1px 1px 0 #000,
+    //   1px 1px 0 #000;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 200;
     font-size: 50%;
   }
 
   .ingred-index-img {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    margin: auto;
     border-radius: 8px;
-    height: 100%;
+    height: auto;
     width: 100%;
+    vertical-align: middle;
+    margin-left: 0;
+    max-height: 400px;
   }
   
   a {
