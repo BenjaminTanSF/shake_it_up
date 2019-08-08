@@ -20,6 +20,10 @@
    justify-content: center;
  }
 
+  input.search::placeholder { 
+   text-align: left;
+ }
+
  hr {
     width: 95%;
     border: 0;
@@ -149,6 +153,11 @@
 // Mobile break point - Desktop code here
 @media screen and (min-width: 415px) {
   // CSS code here
+
+  // Search Bar
+  .drinks-index-container .search {
+    width: 40%;
+  }
 
   // Web Fonts
 // font-family: 'DM Serif Display',
@@ -307,5 +316,4 @@
   }
   
 }
-
 }
