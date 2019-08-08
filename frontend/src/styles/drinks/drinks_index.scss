@@ -229,10 +229,13 @@
   }
 
   .drink-index-tile {
-    width: 21%;
+    width: 20%;
     height: 100%;
     position: relative;
     margin: 0% 3% 3% 1%;
+    border: 1px solid #888888;
+    border-radius: 5px;
+    box-shadow: 9px 9px 10px -2px #888888;
   
     a {
       display: flex;

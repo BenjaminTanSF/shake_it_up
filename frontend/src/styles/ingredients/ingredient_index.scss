@@ -74,7 +74,6 @@
   bottom: 0;
   right: 0px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  border-radius: 3px;
   font-weight: 200;
   font-size: 50%;
   margin-left: 10px;
@@ -203,19 +202,23 @@
     flex-wrap: wrap;
     align-items: center;
     background: #fff;
-    border-radius: 5px;
     width: 80vw;
+    padding: 30px 0 0 15px;
   }
 
   .ingred-index-tile {
     width: 20%;
     height: 20%;
     position: relative;
-    margin: 1% 1% 1% 1%;
+    margin: 0% 3% 3% 1%;
     min-height: 300px;
-    height: 400px;
+    height: 320px;
     display: inline-block;
     vertical-align: middle;
+    background-color: black;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #888888;
+    box-shadow: 9px 9px 10px -2px #888888;
 
     a {
       display: flex;
@@ -227,32 +230,38 @@
 
   .ingred-index-name {
     position: absolute;
-    top: auto;
-    bottom: 7%;
+    top: 87%;
     left: 0;
     right: 0;
-    color: black;
-    background: white;
-    // text-shadow: -1px -1px 0 #000,
-    //   1px -1px 0 #000,
-    //   -1px 1px 0 #000,
-    //   1px 1px 0 #000;
+    margin: 0 0 0 0;
+    color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 200;
-    font-size: 50%;
+    font-size: 20px;
+
+    a {
+      text-decoration: none;
+      font-family: house-script,
+      sans-serif;
+      font-size: 42px;
+      color: black;
+    }
+
   }
 
   .ingred-index-img {
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
+    // position: absolute;
+    // top: 50%;
+    // bottom: 50%;
     margin: auto;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     height: auto;
     width: 100%;
     vertical-align: middle;
     margin-left: 0;
-    max-height: 400px;
+    min-height: 260px;
+    max-height: 260px;
+    background-color: #f7f7f7;
   }
   
   a {
