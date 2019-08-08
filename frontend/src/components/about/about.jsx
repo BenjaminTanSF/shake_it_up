@@ -26,10 +26,10 @@ class About extends React.Component {
                                 <div id="Ben" className="about-team-card-image"></div>
                                 <div className="about-team-card-content">
                                     <span>Benjamin Tan</span>
-                                    <div classname="about-team-card-icons-container">
-                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub"/>
-                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub"/>
-                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub"/>
+                                    <div className="about-team-card-icons-container">
+                                        <a href="https://github.com/BenjaminT88" target="_blank"><img id="GitHub-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" /></a>
+                                        <a href="https://www.linkedin.com/in/benjamin200/" target="_blank"><img className="about-team-card-icon" src={require('../../assets/icons/linkedin.jpg')} alt="LinkedIn" /></a>
+                                        <a href="https://benjamintan.dev/" target="_blank"><img id="portfolio-icon" className="about-team-card-icon" src={require('../../assets/icons/PersonalSite.png')} alt="GitHub" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -37,10 +37,10 @@ class About extends React.Component {
                                 <div id="Frankie" className="about-team-card-image"></div>
                                 <div className="about-team-card-content">
                                     <span>Frankie Siino</span>
-                                    <div classname="about-team-card-icons-container">
-                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
-                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
-                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
+                                    <div className="about-team-card-icons-container">
+                                        <a href="https://github.com/fsiino" target="_blank"><img id="GitHub-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" /></a>
+                                        <a href="https://www.linkedin.com/in/fsiino/" target="_blank"><img className="about-team-card-icon" src={require('../../assets/icons/linkedin.jpg')} alt="LinkedIn" /></a>
+                                        <a href="https://www.frankiesiino.com/" target="_blank"><img id="portfolio-icon" className="about-team-card-icon" src={require('../../assets/icons/PersonalSite.png')} alt="Portfolio" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -48,10 +48,10 @@ class About extends React.Component {
                                 <div id="Phil" className="about-team-card-image"></div>
                                 <div className="about-team-card-content">
                                     <span>Phillip Krasnick</span>
-                                    <div classname="about-team-card-icons-container">
-                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
-                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
-                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
+                                    <div className="about-team-card-icons-container">
+                                        <a href="https://github.com/SkiesXR" target="_blank"><img id="GitHub-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" /></a>
+                                        <a href="https://www.linkedin.com/in/phillipkrasnick" target="_blank"><img className="about-team-card-icon" src={require('../../assets/icons/linkedin.jpg')} alt="LinkedIn" /></a>
+                                        <a href="https://www.phillipkrasnick.com/" target="_blank"><img id="portfolio-icon" className="about-team-card-icon" src={require('../../assets/icons/PersonalSite.png')} alt="Portfolio" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -59,10 +59,10 @@ class About extends React.Component {
                                 <div id="Rob" className="about-team-card-image"></div>
                                 <div className="about-team-card-content">
                                     <span>Rob Roby</span>
-                                    <div classname="about-team-card-icons-container">
-                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
-                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
-                                        <img className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" />
+                                    <div className="about-team-card-icons-container">
+                                        <a href="https://github.com/robmroy" target="_blank"><img id="GitHub-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" /></a>
+                                        <a href="https://www.linkedin.com/in/rob-roy-39286518b/" target="_blank"><img className="about-team-card-icon" src={require('../../assets/icons/linkedin.jpg')} alt="LinkedIn" /></a>
+                                        <a href="https://robmroy.github.io/" target="_blank"><img id="portfolio-icon" src={require('../../assets/icons/PersonalSite.png')} alt="Portfolio" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -90,5 +90,3 @@ class About extends React.Component {
 }
 
 export default About;
-
-// TODO: Consider adding technology icons in "Technology Stack" section

@@ -96,7 +96,7 @@ serif;
     text-align: left;
     font-weight: 700;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .about-body-content li {
@@ -175,14 +175,14 @@ serif;
 
 .about-team-card-icons-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 .about-team-card-icon {
-    width: 50px;
-    height: 50px;
-    margin-top: 5px
+    width: 45px;
+    height: 45px;
+    // margin-top: 5px
 }
 
 // Tech Section
@@ -213,6 +213,16 @@ serif;
 .about-tech-icon {
     width: 50px;
     height: 50px;
+}
+
+#GitHub-icon {
+    width: 55px;
+    height: 55px;
+}
+
+#portfolio-icon {
+    width: 40px;
+    height: 40px;
 }
 
 // Mobile break point - Desktop code here
