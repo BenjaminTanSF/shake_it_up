@@ -79,7 +79,7 @@ class  IngredientShow extends React.Component  {
 
         <div className="is-img-wrapper">
 
-          <img className={numDrinks<3 ? "ingred-show-img" : 'ingred-show-img-shrink'} src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} />
+          <img className={numDrinks<3 || !ingredient.description ? "ingred-show-img" : 'ingred-show-img-shrink'} src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} />
          <div className={numDrinks>3 ? 'mobile-hidden' : 'hidden'}> <DisplayDescription/></div>    
 
         </div>
