@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {withRouter} from 'react-router';
-
 import '../../styles/ingredients/ingredient_show.scss';
 
 
@@ -20,6 +19,7 @@ class  IngredientShow extends React.Component  {
   }
 
   componentDidMount(){
+
     let name = this.state.ingredient.name;
     if (!this.state.ingredientLoaded){
       this.props.fetchDrinksByIngredient(
@@ -32,8 +32,8 @@ class  IngredientShow extends React.Component  {
   }
 
   render (){
-    let ingredient = this.state.ingredient;
-
+    let ingredient = this.state.ingredient || {};
+    let numDrinks = ingredient.drinks ? ingredient.drinks.length : 0;
     let fileName = undefined;
     
     if (ingredient.strIngredientThumb) fileName = ingredient.strIngredientThumb.slice(82, (ingredient.strIngredientThumb.length - 9));
@@ -41,15 +41,15 @@ class  IngredientShow extends React.Component  {
     const DisplayDescription = () => {
       if (ingredient.description !== "" && ingredient.description !== null) {
         return (
-          <>
+          <div className='is-desc'>
             <div className="is-tile-container">
               <h2>Description</h2>
               <hr />
-              <div className="is-show-desc">
+              <span className="is-show-desc">
                 {ingredient.description}
-              </div>
+              </span>
             </div>
-          </>
+          </ div >
         )
       } else {
         return null;
@@ -68,32 +68,54 @@ class  IngredientShow extends React.Component  {
 
     return (
       <div className="ingred-show-container">
+
         <div className = 'is-centerer'>
         <h1 className = 'mobile-ingred-title'>{CapIngredName(ingredient.name)}</h1>
+        <div className = 'desktop-is-left'>
+
+          {numDrinks>6 ?
+        <h1 className = 'desktop-ingred-title'>{CapIngredName(ingredient.name)}</h1>
+        : ''}
 
         <div className="is-img-wrapper">
-          <img className="ingred-show-img" src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} />
+
+          <img className={numDrinks<3 ? "ingred-show-img" : 'ingred-show-img-shrink'} src={process.env.PUBLIC_URL + `/images/${fileName}`} alt={ingredient.name} />
+         <div className={numDrinks>3 ? 'mobile-hidden' : 'hidden'}> <DisplayDescription/></div>    
+
+        </div>
         </div>
 
-        <div>
+        <div className='desktop-is-right'>
+        {numDrinks<=6 ?
         <h1 className = 'desktop-ingred-title'>{CapIngredName(ingredient.name)}</h1>
-
-        <DisplayDescription/>
+        : ''}
+          <div className = 'description-width-setter-2'>
+        <div className={numDrinks > 3 ? 'desktop-hidden' : ''}>
+        <DisplayDescription />
+          </div>
         <br />
-        <div className="is-tile-container">
+        <div className="is-drinks">
           <h2>Drinks this can make...</h2>
           <hr/>
+          <div className = 'desktop-is-grid'>
           {ingredient.drinks.map(drink => (
             <div className="is-drink-item" key={drink._id}>
               <Link to={{
                 pathname: `/drinks/${drink.idDrink}`,
                 state: { drink: drink }
               }}
-              >{drink.strDrink}
+              >
+                <img 
+                src={drink.strDrinkThumb} 
+                alt={drink.strDrink}
+                className='mobile-hidden is-drink-pic'/>
+              {drink.strDrink}
               </Link>
               <hr/>
             </div>
           ))}
+          </div>
+        </div>
         </div>
         </div>
         </div>
