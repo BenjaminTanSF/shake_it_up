@@ -394,15 +394,15 @@ h1 {
     height: 260px;
     font-size: 50px;
     opacity: .8;
-    transition: opacity .25s ease-in-out;
+    transition: all .1s ease-in-out;
     background-position: top;
-    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   .discover-spirit:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     opacity: 1;
     transition: opacity .25s ease-in-out;
+    transform: scale(1.1);
   }
 
   .discover-base {
