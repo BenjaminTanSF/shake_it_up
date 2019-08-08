@@ -26,7 +26,7 @@ serif;
 
 .about-body {
     background-color: #fff;
-    height: 100%;
+    // height: 100%;
     border-radius: 8px;
     width: 90%;
     display: flex;
@@ -80,14 +80,15 @@ serif;
     align-items: center;
 }
 
-// Team Section
+// Body Section
 
 .about-body-content {
-    width: 100%;
+    width: 90%;
+    height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-left: 40px;
+    // margin-left: 40px;
     margin-top: 10px;
 }
 
@@ -95,7 +96,7 @@ serif;
     text-align: left;
     font-weight: 700;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .about-body-content li {
@@ -104,6 +105,125 @@ serif;
     font-size: 18px;
 }
 
+// Team Section
+
+.about-team-cardsContainer {
+    width: 100%;
+    height: 350px;
+    // margin: auto;
+    // background: orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-team-cardContainer {
+    // border-radius: 25px;
+    // background: cornflowerblue;
+    width: 48%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#Ben {
+    background-image: url("../../assets/team_images/ben.jpg");
+    background-position: top;
+    background-size: cover;
+    // border-top-left-radius: 25px;
+}
+
+#Frankie {
+    background-image: url("../../assets/team_images/Frankie.jpeg");
+    background-position: top;
+    background-size: cover;
+}
+
+#Phil {
+    background-image: url("../../assets/team_images/Phil.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+#Rob {
+    background-image: url("../../assets/team_images/Rob.png");
+    background-position: top;
+    background-size: cover;
+}
+
+.about-team-card-image {
+    position: relative;
+    width: 100%;
+    height: 60%;
+}
+
+.about-team-card-content {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0
+}
+
+.about-team-card-content span {
+    color: black;
+    font-size: 16px;
+}
+
+.about-team-card-icons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-team-card-icon {
+    width: 45px;
+    height: 45px;
+    // margin-top: 5px
+}
+
+// Tech Section
+
+.about-body-tech {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    // margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+.about-body-tech span {
+    text-align: left;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.about-body-tech-iconsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-tech-icon {
+    width: 50px;
+    height: 50px;
+}
+
+#GitHub-icon {
+    width: 55px;
+    height: 55px;
+}
+
+#portfolio-icon {
+    width: 40px;
+    height: 40px;
+}
 
 // Mobile break point - Desktop code here
 @media screen and (min-width: 415px) {
