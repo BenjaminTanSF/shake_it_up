@@ -16,7 +16,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     
-    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -32,11 +32,25 @@
 
     <link href="https://fonts.googleapis.com/css?family=Pontano+Sans&display=swap" rel="stylesheet">
 
+    <!-- <link rel="manifest" href="/manifest.json"> -->
+
     <title>Shake It Up!</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        // console.log("Will the service worker register?");
+        navigator.serviceWorker.register('service-worker.js')
+          .then(function (reg) {
+            // console.log("Yes, it did.");
+          }).catch(function (err) {
+            // console.log("No it didn't. This happened:", err)
+          });
+      }
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
