@@ -20,10 +20,52 @@ class About extends React.Component {
                     </div>
                     <div className="about-body-content">
                         <span>Team</span>
-                        <a href="https://benjamintan.dev/" target="_blank"><li>Benjamin Tan</li></a>
+                        <div className="about-team-cardsContainer">
+                            <div className="about-team-cardContainer">
+                                cardContainer
+                                <div className="about-team-card-image">
+                                    <div classname="about-team-card-icons-container">
+                                        <div className="about-team-card-icon"></div>
+                                        <div className="about-team-card-icon"></div>
+                                        <div className="about-team-card-icon"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="about-team-cardContainer">
+                                cardContainer
+                                <div className="about-team-card-image">
+                                    <div classname="about-team-card-icons-container">
+                                        <div className="about-team-card-icon"></div>
+                                        <div className="about-team-card-icon"></div>
+                                        <div className="about-team-card-icon"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="about-team-cardContainer">
+                                cardContainer
+                                <div className="about-team-card-image">
+                                    <div classname="about-team-card-icons-container">
+                                        <div className="about-team-card-icon"></div>
+                                        <div className="about-team-card-icon"></div>
+                                        <div className="about-team-card-icon"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="about-team-cardContainer">
+                                cardContainer
+                                <div className="about-team-card-image">
+                                    <div classname="about-team-card-icons-container">
+                                        <div className="about-team-card-icon"></div>
+                                        <div className="about-team-card-icon"></div>
+                                        <div className="about-team-card-icon"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* <a href="https://benjamintan.dev/" target="_blank"><li>Benjamin Tan</li></a>
                         <a href="https://www.frankiesiino.com/" target="_blank"><li>Frankie Siino</li></a>
                         <a href="https://www.phillipkrasnick.com/" target="_blank"><li>Phillip Krasnick</li></a>
-                        <a href="https://robmroy.github.io/" target="_blank"><li>Rob Roy</li></a>  
+                        <a href="https://robmroy.github.io/" target="_blank"><li>Rob Roy</li></a>   */}
                     </div>
                     <div className="about-body-content">
                         <span>Technology Stack</span>

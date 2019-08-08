@@ -80,14 +80,14 @@ serif;
     align-items: center;
 }
 
-// Team Section
+// Body Section
 
 .about-body-content {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-left: 40px;
+    // margin-left: 40px;
     margin-top: 10px;
 }
 
@@ -102,6 +102,24 @@ serif;
     text-align: left;
     list-style-type: none;
     font-size: 18px;
+}
+
+// Team Section
+
+.about-team-cardsContainer {
+    width: 100%;
+    margin: auto;
+    background: orange;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-team-cardContainer {
+    border-radius: 25px;
+    background: cornflowerblue;
+    width: 40%;
 }
 
 
