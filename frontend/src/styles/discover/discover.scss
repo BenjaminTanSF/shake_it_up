@@ -379,11 +379,36 @@ h1 {
   color: #f55e5f
 }
 
+.mobile-hidden{
+  display:none;
+}
+
 // Mobile break point - Desktop code here
 @media screen and (min-width: 415px) {
   // CSS code here
 
   // Hero Section
+  .desktop-hidden{
+    display: none;
+  }
+
+  .mobile-hidden{
+    display: block;
+  }
+
+  .discover-slideshow-wrapper{
+    height: 380px;
+    margin: 30px 3.5vw;
+  }
+
+  .discover-featured {
+    margin: 60px 80px 0 80px;
+  }
+
+  .discover-slideshow-item {
+    padding: 0px;
+    margin: 0px;
+  }
 
   #hero-tag {
     font-size: 70px;
@@ -418,7 +443,7 @@ h1 {
     margin: 60px 80px 0 80px;
   }
 
-  #base-spirit-h1 {
+  #base-spirit-h1, .discover-featured h1 {
     font-size: 50px;
   }
 

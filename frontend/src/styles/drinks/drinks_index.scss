@@ -92,7 +92,9 @@
     color: black;
     bottom: 0;
     right: 0px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    // font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Lora',
+    serif;
     border-radius: 3px;
     font-weight: 200;
     font-size: 50%;
@@ -233,7 +235,6 @@
     height: 100%;
     position: relative;
     margin: 0% 3% 3% 1%;
-    border: 1px solid #888888;
     border-radius: 5px;
     box-shadow: 9px 9px 10px -2px #888888;
   
@@ -246,12 +247,16 @@
    
   }
 
+  .drink-index-tile:hover {
+    transform: scale(1.05);
+  }
+
   .drink-index-img {
     border-radius: 5px;
     height: 100%;
     width: 100%;
     padding-bottom: 40%;
-    background: black;
+    background: #130d0d;
     margin-left: 0;
   }
 
@@ -261,10 +266,14 @@
     left: 0;
     right: 0;
     margin: 0 0 0 0;
+    padding: 0px 20px;
+    line-height: 30px;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    // font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Vollkorn',
+    serif;
     font-weight: 200;
-    font-size: 20px;
+    font-size: 25px;
   }
   
   a {

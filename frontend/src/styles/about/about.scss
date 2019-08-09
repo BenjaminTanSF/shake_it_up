@@ -38,12 +38,6 @@ serif;
 .about-body-icon {
     width: 75px;
     height: 75px;
-    opacity: .8;
-    transition: all .2s ease-in-out;
-}
-
-.about-body-icon:hover {
-    opacity: 1
 }
 
 @keyframes flickerAnimation {
@@ -134,25 +128,28 @@ serif;
     background-image: url("../../assets/team_images/ben.jpg");
     background-position: top;
     background-size: cover;
-    // border-top-left-radius: 25px;
+    box-shadow: 0 10px 6px -8px #777
 }
 
 #Frankie {
     background-image: url("../../assets/team_images/Frankie.jpeg");
     background-position: top;
     background-size: cover;
+    box-shadow: 0 10px 6px -8px #777
 }
 
 #Phil {
     background-image: url("../../assets/team_images/Phil.jpeg");
     background-position: center;
     background-size: cover;
+    box-shadow: 0 10px 6px -8px #777
 }
 
 #Rob {
     background-image: url("../../assets/team_images/Rob.png");
     background-position: top;
     background-size: cover;
+    box-shadow: 0 10px 6px -8px #777
 }
 
 .about-team-card-image {
@@ -229,4 +226,62 @@ serif;
 @media screen and (min-width: 415px) {
   // CSS code here
 
+    .about-body {
+        height: 100%;
+    }
+
+    .about-body-content {
+        height: 435px;
+    }
+
+    #team {
+        font-size: 35px;
+    }
+
+    .about-body-tech-iconsContainer {
+        justify-content: space-around;
+    }
+
+    .about-body-tech span {
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+
+    .about-team-cardContainer {
+        width: 22%;
+        height: 90%;
+    }
+
+    .about-team-card-image {
+        width: 90%;
+        height: 70%;
+    }
+
+    .about-team-card-content span {
+        margin-top: 5px;
+    }
+
+    .about-team-card-icons-container {
+        margin-top: 5px;
+        align-content: flex-end;
+        justify-content: space-around;
+    }
+
+    #Phil {
+        background-position: 0px -55px;
+    }
+
+    .about-team-card-icon {
+        opacity: .8;
+        // transition: all .25s ease-in-out;
+    }
+
+    .about-team-card-icon:hover {
+        opacity: 1
+    }
+
+    .about-tech-icon {
+        width: 75px;
+        height: 75px;
+    }
 }
