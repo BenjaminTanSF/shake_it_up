@@ -19,7 +19,7 @@ class About extends React.Component {
                         </a>
                     </div>
                     <div className="about-body-content">
-                        <span>Team</span>
+                        <span id="team">Team</span>
                         <div className="about-team-cardsContainer">
                             {/* cards container */}
                             <div className="about-team-cardContainer">

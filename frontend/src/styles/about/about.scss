@@ -128,25 +128,28 @@ serif;
     background-image: url("../../assets/team_images/ben.jpg");
     background-position: top;
     background-size: cover;
-    // border-top-left-radius: 25px;
+    box-shadow: 0 10px 6px -8px #777
 }
 
 #Frankie {
     background-image: url("../../assets/team_images/Frankie.jpeg");
     background-position: top;
     background-size: cover;
+    box-shadow: 0 10px 6px -8px #777
 }
 
 #Phil {
     background-image: url("../../assets/team_images/Phil.jpeg");
     background-position: center;
     background-size: cover;
+    box-shadow: 0 10px 6px -8px #777
 }
 
 #Rob {
     background-image: url("../../assets/team_images/Rob.png");
     background-position: top;
     background-size: cover;
+    box-shadow: 0 10px 6px -8px #777
 }
 
 .about-team-card-image {
@@ -231,6 +234,19 @@ serif;
         height: 435px;
     }
 
+    #team {
+        font-size: 35px;
+    }
+
+    .about-body-tech-iconsContainer {
+        justify-content: space-around;
+    }
+
+    .about-body-tech span {
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+
     .about-team-cardContainer {
         width: 22%;
         height: 90%;
@@ -246,7 +262,7 @@ serif;
     }
 
     .about-team-card-icons-container {
-        margin-top: 10px;
+        margin-top: 5px;
         align-content: flex-end;
         justify-content: space-around;
     }
