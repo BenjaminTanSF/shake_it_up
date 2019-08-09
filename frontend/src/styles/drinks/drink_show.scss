@@ -145,6 +145,10 @@
       width: 90%
     }
 
+    // justify-content: space-between;
+    // margin: 5vh 5vw 5vh 8vw;
+
+
     .desktop-ds-title{
       display: block;
       background: black;
@@ -170,6 +174,11 @@
   #title-container {
     width: 100%;
   }
+    // width: 40vw;
+    // height: 40vw;
+    // border-radius: 5px;
+  }
+
 
   .ds-tile-container {
     display: flex;
@@ -223,7 +232,7 @@
     }
   
   .ds-divider{
-    display: none;
+    display: block;
   }
 
   #drink-instructions {
@@ -231,5 +240,17 @@
     text-align: left;
     width: 95%
   }
+}
+
+.ds-ing-meas {
+  margin-left: 11vw;
+  text-align: left;
+  width: 100%;
+}
+
+.ds-ing-item {
+  text-align: left;
+  margin-right: 6vw;
+  width: 100%;
 }
 }
