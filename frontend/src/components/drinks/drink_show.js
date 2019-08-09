@@ -29,9 +29,11 @@ class DrinkShow extends React.Component {
         return (
           <>
             <div className="ds-tile-container">
-              <h2>Instructions</h2>
+              <div id="title-container">
+                <h2>Instructions</h2>
+              </div>
               <hr />
-              <div className="drink-show-desc">
+              <div id="drink-instructions" className="drink-show-desc">
                 {drink.strInstructions}
               </div>
             </div>
@@ -98,7 +100,9 @@ class DrinkShow extends React.Component {
           <div className = 'desktop-ds-title'>
           <h1>{drink.strDrink}</h1>
           </div>
+          <div id="title-container">
             <h2>Ingredients</h2>
+          </div>
             <hr />
           
             <div className="drink-show-measure-ingr-wrapper">

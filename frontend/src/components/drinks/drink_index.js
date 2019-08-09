@@ -65,7 +65,9 @@ class DrinksIndex extends React.Component {
             <div className="drink-index-tile" key={drink.idDrink}>
               <Link to={`/drinks/${drink.idDrink}`}>
                 <img alt={drink.strDrink} className="drink-index-img" src={drink.strDrinkThumb} />
-                <span className="drink-index-name">{drink.strDrink}</span>
+                <div id="drink-index-name-container">
+                  <span className="drink-index-name">{drink.strDrink}</span>
+                </div>
               </Link>
               <hr></hr>
             </div>
