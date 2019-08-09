@@ -19,18 +19,69 @@ class About extends React.Component {
                         </a>
                     </div>
                     <div className="about-body-content">
-                        <span>Team</span>
-                        <a href="https://benjamintan.dev/" target="_blank"><li>Benjamin Tan</li></a>
+                        <span id="team">Team</span>
+                        <div className="about-team-cardsContainer">
+                            {/* cards container */}
+                            <div className="about-team-cardContainer">
+                                <div id="Ben" className="about-team-card-image"></div>
+                                <div className="about-team-card-content">
+                                    <span>Benjamin Tan</span>
+                                    <div className="about-team-card-icons-container">
+                                        <a href="https://github.com/BenjaminT88" target="_blank"><img id="GitHub-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" /></a>
+                                        <a href="https://www.linkedin.com/in/benjamin200/" target="_blank"><img className="about-team-card-icon" src={require('../../assets/icons/linkedin.jpg')} alt="LinkedIn" /></a>
+                                        <a href="https://benjamintan.dev/" target="_blank"><img id="portfolio-icon" className="about-team-card-icon" src={require('../../assets/icons/PersonalSite.png')} alt="GitHub" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="about-team-cardContainer">
+                                <div id="Frankie" className="about-team-card-image"></div>
+                                <div className="about-team-card-content">
+                                    <span>Frankie Siino</span>
+                                    <div className="about-team-card-icons-container">
+                                        <a href="https://github.com/fsiino" target="_blank"><img id="GitHub-icon" className="about-team-card-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" /></a>
+                                        <a href="https://www.linkedin.com/in/fsiino/" target="_blank"><img className="about-team-card-icon" src={require('../../assets/icons/linkedin.jpg')} alt="LinkedIn" /></a>
+                                        <a href="https://www.frankiesiino.com/" target="_blank"><img id="portfolio-icon" className="about-team-card-icon" src={require('../../assets/icons/PersonalSite.png')} alt="Portfolio" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="about-team-cardContainer">
+                                <div id="Phil" className="about-team-card-image"></div>
+                                <div className="about-team-card-content">
+                                    <span>Phillip Krasnick</span>
+                                    <div className="about-team-card-icons-container">
+                                        <a href="https://github.com/SkiesXR" target="_blank"><img id="GitHub-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" /></a>
+                                        <a href="https://www.linkedin.com/in/phillipkrasnick" target="_blank"><img className="about-team-card-icon" src={require('../../assets/icons/linkedin.jpg')} alt="LinkedIn" /></a>
+                                        <a href="https://www.phillipkrasnick.com/" target="_blank"><img id="portfolio-icon" className="about-team-card-icon" src={require('../../assets/icons/PersonalSite.png')} alt="Portfolio" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="about-team-cardContainer">
+                                <div id="Rob" className="about-team-card-image"></div>
+                                <div className="about-team-card-content">
+                                    <span>Rob Roby</span>
+                                    <div className="about-team-card-icons-container">
+                                        <a href="https://github.com/robmroy" target="_blank"><img id="GitHub-icon" src={require('../../assets/icons/GitHub.png')} alt="GitHub" /></a>
+                                        <a href="https://www.linkedin.com/in/rob-roy-39286518b/" target="_blank"><img className="about-team-card-icon" src={require('../../assets/icons/linkedin.jpg')} alt="LinkedIn" /></a>
+                                        <a href="https://robmroy.github.io/" target="_blank"><img id="portfolio-icon" src={require('../../assets/icons/PersonalSite.png')} alt="Portfolio" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        {/* <a href="https://benjamintan.dev/" target="_blank"><li>Benjamin Tan</li></a>
                         <a href="https://www.frankiesiino.com/" target="_blank"><li>Frankie Siino</li></a>
                         <a href="https://www.phillipkrasnick.com/" target="_blank"><li>Phillip Krasnick</li></a>
-                        <a href="https://robmroy.github.io/" target="_blank"><li>Rob Roy</li></a>  
+                        <a href="https://robmroy.github.io/" target="_blank"><li>Rob Roy</li></a>   */}
                     </div>
-                    <div className="about-body-content">
+                    <div className="about-body-tech">
                         <span>Technology Stack</span>
-                        <li>MongoDB</li>
-                        <li>Express</li>
-                        <li>React.js / Redux</li>
-                        <li>Node.js</li>
+                        <div className="about-body-tech-iconsContainer">
+                            <img className="about-tech-icon" src={require('../../assets/icons/Mongo.png')} alt="MongoDB" title="MongoDB" />
+                            <img className="about-tech-icon" src={require('../../assets/icons/Express.svg')} alt="Express.js" title="Express.js" />
+                            <img className="about-tech-icon" src={require('../../assets/icons/React.png')} alt="React" title="React" />
+                            <img className="about-tech-icon" src={require('../../assets/icons/Redux.png')} alt="Redux" title="Redux"/>
+                            <img className="about-tech-icon" src={require('../../assets/icons/Node.png')} alt="Node.js" title="Node.js" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,6 +90,3 @@ class About extends React.Component {
 }
 
 export default About;
-
-// TODO: Consider adding technology icons in "Technology Stack" section
-// TODO: Consider adding team photos under "Team" section

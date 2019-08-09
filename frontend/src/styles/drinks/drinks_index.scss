@@ -81,21 +81,23 @@
     }
   }
 
-  .drink-index-name {
-  color: black;
-  bottom: 0;
-  right: 0px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  border-radius: 3px;
-  font-weight: 200;
-  font-size: 50%;
-  margin-left: 10px;
-  }
-
   .drink-index-img {
     border-radius: 8px;
     height: 50px;
     width: 50px;
+    margin-left: 10px;
+  }
+
+  .drink-index-name {
+    color: black;
+    bottom: 0;
+    right: 0px;
+    // font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Lora',
+    serif;
+    border-radius: 3px;
+    font-weight: 200;
+    font-size: 50%;
     margin-left: 10px;
   }
   
@@ -223,15 +225,18 @@
     flex-wrap: wrap;
     align-items: center;
     background: #fff;
-    border-radius: 8px;
+    border-radius: 5px;
     width: 80vw;
+    padding: 30px 0 0 15px;
   }
 
   .drink-index-tile {
     width: 20%;
-    height: 20%;
+    height: 100%;
     position: relative;
-    margin: 1% 1% 1% 1%;
+    margin: 0% 3% 3% 1%;
+    border-radius: 5px;
+    box-shadow: 9px 9px 10px -2px #888888;
   
     a {
       display: flex;
@@ -242,27 +247,33 @@
    
   }
 
-  .drink-index-name {
-    position: absolute;
-    // background-color: white;
-    bottom: 3%;
-    left: 0;
-    right: 0;
-    margin: 0 5% 0 5%;
-    color: white;
-    text-shadow: -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 200;
-    font-size: 50%;
+  .drink-index-tile:hover {
+    transform: scale(1.05);
   }
 
   .drink-index-img {
-    border-radius: 8px;
-    height: 90%;
-    width: 90%;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 40%;
+    background: #130d0d;
+    margin-left: 0;
+  }
+
+  .drink-index-name {
+    position: absolute;
+    top: 79%;
+    left: 0;
+    right: 0;
+    margin: 0 0 0 0;
+    padding: 0px 20px;
+    line-height: 30px;
+    color: white;
+    // font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Vollkorn',
+    serif;
+    font-weight: 200;
+    font-size: 25px;
   }
   
   a {
