@@ -387,6 +387,43 @@ h1 {
 @media screen and (min-width: 415px) {
   // CSS code here
 
+  // Header
+
+  .discover-header {
+    // background: rgb(32, 32, 32);
+    // color: white;
+    // font-size: 24px;
+    // display: flex;
+    justify-content: space-around;
+    // align-items: center;
+    // font-family: house-script, sans-serif;
+    // font-weight: 400;
+    // font-style: normal;
+    // padding: 5px 0px 5px 0px;
+  }
+
+  .discover-header a {
+    // font-family: house-script,
+    //   sans-serif;
+    // font-weight: 400;
+    // font-style: normal;
+    // padding: 5px 0px 5px 0px;
+    // color: white;
+    font-size: 47px;
+    // text-decoration: none;
+  }
+
+  // Menu Items
+
+  .menu-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-active span {
+    color: #f55e5f
+  }
+  
   // Hero Section
   .desktop-hidden{
     display: none;
@@ -458,5 +495,6 @@ h1 {
   #base-spirit-h1, .discover-featured h1 {
     font-size: 50px;
   }
+
 
 }
