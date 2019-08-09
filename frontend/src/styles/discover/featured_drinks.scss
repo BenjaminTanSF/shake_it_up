@@ -23,7 +23,7 @@ body {
   border-radius: 50%;
   cursor: pointer;
   line-height: 30px;
-  padding-top: 10vw;
+  padding-top: 9vw;
   z-index: 1000;
   font-weight: bold;
 
@@ -44,23 +44,23 @@ body {
   transition: height 0.5s, width 0.5s, left 0.5s, margin-top 0.5s, line-height 0.5s, background-color 0.5s, font-size 1s;
 }
 
-$level2-height: 13vw;
-$level2-width: 230px;
-$level1-height: 15.6vw;
-$level1-width: 280px;
-$level0-height: 18.72vw;
-$level0-width: 330px;
+// $level2-height: 13vw;
+// $level2-width: 230px;
+// $level1-height: 15.6vw;
+// $level1-width: 280px;
+// $level0-height: 18.72vw;
+// $level0-width: 330px;
 
-$level-2-left: 76vw;
-$level-1-left: 58.13vw;
-$level0-left: 37.14vw;
-$level1-left: 19.27vw;
-$level2-left: 4vw;
+// $level-2-left: 76vw;
+// $level-1-left: 58.13vw;
+// $level0-left: 37.14vw;
+// $level1-left: 19.27vw;
+// $level2-left: 4vw;
 
 
 .level-2 {
-  height: $level2-height;
-  left: $level-2-left;
+  height: 13vw;
+  left: 76vw;
   margin-top: 2.86vw;
   .discover-slideshow-title {
     font-size: 1.5vw;
@@ -68,8 +68,8 @@ $level2-left: 4vw;
 }
 
 .level-1 {
-  height: $level1-height;
-  left: $level-1-left;
+  height: 15.6vw;
+  left: 58.13vw;
   margin-top: 1.56vw;
   .discover-slideshow-title {
     font-size: 2.5vw;
@@ -78,8 +78,8 @@ $level2-left: 4vw;
 }
 
 .level0 {
-  height: $level0-height;
-  left: $level0-left;
+  height: 18.72vw;
+  left: 37.14vw;
   // margin-top: 17.5px;
   .discover-slideshow-title {
     font-size: 3vw;
@@ -88,9 +88,9 @@ $level2-left: 4vw;
 }
 
 .level1 {
-  height: $level1-height;
+  height: 15.6vw;
   margin-top: 1.56vw;
-  left: $level1-left;
+  left: 19.27vw;
   .discover-slideshow-title {
     font-size: 2.5vw;
     transition: font-size 0.5s;
@@ -98,9 +98,9 @@ $level2-left: 4vw;
 }
 
 .level2 {
-  height: $level2-height;
+  height: 13vw;
   margin-top: 2.86vw;
-  left: $level2-left;
+  left: 4vw;
   .discover-slideshow-title {
     font-size: 1.5vw;
     transition: font-size 0.5s;
@@ -109,8 +109,8 @@ $level2-left: 4vw;
 
 .left-enter {
   opacity: 0;
-  left: calc($level2-left - $level2-width);
-  height: $level2-height - 30;
+  left: calc(4vw - 13vw);
+  height: 13vw - 30;
   margin-top: 2.86vw;
   .discover-slideshow-title {
     font-size: 1.5vw;
@@ -120,8 +120,8 @@ $level2-left: 4vw;
 
 .left-enter.left-enter-active {
   opacity: 1;
-  left: $level2-left;
-  height: $level2-height;
+  left: 4vw;
+  height: 13vw;
   margin-top: 2.86vw;
   transition: left 0.5s, opacity 0.5s, height 0.5s, width 0.5s, margin-top 0.5s, line-height 0.5s, font-size 1s;
   .discover-slideshow-title {
@@ -132,8 +132,8 @@ $level2-left: 4vw;
 
 .left-leave {
   opacity: 1;
-  left: $level-2-left;
-  height: $level2-height;
+  left: 76vw;
+  height: 13vw;
   margin-top: 2.86vw;
   .discover-slideshow-title {
     font-size: 1.5vw;
@@ -142,9 +142,9 @@ $level2-left: 4vw;
 }
 
 .left-leave.left-leave-active {
-  left: calc($level-2-left + $level2-width + 20);
+  left: calc(76vw + 13vw + 20);
   opacity: 0;
-  height: $level2-height - 30;
+  height: 13vw - 30;
   margin-top: 2.86vw;
   transition: left 0.5s, opacity 0.5s, height 0.5s, width 0.5s, margin-top 0.5s, line-height 0.5s, font-size 1s;
   .discover-slideshow-title {
@@ -155,8 +155,8 @@ $level2-left: 4vw;
 
 .right-enter {
   opacity: 0;
-  left: calc($level-2-left + $level2-width);
-  height: $level2-height - 30;
+  left: calc(76vw + 13vw);
+  height: 13vw - 30;
   margin-top: 2.86vw;
   .discover-slideshow-title {
     font-size: 1.5vw;
@@ -165,9 +165,9 @@ $level2-left: 4vw;
 }
 
 .right-enter.right-enter-active {
-  left: $level-2-left;
+  left: 76vw;
   opacity: 1;
-  height: $level2-height;
+  height: 13vw;
   margin-top: 2.86vw;
   transition: left 0.5s, opacity 0.5s, height 0.5s, width 0.5s, margin-top 0.5s, line-height 0.5s, font-size 1s;
   .discover-slideshow-title {
@@ -177,8 +177,8 @@ $level2-left: 4vw;
 }
 
 .right-leave {
-  left: $level2-left;
-  height: $level2-height;
+  left: 4vw;
+  height: 13vw;
   opacity: 1;
   margin-top: 2.86vw;
   .discover-slideshow-title {
@@ -188,9 +188,9 @@ $level2-left: 4vw;
 }
 
 .right-leave.right-leave-active {
-  left: calc($level2-left - $level2-width);
+  left: calc(4vw - 13vw);
   opacity: 0;
-  height: $level2-height - 30;
+  height: 13vw - 30;
   margin-top: 2.86vw;
   transition: left 0.5s, opacity 0.5s, height 0.5s, width 0.5s, margin-top 0.5s, line-height 0.5s, font-size 1s;
   .discover-slideshow-title {
