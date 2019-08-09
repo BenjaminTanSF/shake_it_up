@@ -29,7 +29,6 @@ class DrinksIndex extends React.Component {
   }
 
   componentDidMount() {
-    if (!this.props.drinksFullyLoaded)
       this.props.fetchAllDrinks(() => (this.setState({
         drinks: this.props.drinks,
         shownDrinks: this.props.drinks,
