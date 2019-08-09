@@ -50,11 +50,21 @@ class BYOCResults extends React.Component {
 		let pathIngredients = this.props.match.params.spirit_name;
 			let numPathIngs = pathIngredients.split(',').slice(1).length;
 			if (numPathIngs !== this.state.ingredients.length){
+
 				this.runFetch();
 				console.log(`numPathIngs: ${numPathIngs}, sil: ${this.state.ingredients.length}`)
 			}
 
 	}
+
+	// setIngredients(){
+	// 	let pathIngredients = this.props.match.params.spirit_name;
+	// 		let base = pathIngredients.split(',')[0];
+	// 		let ingredients = pathIngredients.split(',').slice(1);
+	// 				this.setState({
+	// 			ingredients: this.props.ingredients.filter(
+	// 				ing => ingredients.includes(ing.name) && !ing.name.endsWith(base))});
+	// }
 		 
 		setCompatibles(){	
 			let drinks = this.state.drinks;
@@ -113,6 +123,7 @@ class BYOCResults extends React.Component {
 
 			let ingNames = this.props.match.params.spirit_name;
 			let base = ingNames.split(',')[0];
+			let ings = ingNames.split(',').slice(1);
 			this.props.fetchDrinksByIngredient(ingNames,
 				()=> {
 					// this.setState({ingredients: this.props.ingredients});
@@ -120,7 +131,7 @@ class BYOCResults extends React.Component {
 						ing => ing.name.endsWith(base)
 					),
 				ingredients: this.props.ingredients.filter(
-					ing => !ing.name.endsWith(base))}, 
+					ing => ings.includes(ing.name) && !ing.name.endsWith(base))}, 
 					() => this.setDrinks(() => this.setCompatibles()))
 				
 				})
