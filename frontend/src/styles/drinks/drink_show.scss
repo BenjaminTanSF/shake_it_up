@@ -162,6 +162,10 @@
   //   padding-bottom: 1vw;
   // }
 
+  #title-container {
+    width: 100%;
+  }
+
   .ds-tile-container {
     display: flex;
     flex-direction: column;
@@ -170,7 +174,7 @@
     background: #fff;
     margin: 0 3vw;
     width: 38vw;
-    padding-bottom: 1vw;
+    padding-bottom: 0px;
     border-radius: 0px;
   }
 
@@ -208,9 +212,9 @@
       font-size: 32px;
       text-align: left;
       margin-top: 10px;
-      width: 100%;
+      width: 95%;
       margin-bottom: 0;
-      margin-left: 10%;
+      margin: 5px 5% 0px;
     }
   
   .ds-divider{
@@ -218,7 +222,9 @@
   }
 
   #drink-instructions {
-    padding: 10px 10px 0 5%;
+    padding: 10px 0px 12px 5%;
+    text-align: left;
+    width: 95%
   }
 }
 }
