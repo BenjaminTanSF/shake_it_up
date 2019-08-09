@@ -139,14 +139,19 @@
   // CSS code here
   .drink-show-container{
     display: flex;
+    justify-content: space-between;
+    margin: 5vh 5vw 5vh 8vw;
 
     .desktop-ds-title{
       display: block;
     }
 
   .drink-show-img {
-    width: 50vw;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 5px;
   }
+
   .ds-tile-container {
     display: flex;
     flex-direction: column;
@@ -158,6 +163,7 @@
     width: 38vw;
     padding-bottom: 1vw;
   }
+  
   .drink-show-title {
     // position: absolute;
     // bottom: 50vw;
@@ -174,7 +180,19 @@
     }
   
   .ds-divider{
-    display: none;
+    display: block;
   }
+}
+
+.ds-ing-meas {
+  margin-left: 11vw;
+  text-align: left;
+  width: 100%;
+}
+
+.ds-ing-item {
+  text-align: left;
+  margin-right: 6vw;
+  width: 100%;
 }
 }
