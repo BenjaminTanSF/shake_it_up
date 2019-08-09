@@ -25,8 +25,12 @@ export const receiveDrinksByIngredient = ingredientObjs => ({
   ingredientObjs
 });
 
-export const fetchDrinksByIngredient = (IngredientName, callback) => dispatch => {
-  dispatch(startLoadingDrinksByIngredient());
+export const fetchDrinksByIngredient = (IngredientName, callback) => (dispatch, getState) => {
+  if (getState().entities.ingredients.fullyLoaded) {
+    if(callback) callback();
+    return;
+  }
+    dispatch(startLoadingDrinksByIngredient());
   return APIUtil.searchIngredientByName(IngredientName).then(
     ingredientObjs => { dispatch(receiveDrinksByIngredient(ingredientObjs.data));
     if(callback) {callback();} },
@@ -34,7 +38,11 @@ export const fetchDrinksByIngredient = (IngredientName, callback) => dispatch =>
   )
 };
 
-export const fetchAllIngredients = (callback) => dispatch => {
+export const fetchAllIngredients = (callback) => (dispatch, getState) => {
+  if (getState().entities.ingredients.fullyLoaded) {
+    if(callback) callback();
+    return;
+  }
   dispatch(startLoadingAllIngredients());
   return APIUtil.getIngredients().then(
     ingredients => {

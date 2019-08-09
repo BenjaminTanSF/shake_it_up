@@ -6,18 +6,17 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 //testing
-import { fetchAllDrinks, fetchSingleDrink } from './actions/drinks_actions';
-import { fetchAllIngredients, fetchDrinksByIngredient } from './actions/ingredients_actions';
+// import { fetchAllDrinks, fetchSingleDrink } from './actions/drinks_actions';
+// import { fetchAllIngredients, fetchDrinksByIngredient } from './actions/ingredients_actions';
 
 //testing
+// window.getState = store.getState;
+// window.dispatch = store.dispatch;
+// window.fetchAllDrinks = fetchAllDrinks;
+// window.fetchSingleDrink = fetchSingleDrink;
+
+// TODO: Remove window, Logger before final push to production
 const store = configureStore();
-
-//testing
-window.getState = store.getState;
-window.dispatch = store.dispatch;
-window.fetchAllDrinks = fetchAllDrinks;
-window.fetchSingleDrink = fetchSingleDrink;
-
 
 ReactDOM.render(<Root store={store} />, document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change

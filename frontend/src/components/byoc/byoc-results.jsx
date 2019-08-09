@@ -49,10 +49,24 @@ class BYOCResults extends React.Component {
 	componentDidUpdate(){
 		let pathIngredients = this.props.match.params.spirit_name;
 			let numPathIngs = pathIngredients.split(',').slice(1).length;
+			let ingArr = pathIngredients.split(',');
+			let singleBase = ingArr[0];
+			let additionalIngs = ingArr.slice(1).map(
+				ingName => ingName.split('%20').join(' ')
+			);
+				let stateIngs = this.state.ingredients;
 			if (numPathIngs !== this.state.ingredients.length){
-				this.runFetch();
-				console.log(`numPathIngs: ${numPathIngs}, sil: ${this.state.ingredients.length}`)
+				return this.runFetch();
 			}
+			for (let i= 0; i< stateIngs.length; i++){
+				if (!additionalIngs.includes(stateIngs[i].name)){
+					return this.runFetch();
+				}
+			}
+			if (!this.state.base.map(ing => ing.name).includes(
+				singleBase
+			)){
+				this.runFetch();}
 
 	}
 		 
@@ -113,14 +127,14 @@ class BYOCResults extends React.Component {
 
 			let ingNames = this.props.match.params.spirit_name;
 			let base = ingNames.split(',')[0];
+			let ings = ingNames.split(',').slice(1);
 			this.props.fetchDrinksByIngredient(ingNames,
 				()=> {
-					// this.setState({ingredients: this.props.ingredients});
 					this.setState({base: this.props.ingredients.filter(
 						ing => ing.name.endsWith(base)
 					),
 				ingredients: this.props.ingredients.filter(
-					ing => !ing.name.endsWith(base))}, 
+					ing => ings.includes(ing.name) && !ing.name.endsWith(base))}, 
 					() => this.setDrinks(() => this.setCompatibles()))
 				
 				})
@@ -187,7 +201,6 @@ class BYOCResults extends React.Component {
 	}
 
 	render() {
-		console.log(this.state);
 		if (this.state.drinks) {
 			return (
 				<div className="byoc-results-container">
