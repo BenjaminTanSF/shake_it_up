@@ -193,10 +193,8 @@
   }
 
   .ds-ing-meas {
-    margin-left: 5%;
+    margin-left: 5% !important;
     margin-top: 5px;
-    text-align: left;
-    width: 100%;
   }
 
   .ds-ing-item {
@@ -218,7 +216,7 @@
       text-shadow: none;
     }
 
-    h2 {
+    .drink-show-container h2 {
       font-family: 'DM Serif Display',
       serif;
       color: black;
@@ -231,9 +229,6 @@
       margin: 5px 5% 0px;
     }
   
-  .ds-divider{
-    display: block;
-  }
 
   #drink-instructions {
     padding: 10px 0px 12px 5%;
@@ -253,4 +248,4 @@
   margin-right: 6vw;
   width: 100%;
 }
-}
+

@@ -8,7 +8,7 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  margin: auto;
+  margin-top: 20px;
   left: 0;
   right: 0;
   top: 0;
@@ -39,9 +39,9 @@ body {
 .item {
   text-align: center;
   color: black;
-  font-size: 40px;
+  // font-size: 40px;
   position: absolute;
-  transition: height 0.5s, width 0.5s, left 0.5s, margin-top 0.5s, line-height 0.5s, background-color 0.5s;
+  transition: height 0.5s, width 0.5s, left 0.5s, margin-top 0.5s, line-height 0.5s, background-color 0.5s, font-size 1s;
 }
 
 $level2-height: 13vw;
@@ -62,30 +62,49 @@ $level2-left: 4vw;
   height: $level2-height;
   left: $level-2-left;
   margin-top: 2.86vw;
+  .discover-slideshow-title {
+    font-size: 1.5vw;
+  }
 }
 
 .level-1 {
   height: $level1-height;
   left: $level-1-left;
   margin-top: 1.56vw;
+  .discover-slideshow-title {
+    font-size: 2.5vw;
+    transition: font-size 0.5s;
+  }
 }
 
 .level0 {
   height: $level0-height;
   left: $level0-left;
   // margin-top: 17.5px;
+  .discover-slideshow-title {
+    font-size: 3vw;
+    transition: font-size 0.5s;
+  }
 }
 
 .level1 {
   height: $level1-height;
   margin-top: 1.56vw;
   left: $level1-left;
+  .discover-slideshow-title {
+    font-size: 2.5vw;
+    transition: font-size 0.5s;
+  }  
 }
 
 .level2 {
   height: $level2-height;
   margin-top: 2.86vw;
   left: $level2-left;
+  .discover-slideshow-title {
+    font-size: 1.5vw;
+    transition: font-size 0.5s;
+  }  
 }
 
 .left-enter {
@@ -93,6 +112,10 @@ $level2-left: 4vw;
   left: calc($level2-left - $level2-width);
   height: $level2-height - 30;
   margin-top: 2.86vw;
+  .discover-slideshow-title {
+    font-size: 1.5vw;
+    transition: font-size 0.5s;
+  }
 }
 
 .left-enter.left-enter-active {
@@ -100,7 +123,11 @@ $level2-left: 4vw;
   left: $level2-left;
   height: $level2-height;
   margin-top: 2.86vw;
-  transition: left 0.5s, opacity 0.5s, height 0.5s, width 0.5s, margin-top 0.5s, line-height 0.5s;
+  transition: left 0.5s, opacity 0.5s, height 0.5s, width 0.5s, margin-top 0.5s, line-height 0.5s, font-size 1s;
+  .discover-slideshow-title {
+    font-size: 1.5vw;
+    transition: font-size 0.5s;
+  }
 }
 
 .left-leave {
@@ -108,6 +135,10 @@ $level2-left: 4vw;
   left: $level-2-left;
   height: $level2-height;
   margin-top: 2.86vw;
+  .discover-slideshow-title {
+    font-size: 1.5vw;
+    transition: font-size 0.5s;
+  }
 }
 
 .left-leave.left-leave-active {
@@ -115,7 +146,11 @@ $level2-left: 4vw;
   opacity: 0;
   height: $level2-height - 30;
   margin-top: 2.86vw;
-  transition: left 0.5s, opacity 0.5s, height 0.5s, width 0.5s, margin-top 0.5s, line-height 0.5s;
+  transition: left 0.5s, opacity 0.5s, height 0.5s, width 0.5s, margin-top 0.5s, line-height 0.5s, font-size 1s;
+  .discover-slideshow-title {
+    font-size: 1.5vw;
+    transition: font-size 0.5s;
+  }
 }
 
 .right-enter {
@@ -123,6 +158,10 @@ $level2-left: 4vw;
   left: calc($level-2-left + $level2-width);
   height: $level2-height - 30;
   margin-top: 2.86vw;
+  .discover-slideshow-title {
+    font-size: 1.5vw;
+    transition: font-size 0.5s;
+  }
 }
 
 .right-enter.right-enter-active {
@@ -130,7 +169,11 @@ $level2-left: 4vw;
   opacity: 1;
   height: $level2-height;
   margin-top: 2.86vw;
-  transition: left 0.5s, opacity 0.5s, height 0.5s, width 0.5s, margin-top 0.5s, line-height 0.5s;
+  transition: left 0.5s, opacity 0.5s, height 0.5s, width 0.5s, margin-top 0.5s, line-height 0.5s, font-size 1s;
+  .discover-slideshow-title {
+    font-size: 1.5vw;
+    transition: font-size 0.5s;
+  }
 }
 
 .right-leave {
@@ -138,6 +181,10 @@ $level2-left: 4vw;
   height: $level2-height;
   opacity: 1;
   margin-top: 2.86vw;
+  .discover-slideshow-title {
+    font-size: 1.5vw;
+    transition: font-size 0.5s;
+  }
 }
 
 .right-leave.right-leave-active {
@@ -145,7 +192,11 @@ $level2-left: 4vw;
   opacity: 0;
   height: $level2-height - 30;
   margin-top: 2.86vw;
-  transition: left 0.5s, opacity 0.5s, height 0.5s, width 0.5s, margin-top 0.5s, line-height 0.5s;
+  transition: left 0.5s, opacity 0.5s, height 0.5s, width 0.5s, margin-top 0.5s, line-height 0.5s, font-size 1s;
+  .discover-slideshow-title {
+    font-size: 1.5vw;
+    transition: font-size 0.5s;
+  }
 }
 
 .noselect {
