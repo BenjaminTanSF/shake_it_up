@@ -139,14 +139,47 @@
   // CSS code here
   .drink-show-container{
     display: flex;
+    margin: 40px 80px;
+
+    hr {
+      width: 90%
+    }
+
+    // justify-content: space-between;
+    // margin: 5vh 5vw 5vh 8vw;
+
 
     .desktop-ds-title{
       display: block;
+      background: black;
+      width: 100%;
     }
 
   .drink-show-img {
-    width: 50vw;
+    width: 45vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
+  // .ds-tile-container {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  //   background: #fff;
+  //   margin: 0 3vw;
+  //   // border-radius: 15px;
+  //   width: 38vw;
+  //   padding-bottom: 1vw;
+  // }
+
+  #title-container {
+    width: 100%;
+  }
+    // width: 40vw;
+    // height: 40vw;
+    // border-radius: 5px;
+  }
+
+
   .ds-tile-container {
     display: flex;
     flex-direction: column;
@@ -154,10 +187,20 @@
     align-items: center;
     background: #fff;
     margin: 0 3vw;
-    border-radius: 15px;
     width: 38vw;
-    padding-bottom: 1vw;
+    padding-bottom: 0px;
+    border-radius: 0px;
   }
+
+  .ds-ing-meas {
+    margin-left: 5% !important;
+    margin-top: 5px;
+  }
+
+  .ds-ing-item {
+    margin-top: 5px;
+  }
+
   .drink-show-title {
     // position: absolute;
     // bottom: 50vw;
@@ -169,12 +212,40 @@
   }
   
     h1 {
-      color: black;
+      color: #f7f7f7;
       text-shadow: none;
     }
+
+    .drink-show-container h2 {
+      font-family: 'DM Serif Display',
+      serif;
+      color: black;
+      font-weight: 100;
+      font-size: 32px;
+      text-align: left;
+      margin-top: 10px;
+      width: 95%;
+      margin-bottom: 0;
+      margin: 5px 5% 0px;
+    }
   
-  .ds-divider{
-    display: none;
+
+  #drink-instructions {
+    padding: 10px 0px 12px 5%;
+    text-align: left;
+    width: 95%
   }
 }
+
+.ds-ing-meas {
+  margin-left: 11vw;
+  text-align: left;
+  width: 100%;
 }
+
+.ds-ing-item {
+  text-align: left;
+  margin-right: 6vw;
+  width: 100%;
+}
+

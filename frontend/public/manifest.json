@@ -1,5 +1,5 @@
 {
-  "short_name": "ShakeItUp",
+  "short_name": "Shake It Up!",
   "name": "Shake It Up!",
   "icons": [
     {
@@ -8,7 +8,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "fullsceen",
   "theme_color": "#000000",
   "background_color": "#ffffff"

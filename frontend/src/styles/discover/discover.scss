@@ -397,8 +397,15 @@ h1 {
   }
 
   .discover-slideshow-wrapper{
-    height: 380px;
+    height: 400px;
     margin: 30px 3.5vw;
+    overflow-x: hidden;
+  }
+
+  .discover-slideshow-title {
+    padding: 0px 20px;
+    top: unset !important;
+    bottom: 1vw;
   }
 
   .discover-featured {
@@ -408,6 +415,11 @@ h1 {
   .discover-slideshow-item {
     padding: 0px;
     margin: 0px;
+  }
+
+  .discover-slideshow-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
   }
 
   #hero-tag {
