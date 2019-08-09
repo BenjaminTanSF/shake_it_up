@@ -45,35 +45,57 @@ class BYOCResults extends React.Component {
 		}, cb);
 
 	}
-		 setCompatibles(){	
+
+	componentDidUpdate(){
+		let pathIngredients = this.props.match.params.spirit_name;
+			let numPathIngs = pathIngredients.split(',').slice(1).length;
+			if (numPathIngs !== this.state.ingredients.length){
+				this.runFetch();
+				console.log(`numPathIngs: ${numPathIngs}, sil: ${this.state.ingredients.length}`)
+			}
+
+	}
+		 
+		setCompatibles(){	
 			let drinks = this.state.drinks;
-			let pathString= this.props.match.params.spirit_name.split('%20').join(' ');
-			let pathIngredients = pathString.split(',');
-			pathIngredients = this.state.ingredients.concat(this.state.base).map(ing => ing.name);
+			let pathIngredients = this.state.ingredients.concat(this.state.base).map(ing => ing.name);
+			const pathPojo = {};
+			pathIngredients.forEach(ing => pathPojo[ing] = true);
+			const compatIngsNumDrinks = {};
+			let maxNumDrinks = 0;
 			let compatibleIngredients = [];
-			let compatibleIngNames = compatibleIngredients.map(ci => ci.name);
-			drinks.forEach((drink, drinkIdx) => {
+			drinks.forEach((drink) => {
 				for (let i = 1; i <= 15; i++) {
-					if (drink[`strIngredient${i}`] === "" || drink[`strIngredient${i}`] === undefined || drink[`strIngredient${i}`] === null) {
+					let drinkIng = drink[`strIngredient${i}`];
+					if (!drinkIng) {
 						break;
-					} else if (!(compatibleIngNames.concat(pathIngredients)).includes(drink[`strIngredient${i}`].toLowerCase())
-					) {
-						if (this.props.location.state){
-							compatibleIngNames.push(drink[`strIngredient${i}`].toLowerCase());
-							compatibleIngredients.push(
-							this.state.images.find(imageObj => imageObj.name === drink[`strIngredient${i}`].toLowerCase()),			
-						);
-						}
-						else {
-							compatibleIngNames.push(drink[`strIngredient${i}`].toLowerCase());
-						}
+					} 
+					drinkIng = drinkIng.toLowerCase();
+					 if (!pathPojo[drinkIng])
+					 { let prevCount = compatIngsNumDrinks[drinkIng] || 0;
+						compatIngsNumDrinks[drinkIng] = prevCount + 1;
+						maxNumDrinks = Math.max(maxNumDrinks, prevCount + 1);
 					}
 				}
 			
 				});
-				if (!this.props.location.state){this.props.fetchDrinksByIngredient(compatibleIngNames.join(','),
+				const compatIngsBuckets = new Array(maxNumDrinks);
+				Object.entries(compatIngsNumDrinks).forEach(
+					entry => {
+						let bucketNumber = maxNumDrinks - entry[1];
+						if(!compatIngsBuckets[bucketNumber]){
+							compatIngsBuckets[bucketNumber] = [];
+						}
+						compatIngsBuckets[bucketNumber].push(entry[0]);
+					}
+				)
+				let sortedIngNames = compatIngsBuckets[0] || [];
+				for (let i= 1; i<compatIngsBuckets.length; i++){
+					sortedIngNames.push(...(compatIngsBuckets[i] || []));
+				}
+				if (!this.props.location.state){this.props.fetchDrinksByIngredient(sortedIngNames.join(','),
 				()=>{compatibleIngredients.push(
-				...compatibleIngNames.map(name => ({name, imageURL:
+				...sortedIngNames.map(name => ({name, imageURL:
 					this.props.ingredients.find(
 					ing => ing.name === name
 				).strIngredientThumb
@@ -81,20 +103,19 @@ class BYOCResults extends React.Component {
 				this.setState({compatibleIngredients});
 			}	
 			)}
-			else {	this.setState({compatibleIngredients});	}
+			else {	compatibleIngredients = sortedIngNames.map(
+				name => this.state.images.find(imageObj => imageObj.name === name)
+			);
+					this.setState({compatibleIngredients});	}
 		}
 
-	 componentDidMount() {
-		if (this.state.loaded) {
-			 this.setDrinks(() => this.setCompatibles());
-			
-	}
-		else {
+		runFetch(){
+
 			let ingNames = this.props.match.params.spirit_name;
 			let base = ingNames.split(',')[0];
 			this.props.fetchDrinksByIngredient(ingNames,
 				()=> {
-					this.setState({ingredients: this.props.ingredients});
+					// this.setState({ingredients: this.props.ingredients});
 					this.setState({base: this.props.ingredients.filter(
 						ing => ing.name.endsWith(base)
 					),
@@ -103,8 +124,13 @@ class BYOCResults extends React.Component {
 					() => this.setDrinks(() => this.setCompatibles()))
 				
 				})
-			
 		}
+	 componentDidMount() {
+		if (this.state.loaded) {
+			 this.setDrinks(() => this.setCompatibles());
+			
+	}
+		else this.runFetch();
 	}
 
 	updateIng(ingredientName) {
@@ -161,6 +187,7 @@ class BYOCResults extends React.Component {
 	}
 
 	render() {
+		console.log(this.state);
 		if (this.state.drinks) {
 			return (
 				<div className="byoc-results-container">
