@@ -30,7 +30,7 @@ function App() {
         <Route path="/" component={Discover} />
       </Switch>
 
-      < Menu />
+      <Menu />
     </div>
   );
 }
