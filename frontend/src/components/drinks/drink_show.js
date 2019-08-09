@@ -31,7 +31,7 @@ class DrinkShow extends React.Component {
             <div className="ds-tile-container">
               <h2>Instructions</h2>
               <hr />
-              <div className="drink-show-desc">
+              <div id="drink-instructions" className="drink-show-desc">
                 {drink.strInstructions}
               </div>
             </div>
