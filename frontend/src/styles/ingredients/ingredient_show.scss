@@ -119,6 +119,8 @@ body {background-color: #f7f7f7;
       display: block;
     }
 
+    h2 { font-family: 'Pontano Sans', sans-serif; }
+
     .desktop-is-left{
       max-width: 85vh;
       margin-top: 25px;
@@ -137,6 +139,7 @@ body {background-color: #f7f7f7;
       width: auto;
       height: 85vh;
       max-width: 85vh;
+      border-radius: 5px;
     }
     .ingred-show-img-shrink{
       height: 55vh;
@@ -147,6 +150,7 @@ body {background-color: #f7f7f7;
     }
     .mobile-hidden{
       display: block;
+      border-radius: 5px 5px 0 0;
     }
 
     .is-tile-container {
@@ -158,8 +162,6 @@ body {background-color: #f7f7f7;
       width: 39vw;
       margin: 0 auto;
     }
-
-    
 
     .is-desc{
       margin: 0 auto;
@@ -189,12 +191,33 @@ body {background-color: #f7f7f7;
       overflow-y: auto;
       overflow-x: hidden;
       width: 40vw;
+      margin-top: 30px;
+      justify-items: center;
+      padding-bottom: 15px;
       }
+
+      a {
+        color: white;
+        vertical-align: middle;
+      }
+
     }
 
     .is-drink-item{
       // width: 13vw;
-    }
-    .is-drink-item a{display: inline-block;}
-  } 
+      width: 9vw;
+      background-color: black;
+      border-radius: 5px;
+      box-shadow: 9px 9px 10px -2px #888888;
+      
+
+      hr {
+        display: none;
+      }
+    
+      a {
+        display: inline-block;
+      }
+    }  
+  }
 }

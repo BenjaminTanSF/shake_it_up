@@ -140,6 +140,7 @@
   .drink-show-container{
     display: flex;
     justify-content: space-between;
+    margin: 5vh 5vw 5vh 8vw;
 
     .desktop-ds-title{
       display: block;
@@ -150,6 +151,7 @@
     height: 40vw;
     border-radius: 5px;
   }
+
   .ds-tile-container {
     display: flex;
     flex-direction: column;
@@ -161,6 +163,7 @@
     width: 38vw;
     padding-bottom: 1vw;
   }
+  
   .drink-show-title {
     // position: absolute;
     // bottom: 50vw;
