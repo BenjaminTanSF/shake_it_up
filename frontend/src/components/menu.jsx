@@ -4,8 +4,8 @@ import discover from '../assets/icons/discover2x.png';
 import discoverActive from '../assets/icons/discover_red.png';
 import cocktail from '../assets/icons/cocktail.png';
 import cocktailActive from '../assets/icons/cocktail-red.png';
-import ingredient from '../assets/icons/ingredients.png';
-import ingredientActive from '../assets/icons/ingredients_red.png';
+import ingredient from '../assets/icons/ingredients-black-2x.png';
+import ingredientActive from '../assets/icons/ingredients_red_2x.png';
 import about from '../assets/icons/about.png';
 import aboutActive from '../assets/icons/about_red.png';
 

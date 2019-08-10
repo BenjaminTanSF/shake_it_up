@@ -1,12 +1,12 @@
 import React from 'react';
 import { withRouter, Link, NavLink } from 'react-router-dom';
-import discover from '../assets/icons/discover2x.png';
+import discover from '../assets/icons/discover-white-2x.png';
 import discoverActive from '../assets/icons/discover_red2x.png';
-import cocktail from '../assets/icons/cocktail.png';
+import cocktail from '../assets/icons/cocktail-white-2x.png';
 import cocktailActive from '../assets/icons/cocktail-red.png';
-import ingredient from '../assets/icons/ingredients.png';
-import ingredientActive from '../assets/icons/ingredients_red.png';
-import about from '../assets/icons/about.png';
+import ingredient from '../assets/icons/ingredients-white-2x.png';
+import ingredientActive from '../assets/icons/ingredients_red_2x.png';
+import about from '../assets/icons/about-white-2x.png';
 import aboutActive from '../assets/icons/about_red.png';
 
 class Header extends React.Component {
