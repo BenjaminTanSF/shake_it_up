@@ -80,6 +80,13 @@ body {background-color: #f7f7f7;
   padding-bottom: 10px;
 }
 
+.is-show-desc {
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 16px;
+  padding: 1vw 1vw 1vw 1vw;
+  text-align: left;
+}
+
 .is-drinks{
   display: flex;
   flex-direction: column;
@@ -109,22 +116,44 @@ body {background-color: #f7f7f7;
 @media screen and (min-width: 415px) {
   // CSS code here
   
-  .ingred-show-container{
+  .ingred-show-container {
+
     .desktop-ingred-title{
+    // display: flex;
+    // margin: 40px 80px;
       display: block;
+      background: black;
       width: 100%;
-      font-size: 52px;
+      color: white;
+      padding: 20px 0 20px 0;
+    
     }
     .is-img-wrapper {
       display: block;
     }
 
-    h2 { font-family: 'Pontano Sans', sans-serif; }
+    h2 { 
+    font-family: 'DM Serif Display', serif;
+    color: black;
+    /* font-weight: 100; */
+    font-size: 32px;
+    text-align: left;
+    margin-top: 10px;
+    width: 95%;
+    margin-bottom: 0;
+    margin: 5px 5% 0px;
+    }
 
     .desktop-is-left{
       max-width: 85vh;
       margin-top: 25px;
       margin-right: 3vw;
+    }
+
+    .desktop-is-title{
+      display: block;
+      background: black;
+      width: 100%;
     }
 
     .is-centerer{
@@ -209,7 +238,8 @@ body {background-color: #f7f7f7;
       background-color: black;
       border-radius: 5px;
       box-shadow: 9px 9px 10px -2px #888888;
-      
+      // padding-top: 5px;
+      margin: 5px 0 5px 0;
 
       hr {
         display: none;
@@ -217,7 +247,12 @@ body {background-color: #f7f7f7;
     
       a {
         display: inline-block;
+        font-family: 'Vollkorn', serif; 
       }
-    }  
+    }
+    
+    .is-drink-item:hover {
+      transform: scale(1.05);
+    }
   }
 }
