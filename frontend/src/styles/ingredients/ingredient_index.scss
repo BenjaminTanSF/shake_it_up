@@ -85,7 +85,28 @@
     height: 50px;
     width: 50px;
     margin-left: 10px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
+
+  // .ingred-index-img {
+  //   // position: absolute;
+  //   // top: 50%;
+  //   // bottom: 50%;
+  //   margin: auto;
+  //   border-radius: 5px 5px 0 0;
+  //   height: auto;
+  //   width: 100%;
+  //   vertical-align: middle;
+  //   margin-left: 0;
+  //   width: 50px;
+  //   height: 50px;
+  //   // background-color: #f7f7f7;
+  //   background-position: center;
+  //   background-size: 10vh;
+  //   background-repeat: no-repeat;
+  // }
   
   a {
     text-decoration: none;
@@ -130,9 +151,9 @@
     opacity: .3;
   }
 
-  .search:active {
-    border-color: rgb(248, 87, 87);
-  }
+  // .search:active {
+  //   border-color: rgb(248, 87, 87);
+  // }
   
 }
 // Mobile break point - Desktop code here
@@ -228,6 +249,10 @@
    }
   }
 
+  .ingred-index-tile:hover {
+    transform: scale(1.05);
+  }
+
   .ingred-index-name {
     position: absolute;
     top: 87%;
@@ -235,8 +260,7 @@
     right: 0;
     margin: 0 0 0 0;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 200;
+    font-family: 'Vollkorn', serif;    font-weight: 200;
     font-size: 20px;
 
     a {
@@ -248,6 +272,21 @@
     }
 
   }
+
+  // .ingred-index-img {
+  //   // position: absolute;
+  //   // top: 50%;
+  //   // bottom: 50%;
+  //   margin: auto;
+  //   border-radius: 5px 5px 0 0;
+  //   height: auto;
+  //   width: 100%;
+  //   vertical-align: middle;
+  //   margin-left: 0;
+  //   min-height: 260px;
+  //   max-height: 260px;
+  //   background-color: #f7f7f7;
+  // }
 
   .ingred-index-img {
     // position: absolute;
@@ -262,6 +301,9 @@
     min-height: 260px;
     max-height: 260px;
     background-color: #f7f7f7;
+    background-position: center;
+    background-size: 25vh;
+    background-repeat: no-repeat;
   }
   
   a {
@@ -270,6 +312,7 @@
     sans-serif;
     font-size: 42px;
     color: black;
+    font-family: 'Vollkorn', serif;
   }
 
   .search-container {
@@ -304,9 +347,9 @@
     opacity: .3;
   }
 
-  .search:active {
-    border-color: rgb(248, 87, 87);
-  }
+  // .search:active {
+  //   border-color: rgb(248, 87, 87);
+  // }
   
 }
 }

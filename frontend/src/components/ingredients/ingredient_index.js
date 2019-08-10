@@ -69,7 +69,13 @@ class IngredientsIndex extends React.Component {
                       ingredient: ingredient
                     }
                   }}>
-                    <img src={process.env.PUBLIC_URL + `/images/${fileName}`} className="ingred-index-img" width="90%" alt={ingredient.name} />
+                    {/* <img src={process.env.PUBLIC_URL + `/images/${fileName}`} className="ingred-index-img" width="90%" alt={ingredient.name} /> */}
+
+
+                    <div style={{ "background-image": `url('${process.env.PUBLIC_URL + `/images/${fileName}'`})` }} className="ingred-index-img" key={ingredient.name}></div>
+
+
+
                     <span className="ingred-index-name">{ingredient.name}</span>
                   </Link>
                   <hr></hr>

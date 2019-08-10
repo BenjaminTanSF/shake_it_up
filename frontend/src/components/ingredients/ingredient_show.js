@@ -70,7 +70,9 @@ class  IngredientShow extends React.Component  {
       <div className="ingred-show-container">
 
         <div className = 'is-centerer'>
-        <h1 className = 'mobile-ingred-title'>{CapIngredName(ingredient.name)}</h1>
+          <div className = 'desktop-is-title'>
+            <h1 className = 'mobile-ingred-title'>{CapIngredName(ingredient.name)}</h1>
+          </div>
         <div className = 'desktop-is-left'>
 
           {numDrinks>6 ?
