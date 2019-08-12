@@ -11,7 +11,6 @@
 - [ ] Educational content regarding cocktails & ingredients
 - [ ] Desktop and mobile-web responsive design
 
-
 # Technologies
 
 ### Backend
@@ -19,13 +18,19 @@
 <ul>
     <a href="https://www.mongodb.com/" target="_blank"><li>MongoDB</li></a>
     <a href="https://expressjs.com/" target="_blank"><li>Express.js</li></a>
+    <a href="https://www.heroku.com/" target="_blank"><li>Heroku</li></a>
 </ul>
 
 ### Frontend
 
 <ul>
-    <a href="https://www.mongodb.com/" target="_blank"><li>MongoDB</li></a>
-    <a href="https://expressjs.com/" target="_blank"><li>Express.js</li></a>
+    <a href="https://reactjs.org/" target="_blank"><li>React</li></a>
+    <a href="https://redux.js.org/" target="_blank"><li>Redux</li></a>
+    <a href="https://sass-lang.com/" target="_blank"><li>Sass</li></a>
+    <a href="https://nodejs.org/en/" target="_blank"><li>Node.js</li></a>
+    <a href="https://webpack.js.org/" target="_blank"><li>Webpack</li></a>
+    <a href="https://www.adobe.com/products/xd.html" target="_blank"><li>Adobe XD</li></a>
+    <a href="https://www.adobe.com/products/illustrator.html" target="_blank"><li>Adobe Illustrator</li></a>
 </ul>
 
 # Technical Challenges
