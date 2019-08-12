@@ -21,20 +21,19 @@
     <a href="https://expressjs.com/" target="_blank"><li>Express.js</li></a>
 </ul>
 
-<strong>Technical Challenges</strong> 
+### Frontend
+
+<ul>
+    <a href="https://www.mongodb.com/" target="_blank"><li>MongoDB</li></a>
+    <a href="https://expressjs.com/" target="_blank"><li>Express.js</li></a>
+</ul>
+
+# Technical Challenges
+
 <ul>
     <li>Incorporating Regex into Req.params</li>
     <li>Reformatting database schema from a public API to expedite querying by ingredient</li>
     <li>Merging overlapping cocktail tables</li>
-</ul>
-
-<strong><u>Frontend</u></strong>
-
-<strong>Technologies</strong> 
-React / Node
-
-<strong>Technical Challenges</strong> 
-<ul>
     <li>Fetching data from MongoDB and organizing for display in frontend</li>
     <li>Implementing real-time querrying based on multi-value input parameters</li>
     <li>Designing a responsive cross-platform user interface</li>
