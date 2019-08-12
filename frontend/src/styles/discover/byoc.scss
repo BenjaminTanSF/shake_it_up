@@ -84,7 +84,7 @@
 
 
 .byoc-result-compatible-card {
-    background-color: #646464;
+    // background-color: #646464;
     // background-color: transparent;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -98,6 +98,7 @@
     min-height: 56px;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     text-shadow: 
         -1px -1px 0 #000,
         1px -1px 0 #000,
@@ -184,7 +185,15 @@
     font-weight: 400;
     font-style: normal;
     font-size: 4vw;
-   
+    opacity: 0.8;
+    transition: all .1s ease-in-out;
+}
+
+.byoc-grid-spirit:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    transform: scale(1.1);
 }
   .byoc-result-drinks-container {
       width: 100%;
@@ -195,6 +204,8 @@
         display: flex;
         overflow-x: scroll;
         color: white;
+        font-size: 32px;
+        line-height: 28px;
     }
 
     .byoc-result-compatible-card {
@@ -219,6 +230,8 @@
             1px -1px 0 #000,
             -1px 1px 0 #000,
             1px 1px 0 #000;
+        font-family: house-script,
+            sans-serif;
     }
 
     #byoc-results-ci-header {
