@@ -1,7 +1,7 @@
 <img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/Logos/SIU%20Logo.png"></img>
 
 ### Overview
-<strong>Shake it Up!</strong> is a responsive single-page web app that offers users an encyclopedia of popular cocktails along with easy-to-follow step by step instructions. Have some ingredients but don't know what to make? No problem! Our app features a "Build Your Own Cocktail" mode... start with a base spirit (e.g. Whiskey, Vodka, Gin) and our app will intelligently recommend compatible ingredients and potential cocktails. "Shake it Up" is your perfect bar-counter companion for an evening out on the town or a fun time enjoying drinks with friends.
+<strong>Shake it Up!</strong> is a responsive single-page web app that offers users an encyclopedia of popular cocktails along with easy-to-follow step by step instructions. Have some ingredients but don't know what to make? No problem! Our app features a "Build Your Own Cocktail" mode... start with a base spirit (e.g. Whiskey, Vodka, Gin) and our app will intelligently recommend compatible ingredients and potential cocktails. <strong>Shake it Up!</strong> is your perfect bar-counter companion for an evening out on the town or a fun time enjoying drinks with friends.
 
 <a href="http://shake-it-up-aa.herokuapp.com" target="_blank">Live Demo</a>
 
