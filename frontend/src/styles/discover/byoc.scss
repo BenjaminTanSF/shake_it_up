@@ -84,7 +84,7 @@
 
 
 .byoc-result-compatible-card {
-    background-color: #646464;
+    // background-color: #646464;
     // background-color: transparent;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -204,6 +204,8 @@
         display: flex;
         overflow-x: scroll;
         color: white;
+        font-size: 32px;
+        line-height: 28px;
     }
 
     .byoc-result-compatible-card {
@@ -228,6 +230,8 @@
             1px -1px 0 #000,
             -1px 1px 0 #000,
             1px 1px 0 #000;
+        font-family: house-script,
+            sans-serif;
     }
 
     #byoc-results-ci-header {
