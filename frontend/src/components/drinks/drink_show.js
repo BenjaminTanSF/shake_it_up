@@ -32,7 +32,7 @@ class DrinkShow extends React.Component {
               <div id="title-container">
                 <h2>Instructions</h2>
               </div>
-              <hr />
+              {/* <hr /> */}
               <div id="drink-instructions" className="drink-show-desc">
                 {drink.strInstructions}
               </div>
@@ -92,7 +92,7 @@ class DrinkShow extends React.Component {
           </div>
         </div>
 
-        <div >&nbsp;</div>
+        <div>&nbsp;</div>
 
         <div className="drink-show-desc">
 
@@ -103,7 +103,7 @@ class DrinkShow extends React.Component {
           <div id="title-container">
             <h2>Ingredients</h2>
           </div>
-            <hr />
+            {/* <hr /> */}
           
             <div className="drink-show-measure-ingr-wrapper">
               <DisplayIngredients />
