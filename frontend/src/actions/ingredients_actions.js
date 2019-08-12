@@ -25,6 +25,11 @@ export const receiveDrinksByIngredient = ingredientObjs => ({
   ingredientObjs
 });
 
+//Our fetch thunk actions check the redux state, so that they
+//only make the http request if the data is not already fully loaded.
+//They also accept an optional callback to be 
+//executed when the data is fetched.
+ 
 export const fetchDrinksByIngredient = (IngredientName, callback) => (dispatch, getState) => {
   if (getState().entities.ingredients.fullyLoaded) {
     if(callback) callback();

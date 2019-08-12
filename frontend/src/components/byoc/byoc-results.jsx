@@ -35,7 +35,7 @@ class BYOCResults extends React.Component {
 		this.setStateFromURL();
 	}
 
-	//Sets local state (base, nonBaseIngredients, drinks, compatibleIngredients),
+	//Set local state (base, nonBaseIngredients, drinks, compatibleIngredients),
 	//based on the URL wildcard.
 	//Since base spirit is the first selection
 	//made by the user, the name of the base spirit is the first segment
@@ -82,7 +82,7 @@ class BYOCResults extends React.Component {
 			})
 	}
 
-	//Set the 'drinks' slice of local state, based on the ingredients which have
+	//Sets the 'drinks' slice of local state, based on the ingredients which have
 	//been selected by the user so far-- the 'base' and 'nonBaseIngredients' 
 	//slices of state. While the 'base' ingredients produce the original array of drinks,
 	//the 'nonBaseIngredients' refine it so that the user hones in on a smaller
@@ -113,7 +113,7 @@ class BYOCResults extends React.Component {
 	//in the 'drinks' slice of state, except for the already selected ingredients,
 	//i.e. the ingredients in the 'base' and 'nonBaseIngredients' slices of state.
 	//Orders the compatible ingredients in descending order of 
-	//'popularity', if popularity means the number of relevant drinks 
+	//'popularity'--popularity meaning the number of relevant drinks 
 	//in the 'drinks' slice of state.
 	setCompatibles() {
 		let drinks = this.state.drinks;
