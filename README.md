@@ -11,6 +11,9 @@
 - [ ] Educational content regarding cocktails & ingredients
 - [ ] Desktop and mobile-web responsive design
 
+<img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/GIFs/discover.gif"></img>
+<img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/GIFs/byoc.gif"></img>
+
 # Technologies
 
 ### Backend
@@ -52,3 +55,7 @@
     <a href="https://github.com/fsiino" target="_blank"><li>Frankie Siino</li></a>
     <a href="https://github.com/SkiesXR" target="_blank"><li>Phillip Krasnick</li></a>
 </ul>
+
+# Screenshots
+
+
