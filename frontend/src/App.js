@@ -25,7 +25,7 @@ function App() {
         <Route exact path="/drinks" component={DrinkIndexContainer} />
         <Route exact path="/drinks/:drink_id" component={DrinkShowContainer} />
         <Route exact path="/byoc" component={BYOCContainer} />
-        <Route exact path="/byoc/:spirit_name" component={BYOCResultsContainer} />
+        <Route exact path="/byoc/:ingredients" component={BYOCResultsContainer} />
         <Route exact path="/about" component={About} />
         <Route path="/" component={Discover} />
       </Switch>
