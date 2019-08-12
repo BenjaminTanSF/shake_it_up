@@ -33,7 +33,11 @@ body {background-color: #f7f7f7;
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
-}
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
 
   .ingred-show-img {
     border-radius: 20px;
@@ -42,6 +46,7 @@ body {background-color: #f7f7f7;
   .ingred-show-img-shrink{
     border-radius: 20px;
     width: 100vw;
+    padding-top: 8px;
   }
 
   .ingred-show-desc {
@@ -126,10 +131,14 @@ body {background-color: #f7f7f7;
       width: 100%;
       color: white;
       padding: 20px 0 20px 0;
-    
     }
+
     .is-img-wrapper {
       display: block;
+    }
+
+    h1 {
+      // margin: 0 0 0 0;
     }
 
     h2 { 
@@ -168,7 +177,7 @@ body {background-color: #f7f7f7;
       width: auto;
       height: 85vh;
       max-width: 85vh;
-      border-radius: 5px;
+      // border-radius: 5px;
     }
     .ingred-show-img-shrink{
       height: 55vh;
@@ -185,12 +194,14 @@ body {background-color: #f7f7f7;
 
     .is-tile-container {
       width: 39vw;
-      margin: 21px auto;
+      margin: 0 auto 0 0;
+      border-radius: 0;
     }
 
     .is-drinks{
       width: 39vw;
-      margin: 0 auto;
+      margin: -18px auto;
+      border-radius: 0;
     }
 
     .is-desc{
@@ -198,20 +209,22 @@ body {background-color: #f7f7f7;
     }
 
     .is-drink-pic{
-      width: 9vw;
+      width: 11vw;
       margin: 0 auto;
       // height: auto;
     }
     .description-width-setter-2{
-      width: 40vw;
+      // width: 40vw;
+      width: 100%;
     }
     .desktop-is-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: auto;
-      grid-column-gap: 1vw;
+      // grid-column-gap: 1vw;
       grid-row-gap: 10px;
       margin-bottom: 30px;
+      margin-top: 30px;
       font-family: house-script,
       sans-serif;
       font-weight: 400;
@@ -221,7 +234,6 @@ body {background-color: #f7f7f7;
       overflow-y: auto;
       overflow-x: hidden;
       width: 40vw;
-      margin-top: 30px;
       justify-items: center;
       padding-bottom: 15px;
       }
@@ -235,7 +247,7 @@ body {background-color: #f7f7f7;
 
     .is-drink-item{
       // width: 13vw;
-      width: 9vw;
+      width: 11vw;
       background-color: black;
       border-radius: 5px;
       box-shadow: 9px 9px 10px -2px #888888;
