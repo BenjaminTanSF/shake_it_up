@@ -12,12 +12,14 @@
 - [ ] Desktop and mobile-web responsive design
 
 
-### Technologies
+# Technologies
 
-<strong><u>Backend</u></strong>
+### Backend
 
-<strong>Technologies</strong>
-MongoDB / Express
+<ul>
+    <a href="https://www.mongodb.com/" target="_blank"><li>MongoDB</li></a>
+    <a href="https://expressjs.com/" target="_blank"><li>Express.js</li></a>
+</ul>
 
 <strong>Technical Challenges</strong> 
 <ul>
@@ -38,18 +40,7 @@ React / Node
     <li>Designing a responsive cross-platform user interface</li>
 </ul>
 
-### Things Accomplished Over the Weekend
-<ul>
-    <li>Feature list</li>
-    <li>Setup database</li>
-    <li>Wrote proposal Readme</li>
-    <li>Reviewed ALL aA MERN materials</li>
-    <li>Back-end routes</li>
-    <li>Home and Search Screen High-Fidelity Prototypes</li>
-    <li>Mapped out User Experience</li>
-</ul>
-
-### Contributors
+# Contributors
 
 <ul>
     <a href="https://github.com/BenjaminT88" target="_blank"><li>Benjamin Tan</li></a>
