@@ -61,7 +61,10 @@
 ### Desktop
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center">
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center">
     <img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/Screenshots/desktop-splash.png"         height="180" width="320"></img>
+    <span><strong>Splash Page</strong></span>
+    </div>
     <img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/Screenshots/desktop-byoc-base.png"       height="180" width="320"></img>
     <img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/Screenshots/desktop-cocktail-idx.png" height="180" width="320"></img>
 </div>
