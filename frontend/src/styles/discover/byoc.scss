@@ -185,7 +185,15 @@
     font-weight: 400;
     font-style: normal;
     font-size: 4vw;
-   
+    opacity: 0.8;
+    transition: all .1s ease-in-out;
+}
+
+.byoc-grid-spirit:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    transform: scale(1.1);
 }
   .byoc-result-drinks-container {
       width: 100%;
