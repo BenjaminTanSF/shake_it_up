@@ -237,24 +237,12 @@ class BYOCResults extends React.Component {
 				return false;
 			});
 
-			// Filter compatible ingredients; store result temporarily as newCompatibles
-			let newCompatibles = [];
-			newDrinks.forEach(drink => {
-				for (let i = 1; i <= 15; i++) {
-					if (!drink[`strIngredient${i}`]) {
-						break;
-					} else if (!newCompatibles.concat(this.state.nonBaseIngredients).concat(this.state.base).map(ci => ci.name).includes(drink[`strIngredient${i}`].toLowerCase()) && drink[`strIngredient${i}`].toLowerCase() !== ingredientName) {
-						newCompatibles.push(
-							this.state.compatibleIngredients.find(imageObj => imageObj.name === drink[`strIngredient${i}`].toLowerCase())
-						);
-					}
-				}
-			});
-			//Set state.
+			
+			//Set state and set the compatibleIngredients slice of state 
+			//by invoking setCompatibles.
 			this.setState({
-				drinks: newDrinks,
-				compatibleIngredients: newCompatibles
-			})
+				drinks: newDrinks
+			}, () => this.setCompatibles())
 			this.resetIngCarousel();    // reset scroll position of ingredient carousel
 			this.resetDrinkCarousel();  // reset scroll position of drink carousel
 		}
