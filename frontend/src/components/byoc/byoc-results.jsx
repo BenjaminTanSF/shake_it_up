@@ -299,7 +299,7 @@ class BYOCResults extends React.Component {
 
 					{/* Compatible Drinks */}
 					<div className="byoc-result-drinks-container">
-						<h1>Potential Drinks</h1>
+						<h1 id="byoc-results-pd-header">Potential Drinks</h1>
 						<div className="byoc-result-drinks-carousel">
 							{this.state.drinks.map(drink => (
 								<div className="byoc-result-drink-card" key={drink.idDrink}>
