@@ -13,47 +13,56 @@
 
 <img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/GIFs/discover.gif"></img>
 <img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/GIFs/byoc.gif"></img>
+<img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/GIFs/live_search.gif"></img>
 
 # Technologies
 
 ### Backend
 
 <ul>
-    <a href="https://www.mongodb.com/" target="_blank"><li>MongoDB</li></a>
-    <a href="https://expressjs.com/" target="_blank"><li>Express.js</li></a>
-    <a href="https://www.heroku.com/" target="_blank"><li>Heroku</li></a>
+	<a href="https://www.mongodb.com/" target="_blank"><li>MongoDB</li></a>
+	<a href="https://expressjs.com/" target="_blank"><li>Express.js</li></a>
+	<a href="https://www.heroku.com/" target="_blank"><li>Heroku</li></a>
 </ul>
 
 ### Frontend
 
 <ul>
-    <a href="https://reactjs.org/" target="_blank"><li>React</li></a>
-    <a href="https://redux.js.org/" target="_blank"><li>Redux</li></a>
-    <a href="https://sass-lang.com/" target="_blank"><li>Sass</li></a>
-    <a href="https://nodejs.org/en/" target="_blank"><li>Node.js</li></a>
-    <a href="https://webpack.js.org/" target="_blank"><li>Webpack</li></a>
-    <a href="https://www.adobe.com/products/xd.html" target="_blank"><li>Adobe XD</li></a>
-    <a href="https://www.adobe.com/products/illustrator.html" target="_blank"><li>Adobe Illustrator</li></a>
+	<a href="https://reactjs.org/" target="_blank"><li>React</li></a>
+	<a href="https://redux.js.org/" target="_blank"><li>Redux</li></a>
+	<a href="https://sass-lang.com/" target="_blank"><li>Sass</li></a>
+	<a href="https://nodejs.org/en/" target="_blank"><li>Node.js</li></a>
+	<a href="https://webpack.js.org/" target="_blank"><li>Webpack</li></a>
+	<a href="https://www.adobe.com/products/xd.html" target="_blank"><li>Adobe XD</li></a>
+	<a href="https://www.adobe.com/products/illustrator.html" target="_blank"><li>Adobe Illustrator</li></a>
 </ul>
+
+# Features
+
+## Lazy Fetch
+Our <strong>fetch thunk</strong> actions check the redux state, so that they only make the http request if the data is not already fully loaded. They also accept an optional callback to be executed when the data is fetched.
+
+## Build Your Own Cocktail (BYOC)
+
 
 # Technical Challenges
 
 <ul>
-    <li>Incorporating Regex into Req.params</li>
-    <li>Reformatting database schema from a public API to expedite querying by ingredient</li>
-    <li>Merging overlapping cocktail tables</li>
-    <li>Fetching data from MongoDB and organizing for display in frontend</li>
-    <li>Implementing real-time querrying based on multi-value input parameters</li>
-    <li>Designing a responsive cross-platform user interface</li>
+	<li>Incorporating Regex into Req.params</li>
+	<li>Reformatting database schema from a public API to expedite querying by ingredient</li>
+	<li>Merging overlapping cocktail tables</li>
+	<li>Fetching data from MongoDB and organizing for display in frontend</li>
+	<li>Implementing real-time querrying based on multi-value input parameters</li>
+	<li>Designing a responsive cross-platform user interface</li>
 </ul>
 
 # Contributors
 
 <ul>
-    <a href="https://github.com/BenjaminT88" target="_blank"><li>Benjamin Tan</li></a>
-    <a href="https://github.com/robmroy" target="_blank"><li>Rob Roy</li></a>
-    <a href="https://github.com/fsiino" target="_blank"><li>Frankie Siino</li></a>
-    <a href="https://github.com/SkiesXR" target="_blank"><li>Phillip Krasnick</li></a>
+	<a href="https://github.com/BenjaminT88" target="_blank"><li>Benjamin Tan</li></a>
+	<a href="https://github.com/robmroy" target="_blank"><li>Rob Roy</li></a>
+	<a href="https://github.com/fsiino" target="_blank"><li>Frankie Siino</li></a>
+	<a href="https://github.com/SkiesXR" target="_blank"><li>Phillip Krasnick</li></a>
 </ul>
 
 # Screenshots
@@ -61,17 +70,17 @@
 ### Desktop
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center">
-    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-right: 10px; margin-bottom: 20px">
-    <img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/Screenshots/desktop-splash.png"         height="180" width="320"></img>
-    <span><strong>Splash Page</strong></span>
-    </div>
-    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-right: 10px; margin-bottom: 20px">
-    <img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/Screenshots/desktop-byoc-base.png"       height="180" width="320"></img>
-    <span><strong>BYOC Base</strong></span>
-    </div>
-    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-right: 10px; margin-bottom: 20px">
-    <img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/Screenshots/desktop-cocktail-idx.png" height="180" width="320"></img>
-    <span><strong>Cocktail Index</strong></span>
-    </div>
+	<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-right: 10px; margin-bottom: 20px">
+	<img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/Screenshots/desktop-splash.png"         height="180" width="320"></img>
+	<span><strong>Splash Page</strong></span>
+	</div>
+	<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-right: 10px; margin-bottom: 20px">
+	<img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/Screenshots/desktop-byoc-base.png"       height="180" width="320"></img>
+	<span><strong>BYOC Base</strong></span>
+	</div>
+	<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-right: 10px; margin-bottom: 20px">
+	<img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/Screenshots/desktop-cocktail-idx.png" height="180" width="320"></img>
+	<span><strong>Cocktail Index</strong></span>
+	</div>
 </div>
 
