@@ -5,17 +5,7 @@ import Root from './Root';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-//testing
-// import { fetchAllDrinks, fetchSingleDrink } from './actions/drinks_actions';
-// import { fetchAllIngredients, fetchDrinksByIngredient } from './actions/ingredients_actions';
 
-//testing
-// window.getState = store.getState;
-// window.dispatch = store.dispatch;
-// window.fetchAllDrinks = fetchAllDrinks;
-// window.fetchSingleDrink = fetchSingleDrink;
-
-// TODO: Remove window, Logger before final push to production
 const store = configureStore();
 
 ReactDOM.render(<Root store={store} />, document.getElementById('root'));
