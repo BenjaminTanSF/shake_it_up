@@ -6,6 +6,10 @@
 <a href="http://shake-it-up-aa.herokuapp.com" target="_blank"><strong>Live Demo</strong></a>
 
 # Features
+
+<img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/Code%20Snippets/siu_snip_1a.png"></img>
+<img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/Code%20Snippets/siu_snip_2a.png"></img>
+
 - [ ] Cocktail suggestions based on multiple user inputs
 - [ ] Cocktail recipes with detailed step-by-step instructions
 - [ ] Educational content regarding cocktails & ingredients
