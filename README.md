@@ -9,10 +9,10 @@
 
 # Features
 
-- [ ] Cocktail suggestions based on multiple user inputs
-- [ ] Cocktail recipes with detailed step-by-step instructions
-- [ ] Educational content regarding cocktails & ingredients
-- [ ] Desktop and mobile-web responsive design
+* Cocktail suggestions based on multiple user inputs
+* Cocktail recipes with detailed step-by-step instructions
+* Educational content regarding cocktails & ingredients
+* Desktop and mobile-web responsive design
 
 # Technologies
 
