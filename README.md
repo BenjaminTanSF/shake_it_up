@@ -42,7 +42,14 @@
 ## Lazy Fetch
 Our <strong>fetch thunk</strong> actions check the redux state, so that they only make the http request if the data is not already fully loaded. They also accept an optional callback to be executed when the data is fetched.
 
+<img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/Code%20Snippets/siu_snip_1a.png?raw=true"></img>
+
 ## Build Your Own Cocktail (BYOC)
+Local state (base, nonBaseIngredients, drinks, compatibleIngredients) is set by <strong>setStateFromURL()</strong>. The 'base' array stores objects corresponding to the various types of the base spirit selected by the user. After selecting the base spirit, the drinks array is set to be all cocktails containing any of the types of the given base spirit, and the compatible ingredients array is initialized as all ingredients of these drinks except for the ones in base.	The user then may select additional ingredients which refines the array of drinks and correspondingly reduces the list of compatible ingredients. 
+
+<img src="https://github.com/BenjaminT88/shake_it_up/blob/master/frontend/src/assets/Code%20Snippets/siu_snip_2a.png?raw=true"></img>
+
+setStateFromURL() sets local state based on the URL wildcard. Since base spirit is the first selection	made by the user, the name of the base spirit is the first segment of the (comma-separated) wildcard. So if the wildcard is 'vodka, lime', setStateFromURL sets base to be an array. It also sets the nonBaseIngredients array. The 'drinks' slice of state is set to the array of cocktails which each contains some version of the base spirit, and also every one of the non-base ingredients. Thus, when the user makes their initial selection, namely base spirit, they see all the drinks containing some version of it, and subsequent clicks on ingredients reduce the list of cocktails. Lastly, the compatibleIngredients array stores all ingredients that go into any cocktail in the drinks array, except for the ingredients that have already been selected.
 
 
 # Technical Challenges
