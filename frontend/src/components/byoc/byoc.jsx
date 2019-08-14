@@ -5,7 +5,7 @@ import LoadingIcon from '../loading_icon/loading_icon';
 
 class BYOCPrompt extends React.Component {
 	componentDidMount() {
-			this.props.fetchAllIngredients();
+		this.props.fetchAllIngredients();
 	}
 
 	render() {
