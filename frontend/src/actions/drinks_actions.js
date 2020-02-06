@@ -32,7 +32,7 @@ export const receiveSingleDrink = drink => ({
 
 export const fetchAllDrinks = (callback) => (dispatch, getState) => {
   if (getState().entities.drinks.fullyLoaded) {
-    if(callback) callback();
+    if (callback) callback();
     return;
   }
   dispatch(startLoadingAllDrinks());
@@ -49,13 +49,14 @@ export const fetchAllDrinks = (callback) => (dispatch, getState) => {
 
 export const fetchSingleDrink = (id, callback) => (dispatch, getState) => {
   if (getState().entities.drinks.fullyLoaded) {
-    if(callback) callback();
+    if (callback) callback();
     return;
   }
   dispatch(startLoadingSingleDrink());
   return APIUtil.getDrinkDetails(id).then(
-    drink => { dispatch(receiveSingleDrink(drink.data));
-      if(callback){callback()} 
+    drink => {
+      dispatch(receiveSingleDrink(drink.data));
+      if (callback) { callback() }
     },
     err => { dispatch(receiveDrinksErrors(err)) }
   )

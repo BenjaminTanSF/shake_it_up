@@ -58,7 +58,7 @@ class BYOCResults extends React.Component {
 		//Grab the last part of the url path. (The 'ingredients' key is
 		//specified in the App component.)
 
-		let ingNames = this.props.match.params.ingredients; 
+		let ingNames = this.props.match.params.ingredients;
 		let ingNamesArr = ingNames.split(',');
 		let [baseString, nonBaseIngStrings] = [ingNamesArr[0], ingNamesArr.slice(1)];
 
@@ -121,7 +121,7 @@ class BYOCResults extends React.Component {
 		//to form a boolean-valued POJO that is quickly checked.
 		let selectedIngreds = this.state.nonBaseIngredients.concat(
 			this.state.base).map(ing => ing.name);
-		const alreadySelected = {}; 
+		const alreadySelected = {};
 		selectedIngreds.forEach(ing => alreadySelected[ing] = true);
 
 		let compatibleIngredients = [];
@@ -237,7 +237,7 @@ class BYOCResults extends React.Component {
 				return false;
 			});
 
-			
+
 			//Set state and set the compatibleIngredients slice of state 
 			//by invoking setCompatibles.
 			this.setState({
